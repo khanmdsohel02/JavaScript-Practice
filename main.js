@@ -1193,16 +1193,498 @@ const cars = [
 
 
 
+//=========JavaScript Array Constant(const)==========
+
+// it is very common practice to declare using const
+
+// Elements can be reassigned
+
+// const একসাথে ডিক্লেয়ার এবং এসাইন করতে হবে
+
+// an array declare with constant has Block Scoop
+
+// আলাদা আলাদা স্কোপের মধ্যে একই কনস্ট ভেরিয়েবল ডিক্লেয়ার করা যাবে
 
 
 
 
 
+//===========JavaScript Date Objects============
+
+// JavaScript counts months from 0 to 11:
+// January = 0.
+// December = 11.
+
+// By default, JavaScript will use the browser's time zone and display a date as a full text string:
+
+// Date objects are created with the new Date() constructor.
+
+// let date = new Date();
+// // console.log(date);
 
 
+// There are 9 ways to create a new date object:
+
+// new Date()
+// new Date(date string)
+// new Date(year,month)
+// new Date(year,month,day)
+// new Date(year,month,day,hours)
+// new Date(year,month,day,hours,minutes)
+// new Date(year,month,day,hours,minutes,seconds)
+// new Date(year,month,day,hours,minutes,seconds,ms)
+// new Date(milliseconds)
+
+// Specifying a month higher than 11, will not result in an error but add the overflow to the next year
+
+// console.log(new Date(2018, 12, 24, 10, 33, 30, 0));
+
+// Specifying a day higher than max, will not result in an error but add the overflow to the next month
+
+// console.log(new Date(2018, 11, 32, 10, 33, 30, 0));
 
 
+// You cannot omit month. If you supply only one parameter it will be treated as milliseconds.
 
+// One and two digit years will be interpreted (Previous Century)
 
-// console.log(arr); 
+// console.log(new Date(99, 11, 24));
+// console.log(new Date(9, 11, 24));
  
+// JavaScript stores dates as number of milliseconds since January 01, 1970.
+
+// One day (24 hours) is 86 400 000 milliseconds.
+
+
+// new Date(milliseconds) creates a new date object as milliseconds plus zero time
+// console.log(new Date(200000000000));
+
+
+// Zero time is January 01, 1970 00:00:00 UTC.
+// console.log(new Date(0));
+
+// When you display a date object in HTML, it is automatically converted to a string, with the toString() method.
+
+// console.log(new Date());
+// console.log((new Date()).toString());
+
+
+// The toDateString() method converts a date to a more readable format
+
+// console.log((new Date()).toDateString());
+
+
+// The toUTCString() method converts a date to a string using the UTC standard
+
+// console.log((new Date()).toUTCString());
+
+
+// The toISOString() method converts a date to a string using the ISO standard
+
+// console.log((new Date()).toISOString());
+
+
+
+
+
+//=====new Date()=====
+
+// new Date() creates a date object with the current date and time
+
+// console.log(new Date());
+
+
+
+
+
+// ===========Date Formats===============
+
+// There are generally 3 types of JavaScript date input formats:
+
+// ISO Date	     "2015-03-25" (The International Standard)
+// Short Date	 "03/25/2015"
+// Long Date	 "Mar 25 2015" or "25 Mar 2015"
+
+// The ISO format follows a strict standard in JavaScript.
+
+// The other formats are not so well defined and might be browser specific.
+
+
+// ISO 8601 is the international standard for the representation of dates and times.
+
+// The ISO 8601 syntax (YYYY-MM-DD) is also the preferred JavaScript date format
+
+// const d = new Date("2015-03-25");
+
+// Date and time is separated with a capital T.
+
+// UTC time is defined with a capital letter Z.
+
+// If you want to modify the time relative to UTC, remove the Z and add +HH:MM or -HH:MM instead:
+
+// UTC (Universal Time Coordinated) is the same as GMT (Greenwich Mean Time).
+
+// Omitting T or Z in a date-time string can give different results in different browsers.
+
+// Long dates are most often written with a "MMM DD YYYY" syntax (Example: "Mar 25 2015")
+
+// Short dates are written with an "MM/DD/YYYY" syntax (Example: "03/25/2015")
+
+// month can be written in full (January), or abbreviated (Jan)
+
+// Month and day can be in any order
+
+
+
+
+
+
+
+
+
+// ===Time Zones===
+
+// When setting a date, without specifying the time zone, JavaScript will use the browser's time zone.
+
+// When getting a date, without specifying the time zone, the result is converted to the browser's time zone.
+
+// In other words: If a date/time is created in GMT (Greenwich Mean Time), the date/time will be converted to CDT (Central US Daylight Time) if a user browses from central US.
+
+
+
+
+//=======Date Input - Parsing Dates=========
+// f you have a valid date string, you can use the Date.parse() method to convert it to milliseconds.
+
+// Date.parse() returns the number of milliseconds between the date and January 1, 1970
+// console.log(Date.parse(new Date()));
+
+// You can then use the number of milliseconds to convert it to a date object
+
+
+
+
+
+
+
+// ==============Get Date Methods=============
+// Get methods return Local time
+// Universal time (UTC) is documented at the bottom of this page.
+
+
+
+// getFullYear()	    Get year as a four digit number (yyyy)
+
+// The getFullYear() method returns the year of a date as a four digit number:
+
+// console.log(new Date().getFullYear());
+// console.log(new Date().getUTCFullYear());
+// console.log(new Date("2021-03-25").getFullYear());
+// console.log(new Date("1998-02-25").getUTCFullYear());
+
+
+
+//=====================
+
+// getMonth()	        Get month as a number (0-11)
+// The getMonth() method returns the month of a date as a number (0-11).
+
+
+// console.log(new Date().getMonth());
+// console.log(new Date().getUTCMonth());
+// console.log(new Date("2021-03-25").getMonth());
+// console.log(new Date("1998-01-25").getUTCMonth());
+// console.log(new Date("1998-02-25").getUTCMonth());
+
+
+// You can use an array of names to return the month as a name:
+
+// const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+// const d = new Date("2021-06-25");
+// let month = months[d.getMonth()];
+// // console.log(month);
+
+
+//=====================
+
+// getDate()	        Get day as a number (1-31)
+// The getDate() method returns the day of a date as a number (1-31):
+
+// console.log(new Date().getDate());
+// console.log(new Date().getUTCDate());
+// console.log(new Date("2021-03-25").getDate());
+// console.log(new Date("1998-02-25").getUTCDate());
+
+
+//============================
+
+// getDay()	            Get weekday as a number (0-6)
+
+// The getDay() method returns the weekday of a date as a number (0-6).
+
+// In JavaScript, the first day of the week (day 0) is Sunday.
+
+// Some countries in the world consider the first day of the week to be Monday
+
+
+// console.log(new Date().getDay());
+// console.log(new Date().getUTCDay());
+// console.log(new Date("2021-03-25").getDay());
+// console.log(new Date("1998-02-25").getUTCDay());
+
+
+// You can use an array of names, and getDay() to return weekday as a name
+
+// const days = ["Friday", "Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"];
+
+// const dy = new Date("2021-03-25");
+// let day = days[dy.getDay()];
+// console.log(day);
+
+
+
+
+//==============================
+
+// getHours()	        Get hour (0-23)
+// The getHours() method returns the hours of a date as a number (0-23):
+
+// console.log(new Date().getHours());
+// console.log(new Date().getUTCHours());
+// console.log(new Date("2021-03-25").getHours());
+// console.log(new Date("1998-02-25").getUTCHours());
+
+
+
+
+//==============================
+
+// getMinutes()	        Get minute (0-59)
+// The getMinutes() method returns the minutes of a date as a number (0-59):
+
+// console.log(new Date().getMinutes());
+// console.log(new Date().getUTCMinutes());
+// console.log(new Date("2021-03-25").getMinutes());
+// console.log(new Date("1998-02-25").getUTCMinutes());
+
+
+
+
+//==================================
+
+// getSeconds()	        Get second (0-59)
+// The getSeconds() method returns the seconds of a date as a number (0-59):
+
+// console.log(new Date().getSeconds());
+// console.log(new Date().getUTCSeconds());
+// console.log(new Date("2021-03-25").getSeconds());
+// console.log(new Date("1998-02-25").getUTCSeconds());
+
+
+
+
+//==================================
+
+// getMilliseconds()	Get millisecond (0-999)
+// The getMilliseconds() method returns the milliseconds of a date as a number (0-999):
+
+// console.log(new Date().getMilliseconds());
+// console.log(new Date().getUTCMilliseconds());
+// console.log(new Date("2021-03-25").getMilliseconds());
+// console.log(new Date("1998-02-25").getUTCMilliseconds());
+
+
+
+
+//===============================
+
+// getTime()	        Get time (milliseconds since January 1, 1970)
+// The getTime() method returns the number of milliseconds since January 1, 1970
+
+// console.log(new Date().getTime());
+// console.log(new Date("2021-03-25").getTime());
+
+
+
+//===============================
+
+// Date.now() Method   ===
+// The syntax is always Date.now().
+
+// console.log(Date.now());
+
+
+// const minute = 1000 * 60;
+// const hour = minute * 60;
+// const day = hour * 24;
+// const year = day * 365;
+
+// let years = Math.round(Date.now() / year);
+// console.log(years);
+
+
+
+//===================
+// getTimezoneOffset() Method===
+// The getTimezoneOffset() method returns the difference (in minutes) between local time an UTC time
+
+// console.log(new Date().getTimezoneOffset());
+
+
+
+//========================================
+//============UTC Date Get Methods============
+
+// getUTCDate()	           getDate()	        Returns the UTC date
+// getUTCFullYear()	       getFullYear()	    Returns the UTC year
+// getUTCMonth()	       getMonth()	        Returns the UTC month
+// getUTCDay()	           getDay()	            Returns the UTC day
+// getUTCHours()	       getHours()	        Returns the UTC hour
+// getUTCMinutes()	       getMinutes()	        Returns the UTC minutes
+// getUTCSeconds()	       getSeconds()	        Returns the UTC seconds
+// getUTCMilliseconds()	   getMilliseconds()	Returns the UTC milliseconds
+
+//====================================================
+
+
+
+
+
+// ===============================Set Date Methods=====================================
+
+// Set Date methods let you set date values (years, months, days, hours, minutes, seconds, milliseconds) for a Date Object
+
+//=====================================================
+
+// setDate()	        Set the day as a number (1-31) 
+
+// The setDate() method sets the day of a date object (1-31)
+
+// const day = new Date();
+// day.setDate(15);
+// // console.log(day);
+
+// // console.log(new Date(new Date().setDate(11)));
+
+
+
+//>>>The setDate() method can also be used to add days to a date
+// const d = new Date();
+
+// // console.log(d.getDate());
+// // console.log(d.getDate() + 50);
+// // console.log(d.setDate(d.getDate() + 50));
+
+// d.setDate(d.getDate() + 50);
+// // console.log(d);
+
+
+
+
+//============================================================
+
+// setFullYear()	    Set the year (optionally month and day)
+// The setFullYear() method sets the year of a date object
+
+
+// console.log( new Date(new Date().setFullYear(2020))); OR
+
+// const d = new Date();
+// d.setFullYear(2020);
+// // console.log(d);
+
+// const date = new Date();
+// date.setFullYear(2020, 8, 3);
+// // console.log(date);
+
+
+
+
+// ========================================================
+
+// setHours()	        Set the hour (0-23)
+// The setHours() method sets the hours of a date object (0-23)
+
+// const h = new Date();
+// h.setHours(8);
+// // console.log(h);
+
+// console.log(new Date(new Date().setHours(11)));
+// console.log(new Date(new Date().setHours(11, 11, 11)));
+
+
+
+
+//============================================================
+
+// setMilliseconds()	Set the milliseconds (0-999)
+
+// console.log(new Date().setMilliseconds(15));
+
+// console.log(new Date().setTime(Date.now()));
+
+
+
+//================================================================
+
+// setMinutes()	        Set the minutes (0-59)
+// The setMinutes() method sets the minutes of a date object (0-59)
+
+// const m = new Date();
+// m.setMinutes(20)
+// // console.log(m);
+
+// console.log(new Date(new Date().setMinutes(11)));
+// console.log(new Date(new Date().setMinutes(11, 11)));
+
+
+
+
+//==============================================================
+
+// setMonth()	        Set the month (0-11)
+// The setMonth() method sets the month of a date object (0-11)
+// const month = new Date();
+// month.setMonth(10);
+// // console.log(month);
+
+// // console.log(new Date(new Date().setMonth(1)));
+
+
+
+
+
+//=============================================================
+
+// setSeconds()	        Set the seconds (0-59)
+// The setSeconds() method sets the seconds of a date object (0-59)
+
+// const s = new Date();
+// s.setSeconds(25);
+// // console.log(s);
+
+// console.log(new Date(new Date().setSeconds(11)));
+
+
+
+
+
+//===============================================
+
+// setTime()	        Set the time (milliseconds since January 1, 1970)
+
+// console.log(new Date().setTime(Date.now()));
+
+
+
+
+
+//=============new Date(date string)======================
+
+// new Date(date string) creates a date object from a date string
+
+// console.log(new Date("October 13, 2014 11:13:00"));
+
+// console.log(new Date("1998-02-25"));
+
