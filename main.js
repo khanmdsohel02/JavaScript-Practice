@@ -1215,6 +1215,8 @@ const cars = [
 // January = 0.
 // December = 11.
 
+// If adding days shifts the month or year, the changes are handled automatically by the Date object.
+
 // By default, JavaScript will use the browser's time zone and display a date as a full text string:
 
 // Date objects are created with the new Date() constructor.
@@ -1555,6 +1557,8 @@ const cars = [
 
 // Set Date methods let you set date values (years, months, days, hours, minutes, seconds, milliseconds) for a Date Object
 
+// If adding days shifts the month or year, the changes are handled automatically by the Date object.
+
 //=====================================================
 
 // setDate()	        Set the day as a number (1-31) 
@@ -1678,6 +1682,21 @@ const cars = [
 
 
 
+// <<<<<<<<<<Compare Dates>>>>>>>>>>>>>
+// let text = "";
+// const today = new Date();
+// const someday = new Date();
+// someday.setFullYear(2100, 0, 14);
+
+// if (someday > today) {
+//   text = "Today is before January 14, 2100.";
+// } else {
+//   text = "Today is after January 14, 2100.";
+// }
+// // console.log(text);
+
+
+
 
 
 //=============new Date(date string)======================
@@ -1688,3 +1707,352 @@ const cars = [
 
 // console.log(new Date("1998-02-25"));
 
+
+
+
+
+
+
+// ================Math Object=======================
+
+// The JavaScript Math object allows you to perform mathematical tasks on numbers.
+
+// The Math object is static.
+
+//<<<<<<<<<<<<<Math Properties >>>>>>>>>>>>>>
+
+// The syntax for any Math property is : Math.property.
+
+// JavaScript provides 8 mathematical constants that can be accessed as Math properties
+
+// Math.E              // returns Euler's number
+
+
+// Math.PI             // returns PI
+// // Get PI value
+//    console.log(Math.PI);
+
+
+
+// Math.SQRT2          // returns the square root of 2
+
+
+// Math.SQRT1_2        // returns the square root of 1/2
+
+
+// Math.LN2            // returns the natural logarithm of 2
+
+
+// Math.LN10           // returns the natural logarithm of 10
+
+
+// Math.LOG2E          // returns base 2 logarithm of E
+
+
+// Math.LOG10E         // returns base 10 logarithm of E
+
+
+
+
+
+//=============Math Methods=====================
+// The syntax for Math any methods is : Math.method(number)
+
+// (Number to Integer) There are 4 common methods to round a number to an integer:
+
+
+// Math.round(x)	        Returns x rounded to its nearest integer
+
+// Math.round(x) returns the nearest integer of x
+
+// console.log(Math.round(2.5));
+// console.log(Math.round(3.4));
+// console.log(Math.round(-5.7));
+// console.log(Math.round(-5.3));
+
+
+//===============================================
+// Math.ceil(x)	            Returns x rounded up to its nearest integer
+
+// Math.ceil(x) returns the value of x rounded up to its nearest integer
+
+// console.log(Math.ceil(2.9));
+// console.log(Math.ceil(5.3));
+// console.log(Math.ceil(-5.7));  //can't round up
+// console.log(Math.ceil(-5.3));  //can't round up
+
+
+
+
+//================================================
+// Math.floor(x)	        Returns x rounded down to its nearest integer
+
+// Math.floor(x) returns the value of x rounded down to its nearest integer
+
+// console.log(Math.floor(2.9));
+// console.log(Math.floor(5.3));
+// console.log(Math.floor(-5.7)); // returns the value of rounded up to its nearest integer
+// console.log(Math.floor(-5.3)); // returns the value of rounded up to its nearest integer
+
+
+
+
+
+//=============================================
+
+//Math.min() and Math.max()
+
+// Math.min() and Math.max() can be used to find the lowest or highest value in a list of arguments
+
+// const numbers9 = [2, 5, 6, 7, 8];
+// console.log(Math.min(2, 5, 6, 7, 8));
+// console.log(Math.max(2, 5, 6, 7, 8));
+
+// console.log(numbers9); // get array
+// console.log(...numbers9); // get array elements using spread(...) operator
+// console.log(Math.min(...numbers9));
+// console.log(Math.max(...numbers9));
+
+
+
+
+
+//=============================================
+// Math.random()
+
+// Math.random() returns a random number between 0 (inclusive), and 1 (exclusive)
+
+// 0 এবং 1 এর মধ্যে যেকোনো নাম্বার রিটার্ন করে
+
+// Math.random() always returns a number lower than 1.
+
+// console.log(Math.random());
+
+
+//<<<<<<Random Integers>>>>>>>>>
+// Math.random() used with Math.floor() can be used to return random integers
+
+
+// Returns a random integer from 0 to 9
+// console.log(Math.floor(Math.random() * 10));
+
+// Returns a random integer from 1 to 10
+// console.log((Math.floor(Math.random() * 10) + 1));
+
+
+// Returns a random integer from 0 to 10
+// console.log(Math.floor(Math.random() * 11));
+
+// Returns a random integer from 1 to 11
+// console.log((Math.floor(Math.random() * 11) + 1));
+
+
+
+// <<<<Get Random Integer Using Function>>>>>
+
+//This JavaScript function always returns a random number between min (included) and max (excluded)
+
+// function getRndInteger(min, max) {
+//   return Math.floor(Math.random() * (max - min) ) + min;
+//   // এই ফাংশনটা 1 এবং 10 ছাড়া সকল integer number রিটার্ন করবে
+// }
+
+// let random = getRndInteger(1, 10);
+// // console.log(random);
+
+
+//------------------------------
+
+// This JavaScript function always returns a random number between min and max (both included)
+
+// function getRndInteger(min, max) {
+//   return Math.floor(Math.random() * (max - min + 1) ) + min;
+//   // এই ফাংশনটা 1 এবং 10 সহ এদের মধ্যে সকল integer সংখ্যা রিটার্ন করবে
+// }
+
+// let random = getRndInteger(1, 10);
+// // console.log(random);
+
+
+
+
+
+
+
+
+// ===============================================
+// Math.trunc(x)	        Returns the integer part of x
+
+// Math.trunc(x) returns the integer part of x
+
+// console.log(Math.trunc(2.9));
+// console.log(Math.trunc(5.3));
+// console.log(Math.trunc(-5.7));
+// console.log(Math.trunc(-5.3));
+
+
+
+
+// ===============================================
+// Math.sign()
+
+// Math.sign(x) returns if x is negative, null or positive
+
+// এটার আর্গুমেন্ট যদি 0 হয় অথবা -0 হয় তাহলে, সেটাই রিটার্ন করে  এবং আর্গুমেন্ট যদি ধনাত্মক সংখ্যা হয় তাহলে 1 রিটার্ন করে ও আর্গুমেন্ট যদি ঋনাত্মক সংখ্যা হয় তাহলে -1 রিটার্ন করে
+
+// console.log(Math.sign(5));
+// console.log(Math.sign(0));
+// console.log(Math.sign(-5));
+
+
+
+
+//==========================================
+// Math.pow()
+// Math.pow(x, y) returns the value of x to the power of y
+
+// It has two arguments: 1...(Required) which is base(কোন সংখ্যার উপর পাওয়ার প্রয়োগ করতে হবে) and 2...(Required) which is exponent(পাওয়ার কত হবে)
+
+// console.log(Math.pow(5, 2));
+// console.log(Math.pow(4, 2));
+// console.log(Math.pow(2, 2));
+// console.log(Math.pow(2, 5));
+// console.log(Math.pow(5, 5));
+
+
+
+
+//=========================================
+// Math.sqrt()
+// Math.sqrt(x) returns the square root of x
+
+// console.log(Math.sqrt(25));
+// console.log(Math.sqrt(64));
+// console.log(Math.sqrt(4));
+
+
+
+
+
+//=====================================
+// Math.abs()
+// Math.abs(x) returns the absolute (positive) value of x
+// ধনাত্মক সংখ্যা রিটার্ন করে
+
+// console.log(Math.abs(-5));
+// console.log(Math.abs(5));
+// console.log(Math.abs(-0));
+// console.log(Math.abs(-5.7));
+
+
+
+
+
+//=======================================
+// Math.sin()
+
+// Math.sin(x) returns the sine (a value between -1 and 1) of the angle x (given in radians).
+
+// If you want to use degrees instead of radians, you have to convert degrees to radians:
+
+// Angle in radians = Angle in degrees x PI / 180
+
+// console.log(Math.sin(0));
+
+// let pi = 90 * Math.PI;
+// console.log(pi);
+// console.log(Math.sin( pi / 180));
+
+
+
+
+//===============================
+// Math.cos()
+
+// Math.cos(x) returns the cosine (a value between -1 and 1) of the angle x (given in radians).
+
+// If you want to use degrees instead of radians, you have to convert degrees to radians:
+
+// Angle in radians = Angle in degrees x PI / 180
+
+// console.log(Math.cos(0));
+
+// console.log(Math.cos(0 * Math.PI / 180));
+
+
+
+
+
+
+//=============================================
+// The Math.log() Method
+
+// Math.log(x) returns the natural logarithm of x
+
+// console.log(Math.log(1));
+// console.log(Math.log(2));
+// console.log(Math.log(10));
+// console.log(Math.E * Math.log(10));
+
+
+
+
+
+
+//========================================
+// Math.log2() Method
+
+// Math.log2(x) returns the base 2 logarithm of x
+
+// console.log(Math.log2(8));
+// console.log(Math.log2(5));
+// console.log(Math.log2(2));
+// console.log(Math.log2(10));
+// console.log(Math.log2(100));
+
+
+
+
+
+//=======================================
+// Math.log10() Method
+
+// Math.log10(x) returns the base 10 logarithm of x.
+
+// console.log(Math.log10(8));
+// console.log(Math.log10(10));
+// console.log(Math.log10(20));
+
+
+
+
+
+//<<<<<<<<<<JavaScript(ALL) Math Methods>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<>>>>>>>>>>>>>>
+
+// abs(x)	                  Returns the absolute value of x
+// acos(x)	                  Returns the arccosine of x, in radians
+// acosh(x)	                  Returns the hyperbolic arccosine of x
+// asin(x)	                  Returns the arcsine of x, in radians
+// asinh(x)	                  Returns the hyperbolic arcsine of x
+// atan(x)	                  Returns the arctangent of x as a numeric value between -PI/2 and PI/2 radians
+// atan2(y, x)	              Returns the arctangent of the quotient of its arguments
+// atanh(x)	                  Returns the hyperbolic arctangent of x
+// cbrt(x)	                  Returns the cubic root of x
+// ceil(x)	                  Returns x, rounded upwards to the nearest integer
+// cos(x)	                  Returns the cosine of x (x is in radians)
+// cosh(x)	                  Returns the hyperbolic cosine of x
+// exp(x)	                  Returns the value of Ex
+// floor(x)	                  Returns x, rounded downwards to the nearest integer
+// log(x)	                  Returns the natural logarithm (base E) of x
+// max(x, y, z, ..., n)	      Returns the number with the highest value
+// min(x, y, z, ..., n)	      Returns the number with the lowest value
+// pow(x, y)	              Returns the value of x to the power of y
+// random()	                  Returns a random number between 0 and 1
+// round(x)	                  Rounds x to the nearest integer
+// sign(x)	                  Returns if x is negative, null or positive (-1, 0, 1)
+// sin(x)	                  Returns the sine of x (x is in radians)
+// sinh(x)	                  Returns the hyperbolic sine of x
+// sqrt(x)	                  Returns the square root of x
+// tan(x)	                  Returns the tangent of an angle
+// tanh(x)	                  Returns the hyperbolic tangent of a number
+// trunc(x)	                  Returns the integer part of a number (x)
