@@ -2455,28 +2455,283 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 
 
 
+//===============JavaScript Booleans=========================
+// A JavaScript Boolean represents one of two values: true or false.
+
+// Comparing two JavaScript objects always return false.
+
+// console.log(10 > 9);
+// console.log('10' > 9);
+// console.log('10' == 10);
+// console.log('10' === 10);
+
+
+
+
+
+//===========Comparison Operators==========
+// Comparison operators are used to test for true or false.
+
+// Comparison operators are used in logical statements to determine equality or difference between variables or values.
+
+
+//***Operators***
+
+// ==     Equal to   
+// compares two values and checks if they are equal
+
+// let x = 10;
+// let y = '10';
+// let a = 18;
+// let b = 15;
+
+// console.log(x == y); // true
+// console.log(a == b); // false
+
+
+
+
+// -------------------------------
+
+// ===    Strict equal to   
+// compares two values and checks if they are equal value and equal type
+
+// let x = 10;
+// let y = '10';
+// let z = 10;
+// let a = 18;
+// let b = 15;
+
+// console.log(x === z); // true
+// console.log(a === b); // false
+// console.log(x === y); // false
+
+
+
+// ------------------------------
+
+// !=     Not equal to   
+// compares two values and checks if they are not equal
+
+// let x = 10;
+// let y = '10';
+// let z = 10;
+// let a = 18;
+// let b = 15;
+
+// console.log(x != y); // false
+// console.log(x != z); // false
+// console.log(x != b); // true
+
+
+
+//--------------------------------
+
+// !==    Strict not equal to   
+//compares two values and checks if they are not equal value or not equal type
+
+// let x = 10;
+// let y = '10';
+// let z = 10;
+// let a = 18;
+// let b = 15;
+
+// console.log(x !== z); // false
+// console.log(x !== y); // true
+// console.log(a !== b); // true
+
+
+
+//-----------------------------------
+
+//   >    Greater than   
+//compares two values and checks if the left value is greater than the right value
+
+// let x = 10;
+// let y = '10';
+// let z = 10;
+// let a = 18;
+// let b = 15;
+
+// console.log(x > z); // false
+// console.log(x > y); // false
+// console.log(a > b); // true
+
+
+
+//----------------------------------
+
+//   <    Less than  
+// compares two values and checks if the left value is less than the right value
+
+// let x = 10;
+// let y = '10';
+// let z = 10;
+// let a = 18;
+// let b = 15;
+
+// console.log(x < z); // false
+// console.log(x < y); // false
+// console.log(a < b); // false
+// console.log(x < b); // true
+
+
+
+//--------------------------------------
+
+//   >=   Greater than or equal to   
+// compares two values and checks if the left value is greater than or equal to the right value
+
+// let x = 10;
+// let y = '10';
+// let z = 10;
+// let a = 18;
+// let b = 15;
+
+// console.log(x >= z); // true
+// console.log(x >= y); // true
+// console.log(a >= y); // true
+// console.log(b >= a); // false
+
+
+
+//-----------------------------
+
+// <=    Less than or equal to   
+// compares two values and checks if the left value is less than or equal to the right value
+
+
+// let x = 10;
+// let y = '10';
+// let z = 10;
+// let a = 18;
+// let b = 15;
+
+// console.log(x <= z); // true
+// console.log(x <= y); // true
+// console.log(a <= b); // false
+// console.log(b <= a); // true
+// console.log(x <= a); // true
 
 
 
 
 
 
+// ================Logical Operators=============
+// Logical operators are used to test for true or false
+// Logical operators are used to determine the logic between variables or values.
+
+// ***Operator***
+
+//    ' && '   Logical AND
+// and অপারেটরের দুইপাশের শর্তই পূরণ করলে true রিটার্ন করবে অথবা false রিটার্ন করবে।
+
+// let x = 10;
+// let y = 10;
+// let a = 18;
+
+// console.log(x > y && a > x); // false
+// console.log(x == y && a > x); // true
+// console.log(x > y && y == x); // false
+
+
+
+
+// -------------------
+
+//    ' || '   Logical OR
+// or অপারেটরের দুই পাশের যে কোন এক পাশ শর্ত পূরণ করলেই true রিটার্ন করবে অথবা false রিটার্ন করবে
+
+// let x = 10;
+// let y = 10;
+// let a = 18;
+
+// console.log(x > y || a > x); // true
+// console.log(x == y || a < x); // true
+// console.log(x == a || a < x); // false
+
+//----------------------
+
+//   ' ! '   Logical NOT
+// যদি কোন রিটার্ন true অথবা রিটার্ন false এর বিপরীত ফলাফল পেতে চাই তাহলে not অপারেটর ব্যবহার করতে হবে
+
+// let x = 10;
+// let y = 10;
+// let a = 18;
+
+
+// console.log(x == y); // true
+// console.log(!(x == y)); // false
+// console.log(x <= y); // true
+// console.log(!(x <= y)); // false
+// console.log(x === y); // true
+// console.log(!(x === y)); // false
+// console.log(x !== y); // false
+// console.log(x !== a); // true
+// console.log(!(x !== a)); // false
 
 
 
 
 
 
+// ===========Conditional (Ternary) Operator=====================
+// JavaScript also contains a conditional operator that assigns a value to a variable based on some condition.
+
+// Syntax: variablename = (condition) ? value1:value2 
+
+// কন্ডিশন true হলে বাম পাশেরটা  আর  কন্ডিশন false হলে ডান পাশেরটা রিটার্ন করে
+
+// let age = 20;
+
+// console.log(5 > 10);
+// console.log(5 > 10 ? "true" : "false");
+
+// console.log(age < 28)
+// console.log(age < 28 ? "Too young":"Old enough");
 
 
 
 
 
 
+// ===========Nullish Coalescing Operator (??)=================
+
+// The Nullish Coalescing Operator (??) returns the first argument if it is not nullish (null or undefined).
+
+// Nullish Coalescing Operator (??) প্রথম আর্গুমেন্ট ফেরত দেয় যদি এটি নালিশ না হয় (নাল বা অনির্ধারিত)।
+
+// Syntax: first argument ?? second argument
+
+
+// let first = undefined;
+// let first = null;
+// let first = 'sohel';
+// let first = [];
+// let first = {};
+// let second = 5;
+// let result = first ?? second;
+// // console.log(result);
+// // console.log(typeof result);
 
 
 
 
+
+
+//===========Optional Chaining Operator (?.)====================
+
+// The Optional Chaining Operator (?.) returns undefined if an object is undefined or null (instead of throwing an error).
+
+// ঐচ্ছিক চেইনিং অপারেটর (?.) undefined রিটার্ন করে যদি কোনো বস্তু undefined or null থাকে (একটি ত্রুটি নিক্ষেপ করার পরিবর্তে)। এছাড়া যদি যে উপাদানটি খুজছি সেটি পাওয়া যায় তাহলে সেই উপাদানটি রিটার্ন করে
+
+
+// const car = {type:"Fiat", model:"500", color:"white"};
+
+// console.log(car?.type);
+// console.log(car?.company);
+// console.log(car?.company?.name);
 
 
 
