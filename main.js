@@ -1,83 +1,88 @@
-/*
-
-a = 3;
-var a;
-console.log(a);
-
-*/
 
 
-/*
+// a = 3;
+// var a;
+// console.log(a);
 
-x = 3;
-let x;
-console.log(x);
 
-*/
 
-// const a ;
-// a = 4;
 
-/*
+// let x;
+// x = 3;
+// // let x;
+// console.log(x);
 
-const friNames = ["Ahmed", "Osama", "Sayed"];
-console.log(friNames);
 
-friNames[1] = "sohel";
-console.log(friNames);
 
-friNames.push('sathi')
-console.log(friNames);
+// // const a = 2;
+// // const a;
+// // a = 4;
+// console.log(a);
 
-*/
 
-/*
+// const friNames = ["Ahmed", "Osama", "Sayed"];
+// console.log(friNames);
 
-const about ={
-    name: "Ahmed",
-    age: 23,
-    job: "Developer" 
-}
-console.log(about);
+// friNames[1] = "sohel";
+// console.log(friNames);
 
-about.age = 24;
-console.log(about);
+// friNames.push('sathi')
+// console.log(friNames);
 
-about['name'] = "sami";
-console.log(about);
 
-about.possition = "web developer";
-console.log(about);
 
-*/
 
-/*
 
-const a = 5;
+// const about ={
+//     name: "Ahmed",
+//     age: 23,
+//     job: "Developer" 
+// }
+// console.log(about);
 
-{
-    const a = 4;
-    console.log(a);
-}
-console.log(a);
+// about.age = 24;
+// console.log(about);
 
-*/
+// about['name'] = "sami";
+// console.log(about);
 
-/*
-const person = {
-    name: "Ahmed",
-    age: 23,
-    job: "Developer",   
-    fullName: function(){
-        console.log(this); //this define full person object
-        console.log(this.name, this.age);
-        console.log(person.name, person.age);
-    }
-}
 
-person.fullName();
+// অবজেক্টের যদি কোন প্রপার্টির মান চেঞ্জ করতে চাই, আর সেখানে যদি প্রপার্টি টা না পাওয়া যায়, তাহলে সেটি নতুন প্রপার্টি হিসেবে Add করে দেওয়া হয়
+// about.possition = "web developer";
+// console.log(about);
 
-*/
+
+
+
+
+// const a = 5;
+// let b = 7;
+// // let b = 8;
+
+// {
+//     const a = 4;
+//     console.log(a);
+//     let b = 8;
+//     console.log(b);
+// }
+// console.log(a);
+
+
+
+
+// const person = {
+//     name: "Ahmed",
+//     age: 23,
+//     job: "Developer",   
+//     fullName: function(){
+//         console.log(this); //this define full person object
+//         console.log(this.name, this.age);
+//         console.log(person.name, person.age);
+//     }
+// }
+
+// person.fullName();
+
 
 
 
@@ -85,20 +90,29 @@ person.fullName();
 // ****==================***String Methods****==========================*****
 
 
-// let fullName = 'Khan Muhammad Sohel Khan';
+// let fullName = 'Khan Muhammad Sohel khan';
 
 // console.log(fullName);
+//
+// console.log(fullName.slice(0, 5)); // The slice() method returns the extracted part in a new string || Return Value: A string containing the extracted characters
+// console.log(fullName);
 
-// console.log(fullName.slice( 0, 4) );
 
-// console.log(fullName.substring(4, 13));
+// console.log(fullName.substring(0, 5)); // The substring() method extracts characters from start to end (exclusive) || Return Value: The extracted part of the string
+// console.log(fullName);
 
 
-// // substr() Method is Deprecated-BAD //
+// substr() Method is Deprecated-BAD //
 // console.log(fullName.substr(13, 5)); 
 
+
 // // replace() Method case-sensitive
-// console.log(fullName.replace('Khan', ''));
+// The replace() method searches a string for a value or a regular expression.
+// The replace() method returns a new string with the value(s) replaced.
+// The replace() method does not change the original string.
+// By default  replace method change the first match
+// console.log(fullName.replace('khan', ''));
+// console.log(fullName);
 
 
 // // With regular expression [/replace text/i] replace() Method insensitive
@@ -115,7 +129,35 @@ person.fullName();
 
 
 // // =========Concat() Method=====================
+// concat means connected between or among
 
+// The concat() method creates a new array by merging (concatenating) existing arrays
+
+// The concat() method does not change the existing arrays. It always returns a new array.
+
+// The concat() method can take any number, arrays, Objects or primitive values of array arguments.
+
+// const arr6 = [1, 2, 3, 4, 5];
+// const arr7 = [6, 7, 8, 9, 10];
+// const arr8 = [11, 12, 13, 14, 15];
+
+// let nam = 'sohel';
+// let nam2 = 'sathi';
+// let nam3 = 'rufaida';
+
+// const obj = { name : 'sohel' , age : 23};
+
+// console.log(arr6.concat(arr7, arr8, obj));
+
+// console.log(nam.concat(' ', nam2, ' ', nam3), ...arr6, ...arr7, arr8, obj);
+
+
+// let items = (nam.concat(' ', nam2, ' ', nam3), arr6, arr7, arr8, obj)
+
+// console.log(typeof items);
+
+
+//==================
 // let a = 'Sohel';
 // let b = 'Sathi';
 
@@ -136,29 +178,50 @@ person.fullName();
 
 // //===================trim() Method======================
 
-// // trim() method removes whitespace from both ends of a string
-
 // let d = '      sami       ';
-// console.log(d.trim());
+// console.log(d.trim()); // trim() method removes whitespace from both ends of a string
+
+// console.log(d.trimStart()); //  trimStart() method removes whitespace from the beginning of a string
+
+// console.log(d.trimEnd()); // trimEnd() method removes whitespace from the end of a string.
+
+
 
 
 
 
 // // ============padStart() and padEnd() Method==================
 
+// padStart() and padEnd() Method are a string method.
+// To pad a number, convert the number to a string first.(toString())
+
+// let c = "5";
 // console.log(c.padStart(10, ' ')); // padStart() method adds padding to the start of a string
+// console.log(c.padStart(10, '0')); // padStart() method adds padding to the start of a string
+
+
 // console.log(c.padEnd(8, '0')); // padEnd() method adds padding to the end of a string
+// console.log(c.padEnd(8, ' ')); // padEnd() method adds padding to the end of a string
+
 
 
 
 
 // // ===============charAt() Method================
-// var n = 'Muhammad sajid';
+var n = 'Muhammad sajid';
 // console.log(n.charAt(11)); // charAt() method returns the character at the specified index(position) in a string
+// console.log(n.charAt(11.5)); // charAt() method returns the character at the specified index(position) in a string
 
-// console.log(typeof n.charAt(44)); // returns an empty string
+// console.log(n.at(12)); // at() method returns the character at the specified index(position) in a string
+// console.log(n.at(12.9)); // at() method returns the character at the specified index(position) in a string
 
-// console.log(n[6]); // bracket operator can also be used to access characters in a string
+// console.log(n.charAt(77)); // returns an empty string
+// console.log(typeof(n.charAt(77))); // returns string
+
+// console.log(n.at(77)); // returns an undefined string
+// console.log(typeof (n.at(77))); // returns an undefined 
+
+// console.log(n[11]); // bracket operator can also be used to access characters in a string
 
 // console.log(n[77]); // returns undefined
 
@@ -178,37 +241,47 @@ person.fullName();
 
 
 // ===============indexOf() method==================
+// The indexOf() method is case sensitive.
 
 // let fName = 'Rufaida Binte Sohel, binte';
 
-// console.log(fName.indexOf('Binte')); // indexOf() method searches a string for a specified value and returns its position
+// console.log(fName.indexOf('n')); // indexOf() method searches a string for a specified value and returns its position
 
-// console.log(fName.indexOf('Sohel', 8)); 
+// console.log(fName.indexOf('S', 8));  // প্রথম প্যারামিটার হচ্ছে আমি কি অনুসন্ধান করছি দ্বিতীয় প্যারামিটার হচ্ছে কোথা থেকে বা কততম ইনডেক্সে অনুসন্ধান শুরু হবে
  
-// console.log(fName.indexOf('Sohel', 20)); // returns -1 if the value is not found
+// console.log(fName.indexOf('S', 15)); // returns -1 if the value is not found
 
 
 
 
 // =============== lastIndexOf() method==================
 
-// console.log(fName.lastIndexOf('Sohel')); // lastIndexOf() method searches a string for a specified value and returns its position
+//এটা ইনডেক্স অফ এর মতনই কাজ করে কিন্তু পার্থক্য আছে শুধু শেষের দিক দিয়ে খোঁজা শুরু করে
 
-// console.log(fName.lastIndexOf('Binte', 8)); //??????????????
+// let fName = 'Rufaida Binte Sohel, binte';
+
+// console.log(fName.lastIndexOf('S')); // lastIndexOf() method searches a string for a specified value and returns its position
+
+// console.log(fName.lastIndexOf('B', 9)); 
+// console.log(fName.lastIndexOf('B', 7)); // returns -1 if the value is not found
 
 
 
 // =============== search() method==================
 
-// console.log(fName.search('Sohel')); // search() method searches a string for a specified value and returns the position of the match
 
-// console.log(fName.search(/binte/g)); 
+// let fName = 'Rufaida Binte Sohel, binte';
 
-// console.log(fName.search(/binte/i));
+// console.log(fName.search('S')); // search() method searches a string for a specified value and returns the position of the first match
+
+// console.log(fName.search(/b/g)); 
+// console.log(fName.search(/b/i));
+// console.log(fName.search(/i/ig));
 
 
 
 // =============== match() method==================
+// let fName = 'Rufaida Binte Sohel, binte';
 
 // console.log(fName.match('Sohel')); // ম্যাচ() পদ্ধতি একটি স্ট্রিং এর বিপরীতে একটি স্ট্রিং মেলানোর ফলাফল ধারণকারী একটি অ্যারে প্রদান করে ...match() will return only the first match in the string.
 
@@ -223,29 +296,40 @@ person.fullName();
 
 
 // =============== matchAll() method==================
+// let fName = 'Rufaida Binte Sohel, binte';
 
 // console.log(fName.matchAll('binte')); // matchAll() method searches a string for all occurrences of a specified value and returns an iterator object with all results
 
-// console.log(Array.from(fName.matchAll('binte'))); // returns an iterator object
+// console.log(Array.from(fName.matchAll('binte'))); // returns an  Array with all results
 
 // console.log(fName.matchAll(/binte/gi)); // the global flag (g) and insensitive flag (i) must be set
 
+// console.log(Array.from(fName.matchAll(/binte/gi))); // the global flag (g) and insensitive flag (i) must be set
 
 
 
 // =============== from() method==================
+// let fName = 'Rufaida Binte Sohel, binte';
 
 // console.log(Array.from(fName.matchAll(/binte/gi)));
 
 
 
 
-// =============== includes() method==================
 
-// console.log(fName.includes('binte')); // includes() method returns true if a string contains a specified value, otherwise it returns false
+// =============== includes() method(string)==================
+// The includes() method is case sensitive.
+// এটা দুইটা প্যারামিটার থাকে প্রথমটা হচ্ছে কি অনুসন্ধান করছি এবং দ্বিতীয়টা হচ্ছে ইনডেক্স নাম্বার যে ইন্ডেস থেকে অনুসন্ধান করা শুরু হবে( Default value is 0)
 
-// console.log(fName.includes('Rufaida', 10)); // returns true if the value is found, otherwise returns false
+// let fName = 'Rufaida Binte Sohel, binte';
 
+// console.log(fName.includes('b')); // includes() method returns true if a string contains a specified value, otherwise it returns false
+
+// The position to start from. Default value is 0
+
+// console.log(fName.includes('S', 5)); // returns true if the value is found, otherwise returns false
+
+// console.log(fName.includes('R', 3)); // returns true if the value is found, otherwise returns false
 
 
 
@@ -258,23 +342,15 @@ person.fullName();
 
 //**********==========================Numbers=====================**********
 
-
 // let a = 10;
-// let b = 20;
 // let c = '5';
-// let d = '2.5';
 
-// console.log(a + b);
-
-// console.log(a + c);
+// console.log(a + c); // return 105
+// console.log(a + +c); // return 15
+// console.log(a + Number(c)); // return 15
 // console.log(a / c);
 // console.log(a * c);
 // console.log((a - c));
-
-// console.log(a + d);
-// console.log(c / d);
-// console.log(c * d);
-// console.log((c - d));
 
 // console.log(typeof (NaN));
 
@@ -282,6 +358,8 @@ person.fullName();
 
 
 //============== toString() Method================
+// The toString() method returns a string as a string.
+// The toString() method does not change the original string
 
 // let num = 10;
 // console.log(typeof num);
@@ -304,15 +382,26 @@ person.fullName();
 
 //============== toPrecision() Method================
 
-// // toPrecision() Method (ekti sonkhar total length nirdaron kore)
+// // toPrecision() Method (ekti sonkhar total length nirdaron kore)[দশমিকের আগে ও পরে সহ]
 
+// let num6 = 1000000; // Return 100000
 // let num6 = 100.3436457463;
 // console.log((num6.toPrecision(6)));
 
 
 
 
+
 // ===============parseInt() Method============
+// The parseInt method parses a value as a string and returns the first integer.
+
+// If the first character cannot be converted, NaN is returned.
+
+// Only the first integer found is returned
+
+// it has two parameters: 1.(Required) The value to be parsed and 2.(Optional[Default is 10]) A number (2 to 36) specifying the number system
+
+// The second parameter is the radix (base) of the number. It is optional. If not specified, JavaScript assumes the base is 10.
 
 // console.log((parseInt('5.6789'))); // parseInt() method parses a string to Number and returns an integer
 
@@ -323,11 +412,15 @@ person.fullName();
 
 
 // ===============parseFloat() Method============
+// The parseFloat() method parses a value as a string and returns the first number(Only Number).
 
-// console.log(parseFloat("4.8ghfg")); // parseFloat() method parses a string to a number and returns a floating-point number 
+// If the first character cannot be converted, NaN is returned.
 
+// Only the first number found is returned
 
+// Parameters: (Required) The value to parse.
 
+// console.log(parseFloat("45.8ghfg")); // parseFloat() method parses a string to a number and returns a floating-point number 
 
 
 
@@ -352,13 +445,19 @@ person.fullName();
 // console.log(arr[arr2]); // last element access
 
 
+
+//******=====================Array Methods=========================== ****** 
+
+
 //============push() method================
+// push() method adds one or more elements to the end of an array and returns the new length of the array
 
-// arr.push(55); // push() method adds one or more elements to the end of an array and returns the new length of the array
+// The push() method adds new items to the end of an array.
 
-// arr[arr.length] = 77; 
+// The push() method changes the length of the array.
 
-// arr[13] = 88; // Adding elements with high indexes can create undefined "holes" in an array:
+// The push() method returns the new length.
+
 
 //In JavaScript, arrays use numbered indexes.  
 
@@ -366,10 +465,27 @@ person.fullName();
 
 // Arrays are a special kind of objects, with numbered indexes.
 
+// const arr = [1, 2, 3, 4, "5", 6, 7, 8, 9, "10"];
+
+// arr.push(55); 
+
+// console.log(arr.push(99)); // return new length
+
+// arr[arr.length] = 77; 
+
+// arr[13] = 88; // Adding elements with high indexes can create undefined "holes" in an array:
+
+// console.log(arr);
+// console.log(arr[12]);
 
 
 
-//==================Array.isArray() ========================
+
+
+//===================Array.isArray() ==================
+
+// const arr = [1, 2, 3, 4, "5", 6, 7, 8, 9, "10"];
+
 
 // console.log(Array.isArray(arr)); // Array.isArray() পদ্ধতি নির্ধারণ করে যে একটি বস্তু একটি অ্যারে কিনা
 
@@ -379,87 +495,142 @@ person.fullName();
 
 
 
-//******=====================Array Methods=========================== ****** 
-
 
 // ==================toString()=========================
-
-// console.log(arr.toString()); // toString() method converts an array to a string of (comma separated) array values. 
 // JavaScript automatically converts an array to a comma separated string when a primitive value is expected
 
 // All JavaScript objects have a toString() method.
 
 
+// const arr = [1, 2, 3, 4, "5", 6, 7, 8, 9, "10"];
+
+// console.log(arr.toString()); // toString() method converts an array to a string of (comma separated) array values. 
+
+// console.log(typeof arr.toString()); // type string
+
+
+
 
 
 //===================== join() method =====================
+// The join() method also joins all array elements into a string. It behaves just like toString(), but in addition you can specify the separator
+
+// const arr = [1, 2, 3, 4, "5", 6, 7, 8, 9, "10"];
 
 
-// console.log(arr.join(' - ')); // The join() method also joins all array elements into a string. It behaves just like toString(), but in addition you can specify the separator
+// console.log(arr.join()); 
+// console.log(arr.join(' ')); 
+// console.log(arr.join(' - ')); 
 
 
 
 
 //=============pop() method======================
+// pop() method removes the last element from an array and returns that element.
 
-// let removed = arr.pop(); // pop() method removes the last element from an array and returns that element.
-// console.log(removed);
+// The pop() method changes the original array.
+
+// The pop() method returns the removed element.
+
+// const arr = [1, 2, 3, 4, "5", 6, 7, 8, 9, "10"];
+
+// console.log(arr.pop());
+// console.log(arr);
+
+
 
 
 
 
 //=============shift() method======================
+// The shift() method removes the first array element and "shifts" all other elements to a lower index and returns that removed element.
 
-// console.log(arr.shift()); // The shift() method removes the first array element and "shifts" all other elements to a lower index and returns that removed element.
+// The shift() method removes the first item of an array.
 
+// The shift() method changes the original array.
 
+// The shift() method returns the shifted element
 
-// =================push() method================
+// const arr = [1, 2, 3, 4, "5", 6, 7, 8, 9, "10"];
 
-// console.log(arr.push(99)); // push() method adds one or more elements to the end of an array and returns the new length of the array
+// console.log(arr.shift()); 
+// console.log(arr);
+
 
 
 
 
 
 // =================unshift() method================
+// unshift() method adds one or more elements to the beginning of an array and "shifts" all other elements to a higher index and returns the new length of the array
 
-// console.log(arr.unshift(11)); // unshift() method adds one or more elements to the beginning of an array and "shifts" all other elements to a higher index and returns the new length of the array
+// The unshift() method overwrites the original array.
+
+// const arr = [1, 2, 3, 4, "5", 6, 7, 8, 9, "10"];
+
+// console.log(arr.unshift(11)); 
+
+// arr[8] = 15;  // Array elements are accessed using their index number and change the value of that element.
 
 // arr[12] = 15;  // Array elements are accessed using their index number and change the value of that element.
+
+// arr[15] = 15;  // Array elements are accessed using their index number and change the value of that element.
+
+// console.log(arr);
+
 
 
 
 
 // ==================delete operator=================
+// delete operator is used to remove the element from an array using index number or property name
 
-// console.log(delete arr[3]); // delete operator is used to remove the element from an array using index number or property name ???????????
+// এটি মূলকে পরিবর্তন করে
+
+// Using delete() leaves undefined holes in the array.
+
+// The delete operator deletes both the value of the property and the property itself.
+
+
+// const arr = [1, 2, 3, 4, "5", 6, 7, 8, 9, "10"];
+// const obj = { name : "sohel" , age : 23};
+
+// console.log(delete arr[0]); 
+// console.log(delete obj.name); 
+// // console.log(delete obj.job); // property not found 
+
+// console.log(arr);
+// console.log(obj);
 
 
 
 
 // =================splice() method================
 
-// console.log(arr); 
-
-// console.log(arr.splice(2, 2)); // only removed elements
-
 // ****splice has 3 parameters**** 
-
 // 1. The first parameter defines the position where new elements should be added (spliced in).
-
 // 2. The second parameter defines how many elements should be removed.
-
 // 3. The rest of the parameters define the new elements to be added.
 
 // The splice() method returns an array with the deleted items:
 
-
 // splice() method removes elements from an array and or adds new elements in place of removed elements. It returns an array containing the deleted elements.
 
-// console.log(arr.splice(2, 2 , 'sohel', 'sathi')); / removed and added new elements
+// const arr = [1, 2, 3, 4, "5", 6, 7, 8, 9, "10"];
 
-// console.log(arr.splice(2, 0 , 'sohel', 'sathi')); // only added new elements 
+// console.log(arr); 
+
+// console.log(arr.splice(2, 2)); // only removed elements, return removed elements array
+
+// console.log(arr.splice(2, 2 , 'sohel', 'sathi')); // removed and added new elements
+
+// console.log(arr.splice(2, 2 , [2, 3, 6])); // removed and added new elements
+
+// console.log(arr.splice(arr.length, 0 , [2, 3, 6])); // only added new elements
+
+// console.log(arr.splice(0, 0 , 'sohel', 'sathi')); // only added new elements 
+
+// console.log(arr);
 
 
 
@@ -467,41 +638,50 @@ person.fullName();
 
 // ================toSpliced() method================
 
-// toSpliced() method removes elements from an array and or adds new elements in place of removed elements. It returns an new array containing with the new elements. array toSpliced() পদ্ধতিটি মূল অ্যারে পরিবর্তন না করে একটি অ্যারেকে বিভক্ত করার একটি নিরাপদ উপায় হিসাবে।
+// toSpliced() method removes elements from an array and or adds new elements in place of removed elements. It returns an new array containing with the new elements. 
 
-// console.log(arr.toSpliced(2, 4, 'sohel', 'sathi')); // removed and added new elements
+// array toSpliced() পদ্ধতিটি মূল অ্যারে পরিবর্তন করে না।
 
-// console.log(arr.toSpliced(2, 0, 'sohel', 'sathi')); // only added new elements 
+// const arr = [1, 2, 3, 4, "5", 6, 7, 8, 9, "10"];
 
+// console.log(arr.toSpliced(2, 4, 'sohel', 'sathi')); // removed and added new elements{returns an new array containing with the new elements.}
 
+// console.log(arr.toSpliced(2, 0, 'sohel', 'sathi')); // only added new elements {returns an new array containing with the new elements.}
 
-
-
-
-
-
+// console.log(arr);
 
 
-// ****=================Arrays concating================******
+
+
+
+
+
+// ****=================Arrays concating(onject, string)================******
 
 // The concat() method creates a new array by merging (concatenating) existing arrays
 
 // The concat() method does not change the existing arrays. It always returns a new array.
 
-// The concat() method can take any number of array arguments.
+// The concat() method can take any number, arrays, Objects or primitive values of array arguments.
 
-const arr6 = [1, 2, 3, 4, 5];
-const arr7 = [6, 7, 8, 9, 10];
-const arr8 = [11, 12, 13, 14, 15];
+// const arr6 = [1, 2, 3, 4, 5];
+// const arr7 = [6, 7, 8, 9, 10];
+// const arr8 = [11, 12, 13, 14, 15];
+
+// let nam = 'sohel';
+// let nam2 = 'sathi';
+// let nam3 = 'rufaida';
+
+// const obj = { name : 'sohel' , age : 23};
+
+// console.log(arr6.concat(arr7, arr8, obj));
+
+// console.log(nam.concat(' ', nam2, ' ', nam3), ...arr6, ...arr7, arr8, obj);
 
 
-// console.log(arr6.concat(arr7, arr8, 20, '21', 22, 23));
+// let items = (nam.concat(' ', nam2, ' ', nam3), arr6, arr7, arr8, obj)
 
-let nam = 'sohel';
-let nam2 = 'sathi';
-let nam3 = 'rufaida';
-
-// console.log(nam.concat(' ', nam2, ' ', nam3), 33, '44', 55);
+// console.log(typeof items);
 
 
 
@@ -511,8 +691,6 @@ let nam3 = 'rufaida';
 
 
 //***** =============Array Slicing===============******
-
-// console.log(arr.slice(2, 6)); 
 // The slice() method slices out a piece of an array into a new array
 
 // The slice() method creates a new array. It return sliced part of the array without ending index element.
@@ -523,14 +701,20 @@ let nam3 = 'rufaida';
 
 // If the 2nd parameter is omitted, the slice() method slices out the rest of the array.
 
+// দ্বিতীয় প্যারামিটারের যে ইনভেক্সটা আছে ওটার এলিমেন্ট বাদ দিয়ে বাকিগুলা রিটার্ন করে
+
+// const arr = [1, 2, 3, 4, "5", 6, 7, 8, 9, "10"];
+
+// console.log(arr.slice(2, 6)); // 3, 4, "5", 6
+// console.log(arr);
 
 
 
 
 
-// ****==================Array at() method==================== *****
 
-// console.log(arr.at(3)); 
+
+//==================Array at() method==================== 
 
 // Array at() method returns the element at the specified index
 
@@ -539,27 +723,38 @@ let nam3 = 'rufaida';
 // The at() method takes one parameter: the index of the element to return.
 
 
+// const arr = [1, 2, 3, 4, "5", 6, 7, 8, 9, "10"];
+
+// console.log(arr.at(3)); 
+// console.log(arr[3]);
 
 
 
 
-// ********===========Array flat() method==================== ***
 
- const newArr = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]];
+
+// ===========Array flat() method====================
+
+// Array flat() method returns a new array with all sub-array elements concatenated into it recursively up to the specified depth.
+
+// অ্যারে ফ্ল্যাট() পদ্ধতি একটি নতুন অ্যারে প্রদান করে যার মধ্যে নির্দিষ্ট  অ্যারে সমস্ত সাব-অ্যারে উপাদান রয়েছে।
+
+// It work like concating.
+
+//  const newArr = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]];
 
 // console.log(newArr.flat()); 
 
-// Array flat() method returns a new array with all sub-array elements concatenated into it recursively up to the specified depth.
-// অ্যারে ফ্ল্যাট() পদ্ধতি একটি নতুন অ্যারে প্রদান করে যার মধ্যে নির্দিষ্ট  অ্যারে সমস্ত সাব-অ্যারে উপাদান রয়েছে।
 
 
 
 
 
+// ===============Array copyWithin() method ===============
 
-// *******===============Array copyWithin() method ===============*********
+// Array copyWithin() method copies array elements within the array. (copyWithin() পদ্ধতি অ্যারের উপাদানকে একটি অ্যারের অন্য অবস্থানে অনুলিপি করে)
 
-// Array copyWithin() method copies array elements within the array. copyWithin() পদ্ধতি অ্যারের উপাদানকে একটি অ্যারের অন্য অবস্থানে অনুলিপি করে
+// The copyWithin() method copies array elements to another position in an array.
 
 // The copyWithin() method overwrites the existing values. returns the modified array.
 
@@ -569,14 +764,27 @@ let nam3 = 'rufaida';
 
 // target jodi array er length teke boro hoy tahole copy hobe na.
 
-// The copyWithin() method takes three parameters: 1. target, 2. start, and 3. end.
+// The copyWithin() method takes three parameters: 1. target index(it is replaced by copy elements), 2. start index(কত তম ইনডেক্স থেকে কপি শুরু হবে), and 3. end index(কত তম ইনডেক্সে কপি শেষ হবে).
+
+// কপিকৃত এলিমেন্ট ও রেস্ট(বাকি) এলিমেন্ট এর length যদি মূল এলিমেন্ট এর length থেকে বড় হয়, তাহলে কপিকৃত এলিমেন্ট থেকে এলিমেন্ট বাদ পরবে (শেষের দিক থেকে)
 
 // By Default, Starting index is 0 and ending index is array length - 1.
 
 // const fruits = ["Banana", "Orange", "Apple", "Mango", "Kiwi", "Avocado"];
 
+
+// console.log(fruits[1]);
+// console.log(fruits[3]);
+// console.log(fruits[2]);
 // console.log(fruits.copyWithin(6, 0));; 
 
+// console.log(fruits.copyWithin(1, 0));;  // console.log(fruits.copyWithin(1));; 
+
+// console.log(fruits.copyWithin(3, 2, 3));; 
+
+// console.log(fruits.copyWithin(3, 2, 4));; 
+
+// console.log(fruits.copyWithin(2, 1, 3));; 
 
 
 
@@ -584,7 +792,10 @@ let nam3 = 'rufaida';
 
 
 
-// *******==============Array sort() method =============*****
+
+
+
+// ==============Array sort() method ===================
 
 // By default, the sort() function sorts values as strings.
 
@@ -592,50 +803,70 @@ let nam3 = 'rufaida';
 
 // jodi kono element er first letter capital hoy tahole otai age bosbe
 
+// by default প্রথম অক্ষর বা বর্ণনা অনুযায়ী sort করে
+
 // const nams = ['sohel', 'sathi', 'rufaida', 'masum', 'osman'];
+
 // console.log(nams.sort());
 
 
 
 
-
-
-// *******===========Array reverse() method =================*****
-
-// The reverse() method reverses the elements in an array
-
-// const fruits = ["Banana", "Orange", "Apple", "Mango"];
-// console.log(fruits.reverse());
-
-
-
-
-
 // ===============Numeric Sorting==============*********
+// by default প্রথম অক্ষর বা বর্ণনা অনুযায়ী sort করে
 
 // const newNum = [23, 53, 3, 46, 4, 1, 45]
+
 // console.log(newNum.sort(function(a, b){return a - b}));
 
+// console.log(newNum.sort()); // নাম্বারের ক্ষেত্রে ভুল sorting
 
 
 
 // =================Sorting an Array in Random Order============
 
 // const points = [40, 100, 1, 5, 25, 10];
-// points.sort(function(){return 0.5 - Math.random()});
+
+// points.sort(function(){return .3 - Math.random()}); // রিটার্নের ভিতর দশমিকের পরের মান যত বেশি হবে, তত তাড়াতাড়ি এলোমেলো সর্টিং হবে 
 // console.log(points);
 
 
 
 
 
-// ==============Find the Lowest (or Highest) Array Value================********
+// =============Array reverse() method ====================
 
-// Sort the array and read the first or last element
-// Use Math.min() or Math.max()
+// The reverse() method reverses the elements in an array
 
-// console.log(Math.max.apply(null, arr));
-// console.log(Math.min.apply(null, arr));
+// মূল Array বিপরীতভাবে সাজানো
+
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// console.log(fruits.reverse()); // মূল Array বিপরীতভাবে সাজানো
+
+// console.log(fruits.sort().reverse()); // মূল ARRAY শর্ট করে বিপরীতভাবে সাজানো --->> By combining sort() and reverse(), you can sort an array in descending order:
+
+
+
+
+
+
+
+// ==============Find the Lowest (or Highest) Array Value================ ??
+
+// Sort the array and read the first or last element using Math.min() or Math.max()
+
+// Array টি যদি এলোমেলো হয়, তাহলে প্রথমে sort করে সাজিয়ে নিতে হবে
+
+// null represent 0
+
+// const arr = [null, 1, 2, 3, 4, "5", 6, 7, 8, 9, "10"]; 
+// const arr = [1, 2, 3, 4, "5", 6, 7, 8, 9, "10"];
+
+// console.log(Math.max.apply(null, arr)); // Old way
+// console.log(Math.min.apply(null, arr)); // Old way
+
+// console.log(Math.max(...arr));
+// console.log(Math.min(...arr));
 
 
 
@@ -645,16 +876,19 @@ let nam3 = 'rufaida';
 
 // ===========================Sorting Object Arrays==================********
 
-const cars = [
-  {type:"Volvo", year:2016},
-  {type:"Saab", year:2001},
-  {type:"BMW", year:2010}
-];
+// const cars = [
+//   {type:"Volvo", year:2016},
+//   {type:"Saab", year:2001},
+//   {type:"BMW", year:2010}
+// ];
 
-
+// sorti by year(numerically)
 // cars.sort(function(a, b){return a.year - b.year});
 // cars.sort(function(a, b){return b.year - a.year});
 // console.log(cars);
+
+
+// string properties in alphabetical order sorting???????
 
 
 
@@ -665,6 +899,8 @@ const cars = [
 // the toSorted() method as a safe way to sort an array without altering the original array.
 
 // toSorted() এবং sort() এর মধ্যে পার্থক্য হল যে toSorted() পদ্ধতিটি মূল অ্যারেটিকে অপরিবর্তিত রেখে একটি নতুন অ্যারে তৈরি করে, যখন sort() পদ্ধতিটি মূল অ্যারেটিকে পরিবর্তন করে।
+
+// const arr = [1, 2, 3, 4, "5", 6, 7, 8, 9, "10"];
 
 // console.log(arr.toSorted());
 // console.log(arr.sort());
@@ -681,6 +917,8 @@ const cars = [
 
 // toReversed() এবং reverse() এর মধ্যে পার্থক্য হল যে toReversed() পদ্ধতিটি একটি নতুন অ্যারে তৈরি করে, মূল অ্যারেটিকে অপরিবর্তিত রেখে, যখন reverse() পদ্ধতিটি মূল অ্যারেটিকে পরিবর্তন করে।
 
+// const arr = [1, 2, 3, 4, "5", 6, 7, 8, 9, "10"];
+
 // console.log(arr.toReversed());
 // console.log(arr.reverse());
 
@@ -694,28 +932,49 @@ const cars = [
 //****================ Array Iteration ====================***** 
 
 
-
 // ===============forEach() method===========****
+// যদি কোন Array er প্রত্যেকটা এলিমেন্টের এক্সেস পেতে চাই, তাহলে forEach() মেথড ব্যবহার করতে হবে
+
+// Syntax: array.forEach(function(currentValue, index, arr), thisValue)
 
 // The forEach() method calls a function (a callback function) once for each array element.
 
-// Note that the function takes 3 arguments:1. value, 2. index, 3. array
+// The forEach() method calls a function for each element in an array.
+
+// The forEach() method is not executed for empty elements.
+
+// Note that the function takes 3 arguments:1. value(currentValue), 2. index, 3. array
 
 // const arrNumbers = [45, 4, 9, 16, 25];
-
+// let values = 0;
 // function myFunction(value, index, array) {
-//   console.log(value, index, array);
+// //   console.log(value, index, array);
+// //   console.log(value < 50);
+// //   console.log(value > 50);
+// //   console.log(value + 50);
+// //   console.log(value - 50);
+// //   console.log(value * 5);
+// //   console.log(value / 5);
+// //   console.log(value % 5);
+//      values = values + value;
+    
 // }
 
 // arrNumbers.forEach(myFunction);
+// // console.log(values);
 
 
 
 
 
 //  =============Array map() method================****
+// শর্ত অনুসারে যদি Array থেকে নতুন Array তৈরি করতে হয়, তাহলে Array map() method ইউজ করতে হবে || এছাড়া যদি কোন Array er প্রত্যেকটা এলিমেন্টের এক্সেস পেতে চাই, তাহলে Array map() মেথড ব্যবহার করতে হবে
+
 
 // The map() method creates a new array by performing a function on each array element.
+
+//map() creates a new array from calling a function for every array element.
+
 
 // The map() method does not execute the function for array elements without values.
 
@@ -731,7 +990,9 @@ const cars = [
 
 // function myFunction(value, index, array) {
 // //   console.log(value, index, array);
-//   return value + 1;
+// //   return value > 1;
+// //   return value + 1;
+//   return value ;
 // }
 
 // const newArrNumbers = arrNumbers.map(myFunction);
@@ -743,22 +1004,26 @@ const cars = [
 
 
 // ==================Array filter() method============****
+// মূল Array থেকে শর্ত অনুসারে ফিল্টারিং এর মাধ্যমে নির্দিষ্ট কিছু মান রিটার্ন করে
 
-// The filter() method creates a new array with array elements that pass a test
+// The filter() method creates a new array filled with elements that pass a test provided by a function.
 
-// এটি ফাংশনের শর্ত অনুসারে মূল অ্যারে থেকে এলিমেন্ট নিয়ে নতুন আরে রিটার্ন করে
+// The filter() method does not execute the function for empty elements.
+
+// The filter() method does not change the original array.
 
 // Note that the function takes 3 arguments: 1. value, 2. index, 3. array
 
-//  const arrNumbers = [45, 4, 9, 16, 25];
+//  const arrNumbers2 = [45, 4, 9, 16, 25];
 
-// function myFunction(value, index, array) {
+// function myFunction2(value, index, array) {
 // //   console.log(value, index, array);
-//   return  value > 9;
+//   return  value < 10;
+// //   return  value > 10;
 // }
 
-// const newArrNumbers = arrNumbers.filter(myFunction);
-// console.log(newArrNumbers);
+// const newArrNumbers2 = arrNumbers2.filter(myFunction2);
+// console.log(newArrNumbers2);
 
 
 
@@ -777,16 +1042,16 @@ const cars = [
 
 // The reduce() method executes a reducer function (that you provide) on each element of the array, resulting in a single output value.
 
-
 // Note that the function takes 4 arguments: 1. The total (the initial value / previously returned value), 2. currentValue, 3. currentIndex, 4. array
 
 
 // const arrNumbers = [45, 4, 9, 16, 25];
 
 // function myFunction(total, value, index, array) {
-//     // console.log(total, value, index, array);
+//     console.log(total, value, index, array);
 //     // console.log(index);
-//   return total + index;
+//   return total + value;
+// //   return total + index;
 // }
 
 // const newArrNumbers = arrNumbers.reduce(myFunction);
@@ -799,13 +1064,13 @@ const cars = [
 // const arrNumbers = [45, 4, 9, 16, 25];
 
 // function myFunction(total, value, index, array) {
-//     // console.log(total, value, index, array);
+//     console.log(total, value, index, array);
 //     // console.log(index);
-//   return total;
+//     //  return total + value;
 // }
 
 // const newArrNumbers = arrNumbers.reduce(myFunction, 5);
-// console.log(newArrNumbers);
+// // console.log(newArrNumbers);
 
 
 
@@ -818,19 +1083,22 @@ const cars = [
 
 // The reduceRight() method is similar to reduce(), but reduces the array to a single value from the right side.
 
-// এটা ডান দিক থেকে বাম দিকের দিকে কাজ করে
+// Kintu এটা ডান দিক থেকে বাম দিকে কাজ করে
 
-// it look like reduce() method
+// It Work look like reduce() method
 
 // const arrNumbers = [45, 4, 9, 16, 25];
 
 // function myFunction(total, value, index, array) {
 //     // console.log(total, value, index, array);
 //     // console.log(total);
-//   return total;
+// //   return total;
+//   return total + value;
 // }
 
-// const newArrNumbers = arrNumbers.reduceRight(myFunction);
+// // const newArrNumbers = arrNumbers.reduceRight(myFunction);
+
+// // const newArrNumbers = arrNumbers.reduceRight(myFunction, 3);
 // // console.log(newArrNumbers);
 
 
@@ -845,17 +1113,20 @@ const cars = [
 
 // The every() method returns true if all elements pass the test, false otherwise.
 
-// এখানে প্রত্যেকটা এলিমেন্ট কে শর্ত অনুসারে চেক করে আউটপুট রিটার্ন করে, আউটপুট হচ্ছে true or false, যদি সমস্ত সংখ্যা হয় ।
+// এখানে প্রত্যেকটা এলিমেন্ট কে শর্ত অনুসারে চেক করে আউটপুট রিটার্ন করে, আউটপুট হচ্ছে true or false, যদি সবগুলো সংখ্যা হয় ।
 
 // Note that the function takes 3 arguments: 1. value, 2. index, 3. array
 
 // const arrNumbers = [45, 4, 9, 16, 25];
+// // const arrNumbers = [45, 4, 9, 16, 25, 'sohel'];
 
 // function myFunction(value, index, array) {
 //     // console.log(value, index, array);
 //     // console.log(value < 50);
 //     // console.log(value > 50);
-// //   return value < 50;
+//     // console.log(value == 16);
+// //   return value < 50 && array[3] == 16;
+// //   return value > 50 ;
 // }
 
 // const newArrNumbers = arrNumbers.every(myFunction);
@@ -881,10 +1152,10 @@ const cars = [
 
 // function myFunction(value, index, array) {
 //     // console.log(value, index, array);
-//     // console.log(value < 50);
-//     // console.log(value > 50);
-//     // console.log(value == 45);
-// //   return value < 50;
+// //     console.log(value < 20);
+// //     console.log(value > 40);
+// //     console.log(array[4] == 25);
+// //   return value < 20;
 // }
 
 // const newArrNumbers = arrNumbers.some(myFunction);
@@ -902,14 +1173,19 @@ const cars = [
 
 // The indexOf() method returns -1 if the value is not found.
 
-// it has two argument: 1...(Required) which is item search and 2...(optional) where the search start {Negative values will start at the given position counting from the end, and search to the end.}
+// it has two argument: 1...(Required) which is item search and 2...(optional) where the search start(index number) {Negative values will start at the given position counting from the end, and search to the end.}
 
-// নেতিবাচক মান প্রদত্ত অবস্থানে শুরু হবে শেষ থেকে গণনা করা হবে এবং শেষ পর্যন্ত অনুসন্ধান করা হবে।
+// নেতিবাচক শুরু মান শেষ উপাদান থেকে গণনা করা হয় (তবে এখনও বাম থেকে ডানে অনুসন্ধান করে)।
 
-// const arrNumbers = [45, 4, 16, 16, 25, 16];
+// const arrNumbers = [45, 4, 16, 26, 25, 16, 36];
 
 // console.log(arrNumbers.indexOf(16)); 
-// console.log(arrNumbers.indexOf(16, -8)); 
+// console.log(arrNumbers.indexOf(16, -0)); 
+// console.log(arrNumbers.indexOf(16, 2)); 
+// console.log(arrNumbers.indexOf(25, -3)); 
+// console.log(arrNumbers.indexOf(16, 7)); 
+// console.log(arrNumbers.indexOf(16, -7)); 
+// console.log(arrNumbers.indexOf(16, 8)); 
 
 
 
@@ -925,17 +1201,31 @@ const cars = [
 
 // The lastIndexOf() method returns -1 if the value is not found.
 
+// The lastIndexOf() method searches the string from the end to the beginning.(ডান থেকে বাম দিকে অনুসন্ধান করে)
+
+// lastIndexOf() পদ্ধতি শেষ(ending index) থেকে শুরু (0 index)পর্যন্ত স্ট্রিং অনুসন্ধান করে।
+
+// The lastIndexOf() method returns the index from the beginning (position 0).
+
 // it has two argument: 1...(Required) which is item search and 2...(optional) where the search start {Negative values will start at the given position counting from the end, and search to the end.}
 
-// // নেতিবাচক মান প্রদত্ত অবস্থানে শুরু হবে শেষ থেকে গণনা করা হবে এবং শেষ পর্যন্ত অনুসন্ধান করা হবে।
+// নেতিবাচক শুরু মান শেষ উপাদান থেকে গণনা করা হয় (তবে এখনও ডানে থেকে বাম অনুসন্ধান করে)।
 
+// কিন্তু ইনডেক্স নাম্বার গণনা করা হবে বাম দিক থেকে ডান দিকের দিকে
 
-// const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
+// const arrNumbers = [45, 4, 16, 9, 22, 16, 33, 25, 20, 16, 50];
 
-// // console.log(arrNumbers.lastIndexOf(16)); 
+// console.log(arrNumbers.lastIndexOf(16)); 
 
-// // console.log(arrNumbers.lastIndexOf(16, -3)); 
+// console.log(arrNumbers.lastIndexOf(4, 3));
 
+// console.log(arrNumbers.lastIndexOf(22, 5)); 
+// console.log(arrNumbers.lastIndexOf(33, 8)); 
+// console.log(arrNumbers.lastIndexOf(22, -8)); 
+// console.log(arrNumbers.lastIndexOf(16, -4)); 
+// console.log(arrNumbers.lastIndexOf(33, -5)); 
+// console.log(arrNumbers.lastIndexOf(16, -6)); 
+// console.log(arrNumbers.length); 
 
 
 
@@ -951,11 +1241,18 @@ const cars = [
 
 // it return true if the value is found, otherwise returns false
 
-// it has one argument: 1...(Required) which is item search
+// এটা দুইটা প্যারামিটার থাকে | প্রথমটা হচ্ছে কি অনুসন্ধান করছি এবং দ্বিতীয়টা হচ্ছে ইনডেক্স নাম্বার, যে ইন্ডেস থেকে অনুসন্ধান করা শুরু হবে( Default value is 0)
 
 // const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 
-// // console.log(arrNumbers.includes(16)); 
+// console.log(arrNumbers.includes(16)); 
+// console.log(arrNumbers.includes(15)); 
+// console.log(arrNumbers.includes(25)); 
+// console.log(arrNumbers.includes(25, 6)); 
+// console.log(arrNumbers.includes(25, -3)); 
+// console.log(arrNumbers.includes(9, -4)); 
+// console.log(arrNumbers.includes(9, -5));
+// console.log(arrNumbers.length); 
 
 
 
@@ -967,21 +1264,26 @@ const cars = [
 
 // The find() method returns the value of the first array element that passes a test function
 
-// The find() method returns the value of the first element in the array that satisfies the provided testing function. If no values satisfy the testing function, undefined is returned.
+// The find() method executes a function for each array element.
 
-// 
+// The find() method returns undefined if no elements are found.
+
+// The find() method does not execute the function for empty elements.
+
+//The find() method does not change the original array.
+
+// এটি শর্তের সাথে মিলে যাওয়ার সাথে সাথেই প্রথম উপাদানটা রিটার্ন করে দেয়
 
 // Note that the function takes 3 arguments: 1. value, 2. index, 3. array
 
-// এটি শর্তের সাথে মিলে যাওয়ার সাথে সাথেই প্রথম উপাদানটা রিটার্ন করে দেয়
 
 // const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 
 // function myFunction(value, index, array) {
 //     // console.log(value);
 //     // console.log(index);
-// //   return value > 5;
-// //   return value > 55;
+//     return value > 45;
+//    // return value > 55;
 // }
 
 // let newArrNumbers = arrNumbers.find(myFunction);
@@ -1000,23 +1302,30 @@ const cars = [
 
 // The findIndex() method returns the index of the first array element that passes a test function
 
-// The findIndex() method returns the index of the first element in the array that satisfies the provided testing function. If no values satisfy the testing function, -1 is returned.
+// The findIndex() method executes a function for each array element.
 
-// it return the index of the first element in the array that satisfies 
+// The findIndex() method returns -1 if no match is found.
 
+// The findIndex() method does not execute the function for empty array elements.
+
+// The findIndex() method does not change the original array.
+
+// এটি শর্তের সাথে মিলে যাওয়ার সাথে সাথেই উপাদানটার ইনডেক্স নাম্বার রিটার্ন করে দেয়
+
+// Note that the function takes 3 arguments: 1. value, 2. index, 3. array
 
 // const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 
 // function myFunction(value, index, array) {
 //     // console.log(value);
 //     // console.log(index);
-// //   return value > 55;
+//   return value > 55;
 // //   return value > 5;
 // }
 
 // let newArrNumbers = arrNumbers.findIndex(myFunction);
 
-// // console.log(newArrNumbers);
+// console.log(newArrNumbers);
 
 
 
@@ -1030,9 +1339,20 @@ const cars = [
 
 // এটি fine() methoad এর মতন কাজ করে
 
-// the findLast() method that will start from the end of an array and return the value of the first element that satisfies a condition.
+// The findLast() method returns the value of the last element that passes a test.
 
-// the findLast() method returns the value of the last element in the array that satisfies the provided testing function. If no values satisfy the testing function, undefined is returned.
+// The findLast() method executes a function for each array element.
+
+// The findLast() method returns undefined if no elements are found.
+
+// The findLast() method does not execute the function for empty elements.
+
+// The findLast() method does not change the original array.
+
+// এটি শর্তের সাথে মিলে যাওয়ার সাথে সাথেই প্রথম উপাদানটা রিটার্ন করে দেয়
+
+// Note that the function takes 3 arguments: 1. value, 2. index, 3. array
+
 
 // const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 
@@ -1040,12 +1360,12 @@ const cars = [
 //     // console.log(value);
 //     // console.log(index);
 // //   return value > 55;
-// //   return value > 5;
+//   return value < 10;
 // }
 
 // let newArrNumbers = arrNumbers.findLast(myFunction);
 
-// // console.log(newArrNumbers);
+// console.log(newArrNumbers);
 
 
 
@@ -1057,24 +1377,34 @@ const cars = [
 
 // এটি শেষের দিক থেকে খোঁজা শুরু করে
 
-// এটি fineIndex() methoad এর মতন কাজ করে
+// এটি fineIndex() method এর মতন কাজ করে
 
-// the findLastIndex() method that will start from the end of an array and return the index of the first element that satisfies a condition.
+// The findLastIndex() method executes a function for each array element.
 
-// the findLastIndex() method returns the index of the last element in the array that satisfies the provided testing function. If no values satisfy the testing function, -1 is returned.
+// The findLastIndex() method returns the index (position) of the last element that passes a test.
 
-// const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
+// The findLastIndex() method returns -1 if no match is found.
+
+// The findLastIndex() method does not execute the function for empty array elements.
+
+// The findLastIndex() method does not change the original array.
+
+// এটি শর্তের সাথে মিলে যাওয়ার সাথে সাথেই উপাদানটার ইনডেক্স নাম্বার রিটার্ন করে দেয়
+
+// Note that the function takes 3 arguments: 1. value, 2. index, 3. array
+
+const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 
 // function myFunction(value, index, array) {
 //     // console.log(value);
 //     // console.log(index);
-// //   return value > 55;
-// //   return value > 5;
+//     //   return value > 55;
+//       return value < 5;
 // }
 
 // let newArrNumbers = arrNumbers.findLastIndex(myFunction);
 
-// // console.log(newArrNumbers);
+// console.log(newArrNumbers);
 
 
 
@@ -1084,17 +1414,23 @@ const cars = [
 
 // ==============Array.from() method===============********
 
-// The Array.from() method returns an Array object from any object with a length property or any iterable object
+// The Array.from() method returns an Array from any object with a length property or any iterable object
 
-// The Array.from() method creates a new, shallow-copied Array instance from an array-like or iterable object.
+// The Array.from() method returns an array from any iterable object.
 
 // The Array.from() method can take any number of arguments, or an array-like object
+
+// Array.from() is a static property of the JavaScript Array object.
+
+// You can only use it as Array.from().
+
 // Array.from() পদ্ধতি যেকোন সংখ্যক আর্গুমেন্ট বা অ্যারের মত বস্তু নিতে পারে
+
 // এটি একটি নতুন array তৈরি করে, রিটার্ন কর এবং মূল array ke কোন পরিবর্তন করে না
 
-// let nams9 = 'Rufaida';
-// // console.log(Array.from(nams9));
-// // console.log(nams9);
+// let nams9 = 'Rufaida Sohel';
+// console.log(Array.from(nams9));
+// console.log(nams9);
 
 
 
@@ -1108,14 +1444,16 @@ const cars = [
 
 // The keys() method returns an object with a specified array's index as the key and the index as the value.
 
+// The keys() method does not change the original array.
+
 // এটি এটারেবল অবজেক্ট এর ভিতর ইনডেক্স নাম্বার রিটার্ন করে পরে, যে কোন arrar er, কোন পরিবর্তন করে না
 
 // const fruits = ["Banana", "Orange", "Apple", "Mango"];
 // const keys = fruits.keys();
-// // console.log(keys);
+// console.log(keys);
 
 // for (let x of keys) {
-// //   console.log(x);
+//   console.log(x);
 // }
 
 
@@ -1130,10 +1468,9 @@ const cars = [
 
 // The entries() method does not change the original array.
 
-
 // The entries() method returns a new Array Iterator object that contains the key/value pairs for each index in the array.
 
-// এটি প্রত্যেকটা এলিমেন্ট এবং এলিমেন্টের ইনডেক্স নাম্বার নিয়ে একত্রে একটি একটি করে রিটার্ন করে
+// এটি প্রত্যেকটা এলিমেন্ট এবং এলিমেন্টের ইনডেক্স নাম্বার নিয়ে একত্রে একটি একটি Array রিটার্ন করে
 
 // const fruits = ["Banana", "Orange", "Apple", "Mango"];
 // const f = fruits.entries();
@@ -1155,11 +1492,18 @@ const cars = [
 
 // Array with() method as a safe way to update elements in an array without altering the original array.
 
+// The with() method updates a specified array element.
+
+// The with() method returns a new array.
+
+// The with() method does not change the original array.
+
 // এটি মূলাকে array কে পরিবর্তন করে না, একটি নতুন array তৈরি করে
 
+// এটি দুইটি প্যারামিটার গ্রহণ করে: প্রথমটি হচ্ছে (ইনডেক্স নাম্বার) যে ইন্ডেক্স এর মান পরিবর্তন করতে হবে এবং দ্বিতীয়টি হচ্ছে পরিবর্তন করে কোন মানটি বসাতে হবে (সেই মান)
 
 // const months = ["Januar", "Februar", "Mar", "April"];
-// const myMonths = months.with(2, "March");
+// const myMonths = months.with(1, "March");
 
 // // console.log(myMonths);
 // // console.log(months);
@@ -1195,15 +1539,15 @@ const cars = [
 
 //=========JavaScript Array Constant(const)==========
 
-// it is very common practice to declare using const
+// it is very common practice to declare using 'const'
 
-// Elements can be reassigned
+// Value cannot be reassigned and redeclared
 
-// const একসাথে ডিক্লেয়ার এবং এসাইন করতে হবে
+// const একসাথে declare এবং assigne করতে হবে
 
 // an array declare with constant has Block Scoop
 
-// আলাদা আলাদা স্কোপের মধ্যে একই কনস্ট ভেরিয়েবল ডিক্লেয়ার করা যাবে
+// আলাদা আলাদা স্কোপের মধ্যে একই 'const' ভেরিয়েবল declare করা যাবে
 
 
 
@@ -1307,10 +1651,10 @@ const cars = [
 // Short Date	 "03/25/2015"
 // Long Date	 "Mar 25 2015" or "25 Mar 2015"
 
+
 // The ISO format follows a strict standard in JavaScript.
 
 // The other formats are not so well defined and might be browser specific.
-
 
 // ISO 8601 is the international standard for the representation of dates and times.
 
@@ -1344,13 +1688,16 @@ const cars = [
 
 
 
-// ===Time Zones===
+// ======Time Zones======
 
 // When setting a date, without specifying the time zone, JavaScript will use the browser's time zone.
 
 // When getting a date, without specifying the time zone, the result is converted to the browser's time zone.
 
 // In other words: If a date/time is created in GMT (Greenwich Mean Time), the date/time will be converted to CDT (Central US Daylight Time) if a user browses from central US.
+
+
+
 
 
 
@@ -1755,15 +2102,24 @@ const cars = [
 
 
 
-//=============Math Methods=====================
+
+
+
+
+
+//================Math Methods=====================
+
 // The syntax for Math any methods is : Math.method(number)
 
 // (Number to Integer) There are 4 common methods to round a number to an integer:
 
 
+// =======
 // Math.round(x)	        Returns x rounded to its nearest integer
 
 // Math.round(x) returns the nearest integer of x
+
+// The Math.round() method rounds a number to the nearest integer.
 
 // console.log(Math.round(2.5));
 // console.log(Math.round(3.4));
@@ -1771,15 +2127,23 @@ const cars = [
 // console.log(Math.round(-5.3));
 
 
+
+
+
 //===============================================
 // Math.ceil(x)	            Returns x rounded up to its nearest integer
 
 // Math.ceil(x) returns the value of x rounded up to its nearest integer
 
+// The Math.ceil() method rounds a number rounded UP to the nearest integer.
+
 // console.log(Math.ceil(2.9));
 // console.log(Math.ceil(5.3));
-// console.log(Math.ceil(-5.7));  //can't round up
-// console.log(Math.ceil(-5.3));  //can't round up
+// console.log(Math.ceil(-5.7));  
+// console.log(Math.ceil(-5.3));  
+
+// console.log(-5.3 < -5);
+
 
 
 
@@ -1789,10 +2153,14 @@ const cars = [
 
 // Math.floor(x) returns the value of x rounded down to its nearest integer
 
+// The Math.floor() method rounds a number DOWN to the nearest integer.
+
 // console.log(Math.floor(2.9));
 // console.log(Math.floor(5.3));
-// console.log(Math.floor(-5.7)); // returns the value of rounded up to its nearest integer
-// console.log(Math.floor(-5.3)); // returns the value of rounded up to its nearest integer
+// console.log(Math.floor(-5.7)); 
+// console.log(Math.floor(-5.3)); 
+
+// console.log( -5.3 > -6);
 
 
 
@@ -1804,14 +2172,19 @@ const cars = [
 
 // Math.min() and Math.max() can be used to find the lowest or highest value in a list of arguments
 
+// console.log(Math.min(9, 5, 6, 7, 8));
+// console.log(Math.max(9, 5, 6, 7, 8));
+
 // const numbers9 = [2, 5, 6, 7, 8];
-// console.log(Math.min(2, 5, 6, 7, 8));
-// console.log(Math.max(2, 5, 6, 7, 8));
 
 // console.log(numbers9); // get array
 // console.log(...numbers9); // get array elements using spread(...) operator
 // console.log(Math.min(...numbers9));
 // console.log(Math.max(...numbers9));
+
+// console.log(Math.min(numbers9)); // return NaN
+// console.log(Math.max(numbers9)); // return NaN
+
 
 
 
@@ -1820,9 +2193,10 @@ const cars = [
 //=============================================
 // Math.random()
 
-// Math.random() returns a random number between 0 (inclusive), and 1 (exclusive)
+// The Math.random() method returns a random floating point number between 0 (inclusive - অন্তর্ভুক্ত) and 1 (exclusive - বাদ ).
 
-// 0 এবং 1 এর মধ্যে যেকোনো নাম্বার রিটার্ন করে
+
+// 0 এবং 1 এর মধ্যে 0 সহ & 1  বাদে যেকোনো নাম্বার রিটার্ন করে
 
 // Math.random() always returns a number lower than 1.
 
@@ -1831,7 +2205,6 @@ const cars = [
 
 //<<<<<<Random Integers>>>>>>>>>
 // Math.random() used with Math.floor() can be used to return random integers
-
 
 // Returns a random integer from 0 to 9
 // console.log(Math.floor(Math.random() * 10));
@@ -1850,15 +2223,15 @@ const cars = [
 
 // <<<<Get Random Integer Using Function>>>>>
 
-//This JavaScript function always returns a random number between min (included) and max (excluded)
+//This JavaScript function always returns a random number between min (included - অন্তর্ভুক্ত) and max (excluded - বাদ)
 
 // function getRndInteger(min, max) {
 //   return Math.floor(Math.random() * (max - min) ) + min;
-//   // এই ফাংশনটা 1 এবং 10 ছাড়া সকল integer number রিটার্ন করবে
+//   // এই ফাংশনটা 1 সহ এবং 10 ছাড়া এদের মধ্যে সকল integer number রিটার্ন করবে
 // }
 
 // let random = getRndInteger(1, 10);
-// // console.log(random);
+// console.log(random);
 
 
 //------------------------------
@@ -1871,10 +2244,7 @@ const cars = [
 // }
 
 // let random = getRndInteger(1, 10);
-// // console.log(random);
-
-
-
+// console.log(random);
 
 
 
@@ -1885,10 +2255,15 @@ const cars = [
 
 // Math.trunc(x) returns the integer part of x
 
+// The Math.trunc() method returns the integer part of a number.
+
+// The Math.trunc() method removes the decimals (does NOT round the number).
+
 // console.log(Math.trunc(2.9));
 // console.log(Math.trunc(5.3));
 // console.log(Math.trunc(-5.7));
 // console.log(Math.trunc(-5.3));
+
 
 
 
@@ -1898,11 +2273,20 @@ const cars = [
 
 // Math.sign(x) returns if x is negative, null or positive
 
+// The Math.sign() method retuns whether a number is negative, positive or zero.
+
+// If the number is positive, this method returns 1.
+// If the number is negative, it returns -1.
+// If the number is zero, it returns 0.
+
 // এটার আর্গুমেন্ট যদি 0 হয় অথবা -0 হয় তাহলে, সেটাই রিটার্ন করে  এবং আর্গুমেন্ট যদি ধনাত্মক সংখ্যা হয় তাহলে 1 রিটার্ন করে ও আর্গুমেন্ট যদি ঋনাত্মক সংখ্যা হয় তাহলে -1 রিটার্ন করে
 
 // console.log(Math.sign(5));
 // console.log(Math.sign(0));
+// console.log(Math.sign(-0));
 // console.log(Math.sign(-5));
+
+
 
 
 
@@ -1922,9 +2306,11 @@ const cars = [
 
 
 
+
 //=========================================
 // Math.sqrt()
 // Math.sqrt(x) returns the square root of x
+// The Math.sqrt() method returns the square root of a number.
 
 // console.log(Math.sqrt(25));
 // console.log(Math.sqrt(64));
@@ -1950,8 +2336,14 @@ const cars = [
 
 //=======================================
 // Math.sin()
-
 // Math.sin(x) returns the sine (a value between -1 and 1) of the angle x (given in radians).
+
+// The Math.sin() method returns the sine of a number.
+
+// The Math.sin() method returns a number between -1 and 1.
+
+
+// The Math.sin() method expects the number in radians.
 
 // If you want to use degrees instead of radians, you have to convert degrees to radians:
 
@@ -1962,6 +2354,7 @@ const cars = [
 // let pi = 90 * Math.PI;
 // console.log(pi);
 // console.log(Math.sin( pi / 180));
+
 
 
 
@@ -2056,3 +2449,60 @@ const cars = [
 // tan(x)	                  Returns the tangent of an angle
 // tanh(x)	                  Returns the hyperbolic tangent of a number
 // trunc(x)	                  Returns the integer part of a number (x)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
