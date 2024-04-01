@@ -2469,10 +2469,14 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 
 
 
-//===========Comparison Operators==========
+
+//=======Comparison Operators==========
+
 // Comparison operators are used to test for true or false.
 
 // Comparison operators are used in logical statements to determine equality or difference between variables or values.
+
+// দুইটা string alphabetically compare করা হয়
 
 
 //***Operators***
@@ -2681,7 +2685,7 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 
 // Syntax: variablename = (condition) ? value1:value2 
 
-// কন্ডিশন true হলে বাম পাশেরটা  আর  কন্ডিশন false হলে ডান পাশেরটা রিটার্ন করে
+// কন্ডিশন true হলে কোলন চিহ্নের বাম পাশেরটা  আর  কন্ডিশন false হলে কোলন চিহ্নের ডান পাশেরটা রিটার্ন করে
 
 // let age = 20;
 
@@ -2738,6 +2742,991 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 
 
 
+//==========JS Conditions====================
+
+// Conditional statements are used to perform different actions based on different conditions.
+
+// Use ' if ' to specify a block of code to be executed, if a specified condition is true
+
+// Use ' else ' to specify a block of code to be executed, if the same condition is false
+
+// Use ' else if ' to specify a new condition to test, if the first condition is false
+
+// Use ' switch ' to specify many alternative blocks of code to be executed
+
+
+//--------------------------------
+//*** ' if ' Statement***
+// Note that if is in lowercase letters. Uppercase letters (If or IF) will generate a JavaScript error.
+
+
+// Syntax: if (condition) {block of code to be executed if the condition is true}
+
+// if ( new Date().getHours() <= 23 ) {
+//     console.log("Good Night");
+// }
+
+// if ( new Date().getFullYear() == 2024 ) {
+//     console.log("Year is 2024");
+// }
+
+// if ( 18 >= 18 && 18 <= 20 ) {
+//     console.log("Both conditions are true");
+// }
+
+
+// let math = 95;
+// if ( math >= 85 ) {
+//     console.log('You Are Good in Mathmetic');
+// }
+
+
+
+
+
+//--------------------------------
+
+//**** ' else ' Statement ****
+// Use the else statement to specify a block of code to be executed if the condition is false.
+
+
+// Syntax:
+// if (condition) {
+//   //  block of code to be executed if the condition is true
+// } else {
+//   //  block of code to be executed if the condition is false
+// }
+
+
+// let Eighteen = (new Date(new Date().setHours(18))).getHours();
+
+// let six = (new Date(new Date().setHours(6))).getHours();
+
+// if (new Date().getHours() > Eighteen || new Date().getHours() < six ) {
+//   console.log("This is Night");
+// } else {
+//   console.log("This is Day");
+// }
+
+
+
+
+
+//--------------------------------
+
+// **** ' else if ' Statement ****
+// Use the else if statement to specify a new condition if the first condition is false.
+
+
+// Syntax:
+// if (condition1) {
+//   //  block of code to be executed if condition1 is true
+// } else if (condition2) {
+//   //  block of code to be executed if the condition1 is false and condition2 is true
+// } else {
+//   //  block of code to be executed if the condition1 is false and condition2 is false
+// }
+
+
+
+// let Eighteen = (new Date(new Date().setHours(18))).getHours();
+// // let Eighteen = 18;
+
+// let six = (new Date(new Date().setHours(6))).getHours();
+// // let six = 6;
+
+// let zero = (new Date(new Date().setHours(0))).getHours();
+// // let zero = 0;
+
+// console.log(Eighteen, six, zero);
+// console.log(new Date().getHours());
+
+// if (new Date().getHours() > Eighteen && new Date().getHours() < six ) {
+//   console.log("This is Night");
+// } else if(new Date().getHours() == zero){
+//   console.log("This is Mid-Night");
+// } else {
+//   console.log("This is Day");
+// }
+
+
+
+
+
+
+// ========' Switch ' Statement===================
+// Use the switch statement to select one of many code blocks to be executed.
+
+// Switch cases use strict comparison (===)[value and type must be same as ' case ' value and type]
+
+// Syntax:=
+// switch(expression) {
+//   case x:
+//     // code block
+//     break;
+//   case y:
+//     // code block
+//     break;
+//   default:
+//     // code block
+// }
+
+
+// The switch expression is evaluated once.
+
+// The value of the expression is compared with the values of each case.
+
+// If there is a match, the associated block of code is executed.
+
+// If there is no match, the default code block is executed.
+
+
+
+// If you omit the break statement, the next case will be executed even if the evaluation does not match the case
+
+// When JavaScript reaches a ' break ' keyword, it breaks out of the switch block.
+
+// ' break ' will stop the execution inside the switch block.
+
+// It is not necessary to break the last case in a switch block. The block breaks (ends) there anyway.
+
+// The ' default ' keyword specifies the code to run if there is no case match
+
+// The ' default ' case does not have to be the last case in a switch block
+
+// If ' default ' is not the last case in the switch block, remember to end the default case with a break.
+
+
+
+// If multiple cases matches a case value, the first case is selected.
+
+// If no matching cases are found, the program continues to the default label.
+
+// If no default label is found, the program continues to the statement(s) after the switch.
+
+
+
+// switch (new Date().getDay()) {
+//   case 0:
+//     day = "Sunday";
+//     break;
+//   case 1:
+//     day = "Monday";
+//     break;
+//   case 2:
+//      day = "Tuesday";
+//     break;
+//   case 3:
+//     day = "Wednesday";
+//     break;
+//   case 4:
+//     day = "Thursday";
+//     break;
+//   case 5:
+//     day = "Friday";
+//     break;
+//   case 6:
+//     day = "Saturday";
+// }
+// console.log(new Date().getDay());
+// console.log(day);
+
+
+
+// ' default ' Keyword
+// switch (new Date().getDay()) {
+//   case 4:
+//     text = "Today is Saturday";
+//     break;
+//   case 0:
+//     text = "Today is Sunday";
+//     break;
+//   default:
+//     text = "Looking forward to the Weekend";
+// }
+
+// console.log(text);
+
+
+
+// break Keyword
+// switch (new Date().getDay()) {
+//   case 4:
+//   case 5:
+//     text = "Soon it is Weekend";
+//     console.log("Soon it is Weekend");
+//     break;
+//   case 6:
+//     text = "It is Weekend";
+//     console.log("It is Weekend");
+//   case 6:
+//     text = " Weekend";
+//     console.log('Weekend');
+//   case 5:
+//     text = " Weekend2";
+//     console.log('Weekend2');
+//     break;
+//   default:
+//     text = "Looking forward to the Weekend";
+//     console.log("Looking forward to the Weekend");
+// }
+
+
+// console.log(text);
+
+
+
+// let x = "0";
+// switch (x) {
+//   case 0:
+//     text = "Off";
+//     break;
+//   case 1:
+//     text = "On";
+//     break;
+//   default:
+//     text = "No value found";
+// }
+// console.log(text);
+
+
+// let a = 0;
+// switch (a) {
+//   case 0:
+//     text = "Off";
+//     break;
+//   case 1:
+//     text = "On";
+//     break;
+//   default:
+//     text = "No value found";
+// }
+// console.log(text);
+
+
+
+
+
+
+
+// ===========JavaScript Loops===============================
+// Loops can execute a block of code a number of times.
+
+// There are three different types of loops:
+// ' for ' - loops through a block of code a number of times
+
+// ' for/in ' - loops through the properties of an object
+
+// ' for/of ' - loops through the values of an iterable object
+
+// ' while ' - loops through a block of code while a specified condition is true
+
+// ' do/while ' - also loops through a block of code while a specified condition is true
+
+
+
+//***' For ' Loop**** 
+
+//syntax
+// for (expression 1; expression 2; expression 3) {
+//   // code block to be executed
+// }
+
+
+//Example of 'For' loop:
+// for (let i = 0; i < 10; i++) {
+// //   console.log(i);
+// }
+
+// const numbers = [45, 4, 9, 16, 25];
+
+// for (let i = 0; i < numbers.length; i++) {
+// //   console.log(i); // return index
+// //   console.log(numbers[i]); // return value
+// }
+
+
+// Expression 1:----->
+// (optional) Expression 1 is executed (one time) before the execution of the code block.(initialization)
+//[Expression 1 এর মধ্যে কমা(,) ব্যবহার করে একাধিক variable  লেখা যাবে]
+
+// Expression 1 বাদ দিয়ে
+// let i = 0;
+// let length = 7;
+// for (; i <= length; i++) {
+// //   console.log(i);
+// }
+
+
+
+// Expression 2:----->
+//(optional) Expression 2 defines the condition for executing the code block.(condition)
+// If you omit Expression 2, you must provide a break inside the loop. Otherwise the loop will never end. This will crash your browser.
+// If expression 2 returns true, the loop will start over again. If it returns false, the loop will end.
+
+// Expression 2 বাদ দিয়ে
+// let i = 0;
+// let length = 7;
+// for (let i = 0, length = 7; ; i++) {
+//     if(i > length){
+//         break;
+//     }
+// //   console.log(i);
+// }
+
+
+
+// Expression 3:----->
+//(optional) Expression 3 is executed (every time) after the code block has been executed.(increment/decrement)
+// Expression 3 can also be omitted (like when you increment your values inside the loop)
+
+// Expression 3 বাদ দিয়ে
+// let i = 0;
+// let length = 7;
+// for (let i = 0, length = 7; i <= length; ) {
+// //   console.log(i);
+//   i++;
+// }
+
+
+
+// Expression 1, 2 & 3 বাদ দিয়ে
+// let i = 0;
+// let length = 7;
+// for ( ; ; ) {
+//     if(i > length){
+//         break;
+//     }
+// //   console.log(i);
+//   i++;
+// }
+
+
+
+
+
+
+
+//***' For/in ' Loop**** 
+
+// The JavaScript ' for in ' statement loops through the properties of an Object:
+
+// Syntax:-->
+// for (key in object) {
+//   // code block to be executed
+// }
+
+
+// Example of 'For/in' loop:
+// const person = {fname:"John", lname:"Doe", age:25};
+
+// for (let x in person) {
+// //   console.log(x); // return property Name
+// //   console.log(person.x); // return undefined
+// //   console.log(person[x]); // return value
+// }
+
+
+// The for in loop iterates over a person object
+
+// Each iteration returns a key (x)
+
+// The key is used to access the value of the key
+
+// The value of the key is person[x]
+
+
+//-------------
+
+// The JavaScript ' for in ' statement can also loop over the properties of an Array:
+
+// Syntax:-->
+// for (variable in array) {
+//   // code block to be executed
+// }
+
+// Example of 'For/in' loop:
+// const numbers = [45, 4, 9, 16, 25];
+
+// for (let x in numbers) {
+// //   console.log(x); // return index
+// //   console.log(numbers[x]); // return value
+// }
+
+// Note: Do not use 'for in' over an Array if the index order is important. It is better to use a 'for' loop, a 'for of' loop, or 'Array.forEach()' when the order is important.
+
+
+
+
+
+// ***' For/of ' Loop****
+// The JavaScript for of statement loops through the values of an iterable object.
+
+// iterable - An object that has iterable properties.
+
+// An object that has iterable properties, such as Array, Map, Set, String, TypedArray, or any other object that defines a @@iterator method.
+
+// Syntax:-->
+// for (variable of iterable) {
+//   // code block to be executed
+// }
+
+// Example of 'For/of' loop:
+
+// --**Looping over a String**--
+// let nam = 'muhammad';
+
+// for (let x of nam) {
+//     // console.log(x); // return value
+// }
+
+
+// --**Looping over an Arrays**--
+
+// const numbers = [45, 4, 9, 16, 25];
+
+// for (let number of numbers) {
+// //   console.log(number); // return value
+// }
+
+// const names = ['abul', 'babul', 'kabul', 'sabul', 'habul'];
+
+// for (let name of names) {
+//     // console.log(name); // return value
+// }
+
+
+
+//***objects are not iterable**** 
+// const obj = {
+//     name : 'abul',
+//     age : 25,
+//     country : 'Bangladesh'
+// }
+
+// for (let x of obj) {
+//     // console.log(x); // obj is not iterable
+// }
+
+
+
+
+//***' while ' Loop****
+// Loops can execute a block of code as long as a specified condition is true.
+
+// The while loop loops through a block of code as long as a specified condition is true.
+
+// The while loop executes the code block once, before checking if the condition is true, then executes it again, and so on, until the condition is false.
+
+
+// Syntax:-->
+// while (condition) {
+    // code block to be executed
+// }
+
+// Example of 'While' loop:
+
+// let i = 0;
+
+// while (i <= 5) {
+//   console.log(i);
+//   i++;
+// }
+
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// let i = 0;
+// while (i < arr.length) {
+//     // console.log(arr[i]); // return value
+//     i++;
+// }
+
+
+
+
+
+// ***' do/while ' Loop****
+// The do while loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.
+
+
+// Syntax:-->
+// do {
+    // code block to be executed
+// }
+// while (condition);
+
+
+// Example of 'do/while' loop:
+
+// const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// let i = 10;
+
+// do {
+//     // console.log(i);
+//     // console.log(arr[i]); // return undefined if not found
+//     i++;
+// } while (i < arr.length)
+
+
+
+// while (i < arr.length) {
+//     console.log(arr[i]); // return value
+//     i++;
+// }
+
+
+// A ' while ' loop is much the same as a ' for ' loop, if  ' for ' loop expression 1 and expression 3 omitted.
+
+// একটি 'while' লুপ অনেকটা একটি 'for' লুপের মতই, যদি 'for' লুপের এক্সপ্রেশন 1 এবং এক্সপ্রেশন 3 বাদ দেওয়া হয়।
+
+
+// const cars = ["BMW", "Volvo", "Saab", "Ford"];
+// let i = 0;
+
+// for (;cars[i];) {
+// //  console.log(i); // return index
+// //  console.log(cars[i]); // return value
+//   i++;
+// }
+
+
+// while (cars[i]) {
+//  console.log(cars[i]); // return value
+//   i++;
+// }
+
+
+
+
+
+
+//==============Break and Continue====================
+
+// *** ' break ' Statement***
+// The break statement "jumps out" of a loop.
+
+// The break statement, without a label reference, can only be used to jump out of a loop or a switch.
+
+// The break statement can also be used to jump out of a loop based on a specified condition.
+
+// 'break' সম্পূর্ণভাবে loop থেকে বের হওয়ার জন্য ব্যবহার করা হয়
+
+// for (let i = 0; i < 10; i++) {
+//   if (i === 3) { break; }
+//   console.log(i);}
+
+// for (let i = 0; ; i++) {
+//   if (i === 3) { break; }
+//   console.log(i);}
+
+
+
+
+
+// *** ' continue ' Statement***
+// The continue statement "jumps over" one iteration in the loop.
+
+// The continue statement breaks one iteration (in the loop), if a specified condition occurs, and continues with the next iteration in the loop.
+
+// The continue statement can also be used to skip an iteration in a loop based on a specified condition.
+
+// 'continue' একটি loop এর মধ্যে নির্দিষ্ট কন্ডিশন skip করা অথবা এড়ানোর জন্য ব্যবহার করা হয়
+
+// for (let i = 0; i < 10; i++) {
+//   if (i === 3) { continue; }
+//   console.log(i);
+// }
+
+
+
+
+
+
+
+//==========JavaScript Sets====================
+// A JavaScript Set is a collection of unique values. Each value can only occur once in a Set.
+
+
+//^^^^^Create a Set^^^^^^^^
+// Passing an Array to 'new Set()'
+// Create a new Set and use 'add()' to add values
+// Create a new Set and use 'add()' to add variables
+
+
+
+// **Set Methods**
+
+// new Set(iterable)	    
+// Creates a new Set object
+// new Set()	           
+//  Creates a new Set
+
+// const num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// console.log(num);
+
+// const mySet = new Set(num);
+// const mySet = new Set(['red', 'green', 'blue', 'yellow']);
+// console.log(mySet);
+
+
+
+
+
+// ---------------------------------------
+// add()	                
+//Adds one or more elements to the Set
+
+// mySet.add(11);
+
+
+
+
+//------------------------------------
+// delete()	                
+// Removes one or more elements from the Set
+
+// mySet.delete('red'); // delete the value
+// console.log(mySet.delete('red')); // return true 
+// console.log(mySet.delete(11)); // return false
+// console.log(mySet);
+
+
+
+
+
+//------------------------------------
+// clear()	                
+//Removes all elements from the Set
+
+// mySet.clear(); // clear the set
+// console.log(mySet);
+
+
+
+
+
+//------------------------------------
+// has()	                
+//Returns a Boolean indicating whether an element is in the Set
+
+// console.log(mySet.has('green')); // return false
+// console.log(mySet.has(10)); // return true
+
+
+
+
+
+//------------------------------------
+// forEach()	            
+// Executes a provided function once for each Set element
+
+
+
+
+
+
+//------------------------------------
+// values()	                
+// Returns a new Iterator object containing the values for each element in the Set
+
+// console.log(mySet.values()); // [object Set Iterator]
+
+
+
+
+
+
+//------------------------------------
+// keys()	                
+// Returns a new Iterator object containing the keys for each element in the Set
+
+// console.log(mySet.keys()); // [object Set Iterator]
+
+
+
+
+
+//------------------------------------
+// entries()	            
+// Returns a new Iterator object containing the [key, value] for each element in the Set
+
+// console.log(mySet.entries()); // [object Set Iterator]
+
+
+
+
+//--------------------------
+// [Symbol.iterator]()	    
+// Returns a new Iterator object that contains the values for each element in the Set
+
+
+
+
+//--------------------------
+// [Symbol.toStringTag]	    
+// Returns a string that contains all the elements in the Set
+
+
+
+
+//--------------------------
+// toString()	            
+// Returns a string that contains all the elements in the Set
+
+
+
+
+//--------------------------
+// toJSON()	                
+// Returns a JSON representation of the Set
+
+
+
+
+//--------------------------
+// valueOf()	            
+// Returns the Set itself 
+
+// console.log(mySet.valueOf());
+
+
+
+
+// Property---->
+// size	                    
+//Returns the number of elements in a Set
+ 
+// console.log(mySet.size); // return length of set
+
+
+
+
+
+
+// Example:----->
+// const num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// console.log(num);
+
+// const mySet = new Set(num);
+// console.log(mySet);
+
+// mySet.add(11);
+
+// mySet.clear(); // clear the set
+// console.log(mySet);
+
+// mySet.delete(4); // delete the value
+// console.log(mySet.delete(4)); // return true 
+// console.log(mySet.delete(11)); // return false
+// console.log(mySet);
+
+
+// console.log(mySet.entries()); // [object Set Iterator]
+
+// console.log(mySet.has(11)); // return false
+// console.log(mySet.has(10)); // return true
+
+// console.log(mySet.keys()); // [object Set Iterator]
+
+// console.log(mySet.size); // return length of set
+
+
+// console.log(mySet.values()); // [object Set Iterator]
+
+
+// console.log(mySet.valueOf()); // return the set itself
+
+
+
+
+
+
+ 
+
+// =================JavaScript Maps=================
+// A Map holds key-value pairs where the keys can be any datatype.
+// A Map remembers the original insertion order of the keys.
+
+
+//^^^^^Create a Map^^^^^^^^
+// Passing an Array to new Map()
+// Create a Map and use Map.set()
+
+
+
+// **Map Methods**
+
+// new Map(iterable)	    
+// Creates a new Map object
+// new Map()	           
+// Creates a new Map object
+
+// const fruits = [
+//   ["apples", 500],
+//   ["bananas", 300],
+//   ["oranges", 200]
+// ];
+// console.log(fruits);
+
+// const myMap = new Map(fruits);
+// console.log(myMap);
+
+
+
+
+
+
+//---------------------------------------------
+// set()	                
+// Adds one or more key-value pairs to the Map
+
+// myMap.set("kiwi", 100);
+// myMap.set(50, 100);
+// myMap.set(true, 100);
+
+
+
+
+
+//-------------------------------------------
+// get()	                
+// Returns the value of the specified key in a Map
+
+// console.log(myMap.get(50));
+// console.log(myMap.get('apples'));
+
+
+
+
+
+
+//-------------------------------------------
+// has()	                
+// Returns true if a key exists in a Map
+
+// console.log(myMap.has('kiwi')); // return true
+// console.log(myMap.has(50)); // return true
+// console.log(myMap.has('50')); // return false
+
+
+
+
+
+
+//-------------------------------------------
+// delete()	            
+// Removes a Map element specified by a key
+
+// console.log(myMap.delete(50)); // return true
+// console.log(myMap.delete('50')); // return false
+
+
+
+
+//-------------------------------------------
+// clear()	            
+// Removes all elements from a Map
+
+// console.log(myMap.clear()); // return undefined
+// console.log(myMap); // return empty map
+
+
+
+
+
+
+//-------------------------------------------
+// forEach()	        
+// Executes a provided function once for each Map element
+
+
+
+
+
+
+
+//-------------------------------------------
+// entries()	        
+// Returns a new Iterator object containing the [key, value] for each element in the Map
+
+// console.log(myMap.entries()); 
+
+
+
+
+//-------------------------------------------
+// keys()	            
+// Returns a new Iterator object containing the keys for each element in the Map
+
+// console.log(myMap.keys()); 
+
+
+
+
+
+
+//-------------------------------------------
+// values()	        
+// Returns a new Iterator object containing the values for each element in the Map
+
+// console.log(myMap.values()); 
+
+
+
+
+
+
+//-------------------------------------------
+// toString()	        
+// Returns a string that contains all the elements in the Map
+
+
+
+
+
+
+
+//-------------------------------------------
+// [Symbol.iterator]()	
+// Returns a new Iterator object that contains the values for each element in the Map
+
+
+
+
+
+
+
+//-------------------------------------------
+// [Symbol.toStringTag]	
+// Returns a string that contains all the elements in the Map
+
+
+
+
+
+//-------------------------------------------
+// valueOf()	        
+// Returns the Map itself
+
+// console.log(myMap.valueOf()); // return the map itself
+// console.log(myMap);
+
+
+
+
+//-------------------------------------------
+// toJSON()	        
+// Returns a JSON representation of the Map
+
+
+
+
+//^^^^Property^^^^^^^^
+// size  
+// Returns the number of elements in a Map
+
+// console.log(myMap.size); // return length of map
 
 
 
@@ -2748,6 +3737,102 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 
 
 
+//=============JavaScript typeof operator==================================================================
+// You can use the typeof operator to find the data type of a JavaScript variable.
+
+
+
+// In JavaScript there are 5 different data types that can contain values:
+// string
+// number
+// boolean
+// object
+// function
+
+
+// There are 6 types of objects:
+// Object
+// Date
+// Array
+// String
+// Number
+// Boolean
+
+
+// And 2 data types that cannot contain values:
+// null
+// undefined
+
+
+//------------
+// typeof "John"                 // Returns "string"
+
+// typeof 3.14                   // Returns "number"
+
+// typeof NaN                    // Returns "number"
+
+// typeof false                  // Returns "boolean"
+
+// typeof [1,2,3,4]              // Returns "object"
+
+// typeof {name:'John', age:34}  // Returns "object"
+
+// typeof new Date()             // Returns "object"
+
+// typeof function () {}         // Returns "function"
+
+// typeof myCar                  // Returns "undefined" *
+
+// typeof null                   // Returns "object"
+
+
+
+// The typeof operator returns "object" for arrays because in JavaScript arrays are objects.
+
+// The typeof operator always returns a string (containing the type of the operand).
+
+
+
+// "John".constructor                // Returns function String()  {[native code]}
+
+// (3.14).constructor                // Returns function Number()  {[native code]}
+
+// false.constructor                 // Returns function Boolean() {[native code]}
+
+// [1,2,3,4].constructor             // Returns function Array()   {[native code]}
+
+// {name:'John',age:34}.constructor  // Returns function Object()  {[native code]}
+
+// new Date().constructor            // Returns function Date()    {[native code]}
+
+// function () {}.constructor        // Returns function Function(){[native code]}
+
+
+
+// In JavaScript, a variable without a value, has the value undefined. The type is also undefined.
+
+// Any variable can be emptied, by setting the value to undefined. The type will also be undefined.
+
+// Empty values কখনো undefined হয় না (let car = "";    // The value is "", the typeof is "string")
+
+
+
+// In JavaScript null is "nothing". It is supposed to be something that doesn't exist.
+
+// Null মানে হচ্ছে কোন জিনিস এখানে exist করে না
+
+// You can empty an object by setting it to null
+
+// You can also empty an object by setting it to undefined
+
+
+//**undefined and null are equal in value but different in type
+
+// typeof undefined           // undefined
+// typeof null                // object
+
+// null === undefined         // false
+// null == undefined          // true
 
 
 
@@ -2757,6 +3842,307 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 
 
 
+
+//========JavaScript Type Conversion============================================
+
+//**** Converting Strings to Numbers using Number() and unary + operator
+
+// console.log("3.14");
+// console.log(Number("3.14"));
+// console.log(+"3.14");
+
+
+
+//___________________
+//**** Converting Numbers to Strings using String() and toString()
+
+// console.log(String(123));
+// console.log((123).toString());
+// console.log(String(100 + 23) );
+// console.log((100 + 23).toString());
+
+
+
+
+//___________________
+//**** Converting Dates to Numbers using Number() and unary + operator
+
+// let date = new Date();
+// console.log(date);
+
+// console.log(Number(date));
+// console.log(+(date));
+
+
+
+//___________________
+//**** Converting Dates to Strings using String() and toString()
+
+// console.log(Date());
+// console.log(String(Date()));
+// console.log((Date().toString()));
+
+
+
+//___________________
+//**** Converting Numbers to Dates using new Date()
+
+// console.log(new Date(11, 0, 1));
+// console.log(new Date(11, 1, 1));
+
+
+
+//___________________
+//**** Converting Booleans to Numbers using Number() and unary + operator
+
+// console.log(Number(false));    // returns 0
+// console.log(+false);           // returns 0
+// console.log(Number(true));     // returns 1
+// console.log(+true);            // returns 1
+
+
+
+
+
+//___________________
+//**** Converting Booleans to Strings using String() and toString()
+
+// console.log(String(false));    // returns "false"
+// console.log(String(true));      // returns "true"
+
+// console.log(false.toString());
+// console.log(true.toString());
+
+
+
+
+//___________________
+//**** Converting Numbers to Booleans using Boolean()
+
+// console.log(Boolean(0));    // returns false
+// console.log(Boolean(1));    // returns true
+
+
+// console.log(Boolean(3.4));    // returns true
+// console.log(Boolean(1.5));    // returns true
+// console.log(Boolean(0.5));    // returns true
+
+
+
+
+
+
+//^^^^^Automatic Type Conversions
+// 5 + null    // returns 5         because null is converted to 0
+// "5" + null  // returns "5null"   because null is converted to "null"
+// "5" + 2     // returns "52"      because 2 is converted to "2"
+// "5" - 2     // returns 3         because "5" is converted to 5
+// "5" * "2"   // returns 10        because "5" and "2" are converted to 5 and 2
+
+
+
+
+
+
+
+//==========JavaScript Bitwise Operations==================???????========
+// &	AND	Sets each bit to 1 if both bits are 1
+// |	OR	Sets each bit to 1 if one of two bits is 1
+// ^	XOR	Sets each bit to 1 if only one of two bits is 1
+// ~	NOT	Inverts all the bits
+// <<	Zero fill left shift	Shifts left by pushing zeros in from the right and let the leftmost bits fall off
+// >>	Signed right shift	Shifts right by pushing copies of the leftmost bit in from the left, and let the rightmost bits fall off
+// >>>	Zero fill right shift	Shifts right by pushing zeros in from the left, and let the rightmost bits fall off
+
+
+// // Example:
+// 5 & 1	1	0101 & 0001	 0001
+// 5 | 1	5	0101 | 0001	 0101
+// ~ 5	10	 ~0101	 1010
+// 5 << 1	10	0101 << 1	 1010
+// 5 ^ 1	4	0101 ^ 0001	 0100
+// 5 >> 1	2	0101 >> 1	 0010
+// 5 >>> 1	2	0101 >>> 1	 0010
+
+
+
+
+
+
+
+
+//=============JavaScript Regular Expressions================================================================
+// A regular expression is a sequence of characters that forms a search pattern. The search pattern can be used for text search and text replace operations. A regular expression can be a single character, or a more complicated pattern. Regular expressions can be used to perform all types of text search and text replace operations.
+
+//^^Syntax:---> /pattern/modifiers;
+
+// In JavaScript, regular expressions are often used with the two string methods: search() and replace().
+
+
+//**The search() method uses an expression to search for a match, and returns the position of the match.
+
+// The search() method searches a string for a specified value and returns the position of the match
+
+// let text = "The rain in SPAIN stays mainly in the plain";
+
+// console.log(text.search("ain")); // returns the index position of first match
+
+// console.log(text.search(/ain/)); // returns the index position of first match
+
+// console.log(text.search(/Ain/i)); // returns the index position of first match 
+
+// console.log(text.search(/Ain/ig)); // returns the index position of first match
+
+
+
+//------------------
+//**The replace() method returns a modified string where the pattern is replaced.
+
+// The replace() method replaces a specified value with another value in a string
+
+// It has two arguments: 1. search value and 2. replace a new value
+
+// let text = "The rain in SPAIN stays mainly in the plain";
+
+// console.log(text.replace("ain", "on")); // first match is replaced
+
+// console.log(text.replace(/Ain/i, "on")); // first match is replaced
+
+// console.log(text.replace(/Ain/ig, "on")); // all matches are replaced
+
+
+
+
+
+//***Regular Expression Modifiers___
+
+// Modifiers can be used to perform case-insensitive more global searches:
+
+// i-->	Perform case-insensitive matching	
+// g-->	Perform a global match (find all)	
+// m-->	Perform multiline matching	???????????
+// d-->	Perform start(start index) and end(end index) matching
+
+
+// let text = 'Modifiers can be used to perform case-insensitive more global searches.'
+// ;
+
+// console.log('Modifiers can be used to perform case-insensitive more global searches.'.match(/insensitive/));
+
+// console.log('Modifiers can be used to perform case-insensitive more global searches.'.match(/insensitive/m)); // ?????????????
+
+// console.log('Modifiers can be used to perform case-insensitive more global searches.'.match(/insensitive/d));
+
+
+
+
+
+
+//***Regular Expression Patterns____
+// Brackets are used to find a range of characters
+
+//-----
+// [abc]-->	Find any of the characters between the brackets	
+
+
+// let text = '1. Modifiers can be used to perform case-insensitive more global searches.'
+// ;
+
+// console.log(text.match(/[aeiou]/ig));
+// console.log(text.match(/[1-9]/ig));
+
+
+
+//---------------------------
+// [0-9]-->	Find any of the digits between the brackets	
+
+
+// const arr = [1, 26, 34, 87];
+// console.log(arr.toString().match(/[1234567]/ig));
+// console.log(arr.toString().match(/[1-7]/ig));
+
+// let num = '142352346346'
+// console.log(num.match(/[1234567]/ig));
+// console.log(('142352346346').match(/[1-7]/ig));
+
+
+
+
+//-------------------
+// (x|y)-->	Find any of the alternatives separated with |
+
+
+// let text = "re, green, red, green, gren, grcn, gr, blue, yellow, black" ;
+
+
+// console.log(text.match(/Black|red/ig));
+
+
+// console.log(text.match(/gr[aec]n/g));
+
+// console.log(text.match(/gr[a-z]n/g));
+
+
+
+
+
+
+//====test() method===========================
+// The test() method is a RegExp expression method.
+
+// It searches a string for a pattern, and returns true or false, depending on the result.
+
+// const pattern = /a/;
+// console.log(pattern.test("The test() method is a RegExp expression method"));
+
+// const pattern = /A/i;
+// console.log(pattern.test("The test() method is a RegExp expression method"));
+
+// const pattern = /[a-z]/;
+// console.log(pattern.test("The test() method is a RegExp expression method"));
+
+// const pattern = /1/;
+// console.log(pattern.test("The test() method is a RegExp expression method"));
+
+// const pattern = /[0-9]/;
+// console.log(pattern.test(" 1. The test() method is a RegExp expression method"));
+
+
+
+
+
+
+//=======exec() method=====================================
+// The exec() method is a RegExp expression method.
+// It searches a string for a specified pattern, and returns the found text as an object.
+// If no match is found, it returns an empty (null) object.
+
+// console.log(/e/.exec("The best things in life are free!"));
+
+// console.log(/1/.exec("The best things in life are free!"));
+
+// console.log(/B/i.exec("The best things in life are free!"));
+
+// console.log(/B/id.exec("The best things in life are free!"));
+
+
+
+
+
+
+
+//========JavaScript Operator Precedence============================
+
+// Link ---> https://www.w3schools.com/js/js_precedence.asp
+
+
+
+
+
+
+
+
+//========JavaScript Errors================================================
 
 
 
