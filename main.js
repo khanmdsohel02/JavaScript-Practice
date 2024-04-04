@@ -1,4 +1,4 @@
-
+// "use strict";
 
 // a = 3;
 // var a;
@@ -383,6 +383,8 @@ var n = 'Muhammad sajid';
 //============== toPrecision() Method================
 
 // // toPrecision() Method (ekti sonkhar total length nirdaron kore)[দশমিকের আগে ও পরে সহ]
+
+// toPrecision() argument must be between 1 and 100
 
 // let num6 = 1000000; // Return 100000
 // let num6 = 100.3436457463;
@@ -3347,6 +3349,9 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 //==========JavaScript Sets====================
 // A JavaScript Set is a collection of unique values. Each value can only occur once in a Set.
 
+// A Set can hold any value of any data type.
+
+
 
 //^^^^^Create a Set^^^^^^^^
 // Passing an Array to 'new Set()'
@@ -3365,11 +3370,15 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 // const num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // console.log(num);
 
+
+// console.log(num instanceof Set);
+
 // const mySet = new Set(num);
 // const mySet = new Set(['red', 'green', 'blue', 'yellow']);
 // console.log(mySet);
 
 
+// console.log(mySet instanceof Set); // return true
 
 
 
@@ -3542,11 +3551,24 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 
 
 
+
+
+
+
+
+
+
+
+
  
 
 // =================JavaScript Maps=================
-// A Map holds key-value pairs where the keys can be any datatype.
-// A Map remembers the original insertion order of the keys.
+// The Map object holds key-value pairs and remembers the original insertion order of the keys.
+
+// A Map has a property that represents the size of the map.
+
+// The Map object is iterable, which means you can loop through it using a for..of loop.
+
 
 
 //^^^^^Create a Map^^^^^^^^
@@ -3557,41 +3579,74 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 
 // **Map Methods**
 
+// __new Map()__	
 // new Map(iterable)	    
+// Creates a new Map object           
 // Creates a new Map object
-// new Map()	           
-// Creates a new Map object
+// The new Map() constructor creates an empty map and also creates a new Map object.
+
+
+// const fruit1 = new Map([
+//   ["apples", 500],
+//   ["bananas", 300],
+//   ["oranges", 200]
+// ]);
+
 
 // const fruits = [
 //   ["apples", 500],
 //   ["bananas", 300],
 //   ["oranges", 200]
 // ];
-// console.log(fruits);
+// // console.log(fruits);
 
 // const myMap = new Map(fruits);
-// console.log(myMap);
+// // console.log(myMap);
 
+
+// console.log(fruits instanceof Map); // return false
+
+// console.log(myMap instanceof Map); // return true
 
 
 
 
 
 //---------------------------------------------
-// set()	                
-// Adds one or more key-value pairs to the Map
+//____set()____	    
+// Sets the value for a key in a Map
 
-// myMap.set("kiwi", 100);
-// myMap.set(50, 100);
-// myMap.set(true, 100);
+// The set() method can also be used to add new key/value pairs to a Map.
+
+// Create a Map
+// const fruits = new Map();
+
+// // Set Map Values
+// fruits.set("apples", 500);
+// fruits.set("bananas", 300);
+// fruits.set("oranges", 200);
+
+
+// console.log(fruits);
+
+//**The set() method can also be used to change existing Map values.
+
+// fruits.set("apples", 600);
+
+// console.log(fruits);
+
+
 
 
 
 
 
 //-------------------------------------------
-// get()	                
+// ____get()____	                
 // Returns the value of the specified key in a Map
+
+// const myMap = new Map(fruits);
+// // console.log(myMap);
 
 // console.log(myMap.get(50));
 // console.log(myMap.get('apples'));
@@ -3602,8 +3657,11 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 
 
 //-------------------------------------------
-// has()	                
+// ____has()____	                
 // Returns true if a key exists in a Map
+
+// const myMap = new Map(fruits);
+// // console.log(myMap);
 
 // console.log(myMap.has('kiwi')); // return true
 // console.log(myMap.has(50)); // return true
@@ -3615,8 +3673,11 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 
 
 //-------------------------------------------
-// delete()	            
+// ____delete()____	            
 // Removes a Map element specified by a key
+
+// const myMap = new Map(fruits);
+// // console.log(myMap);
 
 // console.log(myMap.delete(50)); // return true
 // console.log(myMap.delete('50')); // return false
@@ -3625,8 +3686,11 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 
 
 //-------------------------------------------
-// clear()	            
+// ____clear()____	            
 // Removes all elements from a Map
+
+// const myMap = new Map(fruits);
+// // console.log(myMap);
 
 // console.log(myMap.clear()); // return undefined
 // console.log(myMap); // return empty map
@@ -3637,7 +3701,7 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 
 
 //-------------------------------------------
-// forEach()	        
+// ____forEach()____	        
 // Executes a provided function once for each Map element
 
 
@@ -3647,8 +3711,11 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 
 
 //-------------------------------------------
-// entries()	        
+// ____entries()____	        
 // Returns a new Iterator object containing the [key, value] for each element in the Map
+
+// const myMap = new Map(fruits);
+// // console.log(myMap);
 
 // console.log(myMap.entries()); 
 
@@ -3656,8 +3723,11 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 
 
 //-------------------------------------------
-// keys()	            
+// ____keys()____	            
 // Returns a new Iterator object containing the keys for each element in the Map
+
+// const myMap = new Map(fruits);
+// // console.log(myMap);
 
 // console.log(myMap.keys()); 
 
@@ -3667,8 +3737,11 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 
 
 //-------------------------------------------
-// values()	        
+// ____values()____	        
 // Returns a new Iterator object containing the values for each element in the Map
+
+// const myMap = new Map(fruits);
+// // console.log(myMap);
 
 // console.log(myMap.values()); 
 
@@ -3678,7 +3751,7 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 
 
 //-------------------------------------------
-// toString()	        
+// ____toString()____	        
 // Returns a string that contains all the elements in the Map
 
 
@@ -3688,7 +3761,7 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 
 
 //-------------------------------------------
-// [Symbol.iterator]()	
+// ____[Symbol.iterator]()____	
 // Returns a new Iterator object that contains the values for each element in the Map
 
 
@@ -3698,7 +3771,7 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 
 
 //-------------------------------------------
-// [Symbol.toStringTag]	
+// ____[Symbol.toStringTag]____	
 // Returns a string that contains all the elements in the Map
 
 
@@ -3706,8 +3779,11 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 
 
 //-------------------------------------------
-// valueOf()	        
+// ____valueOf()____	        
 // Returns the Map itself
+
+// const myMap = new Map(fruits);
+// // console.log(myMap);
 
 // console.log(myMap.valueOf()); // return the map itself
 // console.log(myMap);
@@ -3716,17 +3792,34 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 
 
 //-------------------------------------------
-// toJSON()	        
+// ____toJSON()____	        
 // Returns a JSON representation of the Map
 
 
 
 
 //^^^^Property^^^^^^^^
-// size  
+// ____size____  
 // Returns the number of elements in a Map
 
+// const myMap = new Map(fruits);
+// // console.log(myMap);
+
 // console.log(myMap.size); // return length of map
+
+
+
+
+
+//** Differences between JavaScript Objects and Maps:--->>
+
+//        ^^Object^^	                        ^^Map^^
+// Not directly iterable	               Directly iterable
+// Do not have a size property	           Have a size property
+// Keys must be Strings (or Symbols)	   Keys can be any datatype
+// Keys are not well ordered	           Keys are ordered by insertion
+// Have default keys	                   Do not have default keys
+
 
 
 
@@ -4143,6 +4236,1710 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 
 
 //========JavaScript Errors================================================
+
+// The ' try ' statement defines a code block to run (to try).
+
+// The ' catch ' statement defines a code block to handle any error.
+
+// The ' finally ' statement defines a code block to run regardless of the result.
+
+// The ' throw ' statement defines a custom error.
+
+
+
+
+//*** JavaScript try and catch_____
+
+// The 'try' statement allows you to define a block of code to be tested for errors while it is being executed.
+
+// The 'catch' statement allows you to define a block of code to be executed, if an error occurs in the try block.
+
+// syntax:-->
+// try {
+//   Block of code to try
+// }
+// catch(err) {
+//   Block of code to handle errors
+// }
+
+
+// Example:-->
+// try {
+//   adddlert("Welcome guest!");
+// }
+// catch(err) {
+// console.log(err);
+// }
+
+
+// try {
+//   eval("alert('Hello)");   // Missing ' will produce an error
+// }
+// catch(err) {
+// console.log(err);}
+
+
+
+
+//-------------------------------------------------
+//*** The 'finally' Statement_____
+// The 'finally' statement lets you execute code, after try and catch, regardless of the result:
+
+// syntax:-->
+// try {
+//   Block of code to try
+// }
+// catch(err) {
+//   Block of code to handle errors
+// }
+// finally {
+//   Block of code to be executed regardless of the try / catch result
+// }
+
+
+//Example:-->
+// try {
+//   alert("Welcome guest!");
+// }
+// catch(err) {
+// console.log(err);
+// }
+// finally {
+//  console.log("Finally block is always executed");
+// }
+
+
+
+
+
+//-------------------------------------------
+//*** The ' throw ' Statement_____
+
+// When an error occurs, JavaScript will normally stop and generate an error message.
+
+// The technical term for this is: JavaScript will throw an exception (throw an error).
+
+// JavaScript will actually create an Error object with two properties: name and message.
+
+// The ' throw ' statement allows you to create a custom error.
+
+// Technically you can throw an exception (throw an error).
+
+// The exception can be a JavaScript 'String', a 'Number', a 'Boolean' or an 'Object':
+
+// If you use throw together with try and catch, you can control program flow and generate custom error messages.
+
+
+
+// Syntax:-->
+
+// throw "Too big";    // throw a text
+// throw 500;          // throw a number
+
+
+// Example:-->
+
+// let x = '';
+// let x = '4g';
+// let x = '4';
+// let x = '12';
+// let x = '5';
+// try {
+//     if(x.trim() == "") throw "empty";
+//     if(isNaN(x)) throw "not a number";
+//     x = Number(x);
+//     if(x < 5) throw "too low";
+//     if(x > 10) throw "too high";
+//   }
+//   catch(err) {
+//     console.log(err);
+//   }
+//   finally {
+//       console.log("Finally block is always executed");
+//   }
+
+// Custom Error Messages**
+// let x = '5h';
+// try {
+//     if(x.trim() == "") throw "empty";
+//     if(isNaN(x)) throw {message: "Only number values are allowed", errorCode: 1234, errorName: "NotANumber", errorType: "TypeError", errorStack: "TypeError: Only number values are allowed"};
+
+//     x = Number(x);
+//     if(x < 5) throw "too low";
+//     if(x > 10) throw "too high";
+//   }
+//   catch(err) {
+//     console.log(err);
+//     console.log(err.message);
+//   }
+//   finally {
+//       console.log("Finally block is always executed");
+//   }
+
+
+
+
+
+
+// ***___The Error Object____**
+
+// JavaScript has a built in error object that provides error information when an error occurs.
+
+//* The error object provides two useful properties: name and message (a string).
+
+
+
+
+
+
+
+//___Error Name Values_______________________
+
+//^^___Range Error____**
+// A RangeError is thrown if you use a number that is outside the range of legal values.
+
+
+// let num = 1;
+// try {
+//   num.toPrecision(500);   // A number cannot have 500 significant digits
+// }
+// catch(err) {
+//     console.log(err);
+//     console.log(err.name);
+// // }
+
+// console.log(num.toPrecision(5));
+// console.log(num.toPrecision(500)); // toPrecision() argument must be between 1 and 100
+
+
+
+
+//^^___Reference Error____**
+/// A ReferenceError is thrown if you use (reference) a variable that has not been declared:
+
+// let x = 5;
+// try {
+//   x = y + 1;   // y cannot be used (referenced)
+// }
+// catch(err) {
+    // console.log(err);
+// //   console.log(err.name);
+// }
+
+
+
+
+
+//^^___Syntax Error____**   
+// A SyntaxError is thrown if you try to evaluate code with a syntax error.
+
+// try {
+//   eval("alert('Hello)");   // Missing ' will produce an error
+// }
+// catch(err) {
+// // console.log(err);
+// // console.log(err.name);
+// }
+
+
+
+
+//^^___Type Error____**
+// A TypeError is thrown if an operand or argument is incompatible with the type expected by an operator or function
+
+// let num = 1;
+// let num = 'sohel';
+
+// try {
+//   num.toUpperCase();   // You cannot convert a number to upper case
+// }
+// catch(err) {
+// // console.log(err);
+// // console.log(err.name);
+// }
+
+
+
+
+
+
+//^^___URI(Uniform Resource Identifier) Error____**
+// A URIError is thrown if you use illegal characters in a URI function:
+
+// try {
+//   decodeURI("%");   // Illegal characters will produce an error
+// }   
+// catch(err) {
+//     console.log(err);
+//     console.log(err.name);
+// }
+
+
+
+
+
+
+
+
+
+//============JavaScript Scope====================================================
+
+// Scope determines the accessibility (visibility) of variables.
+
+// JavaScript variables have 3 types of scope:
+// Block scope (let, const)
+// Function scope (local scope)
+// Global scope
+
+
+//***Block Scope__
+// Before ES6 (2015), JavaScript variables had only 'Global Scope' and 'Function Scope'.
+
+// ES6 introduced two important new JavaScript keywords: 'let' and 'const'. These two keywords provide 'Block Scope' in JavaScript.
+
+// Variables declared with 'let' and 'const' keywords inside a curly brace { } block, cannot be accessed from outside the block.
+
+// {
+//   let x = 2;
+// const a = 5;
+// }
+// x and a cannot be accessed from outside**
+
+
+
+// Variables declared with the var keyword can NOT have block scope. **But you can access the variable from outside the block**.
+// {
+//   var x = 2;
+// }
+// x can access outside the block
+
+
+
+
+
+
+// ***Local  Scope__
+
+// Variables declared within a JavaScript function, are LOCAL to the function
+
+// Local variables have Function Scope
+
+// They can only be accessed from within the function
+
+// Local variables are created when a function starts, and deleted when the function is completed.
+
+// ফাংশনের মধ্যে কোনো ভেরিবল ডিক্লেয়ার করলে সেটা শুধু ফাংশনের মধ্যেই এক্সপ্রেস করা যাবে
+
+// ফাংশনাল scope কে Local Scope বলা হয়
+
+
+
+
+
+
+
+// ***Function Scope__
+
+// JavaScript has function scope: Each function creates a new scope.
+
+// Variables defined inside a function are not accessible (visible) from outside the function.
+
+// Variables declared with var, let and const are quite similar when declared inside a function. They all have Function Scope
+
+// var, let এবং const দিয়ে ফাংশনের মধ্যে কোনো ভেরিবল ডিক্লেয়ার করলে, সেটা শুধু ফাংশনের মধ্যেই এক্সপ্রেস করা যাবে এবং তাদের সবারই ফাংশন স্কোপ আছে
+
+// function myFunction() {
+//   var carName = "Volvo";   // Function Scope
+// }
+
+// function myFunction() {
+//   let carName = "Volvo";   // Function Scope
+// }
+
+// function myFunction() {
+//   const carName = "Volvo";   // Function Scope
+// }
+
+//carName can't access out of the function***
+
+
+
+
+
+
+
+
+// ***Global JavaScript Variables(Global Scope)__
+
+// A global variable has Global Scope. All scripts and functions on a web page can access it.
+
+// Variables declared Globally (outside any function or block scope) have Global Scope.
+
+// Global variables can be accessed from anywhere in a JavaScript program
+
+// Variables declared with var, let and const are quite similar when declared outside a block. They all have Global Scope
+
+// var a = 2;         // Global scope
+// let b = 2;         // Global scope
+// const c = 2;       // Global scope
+
+// console.dir(window);
+
+
+//^^^ JavaScript Variables*****
+// In JavaScript, objects and functions are also variables.
+//Scope determines the accessibility of variables, objects, and functions from different parts of the code.
+
+
+
+
+//^^^ Automatically Global*****
+
+// If you assign a value to a variable that has not been declared, it will automatically become a GLOBAL variable.
+
+
+// function myFunction() {
+//   carName = "Volvo";
+// }
+// myFunction();
+
+// console.log(carName); // returns "Volvo"
+// carName will be a global variable. it can access from anywhere in the program.***
+
+
+
+
+//^^^Strict Mode:--> Strict mode is a new feature that helps you to catch common coding mistakes. In "Strict Mode", undeclared variables are not automatically global.**
+
+
+
+
+// ** With JavaScript, the global scope is the JavaScript environment.**
+
+// ** In HTML, the global scope is the 'window' object.**
+
+// Global variables defined with the 'var' keyword belong to the window object.
+
+// Global variables defined with the 'let' and 'const' keywords are not belong to the 'window' object.
+
+
+
+
+//******Warning___
+//Do NOT create global variables unless you intend to.
+
+// Your global variables (or functions) can overwrite window variables (or functions). Any function, including the window object, can overwrite your global variables and functions.
+
+
+
+
+
+
+//___The Lifetime of JavaScript Variables____
+
+// The lifetime of a JavaScript variable starts when it is declared.
+
+// Function (local) variables are deleted when the function is completed.
+
+// In a web browser, global variables are deleted when you close the browser window (or tab).
+
+// Global variables are also deleted when you refresh the page.
+
+// Global variables are also deleted when you clear your browser cache.
+
+
+
+
+//***Function Arguments:--> Function arguments (parameters) work as local variables inside functions.
+
+
+
+
+
+
+
+
+
+
+//========JavaScript Hoisting===================================
+
+// Hoisting is JavaScript's default behavior of moving declarations (var a; , let b; , const c; etc) to the top. 
+
+// Hoisting allows us to use variables before they are declared.
+
+
+//****JavaScript Declarations are Hoisted______
+
+// JavaScript শুধুমাত্র Declarations পার্টটুকুকে Hoisting(উপরে তোলা) করা হয় 
+
+// In JavaScript, a variable can be declared after it has been used.
+
+// In other words; a variable can be used before it has been declared.
+
+// Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope (to the top of the current script or the current function).
+
+
+// Variables defined with 'let' and 'const' are hoisted to the top of the block, but not initialized.
+
+// Variables defined with var are hoisted to the top of the block and initialized to undefined.
+
+// 'let' এবং 'const' এর ক্ষেত্রে JavaScript যে লাইনে এগুলোকে ডিক্লেয়ার করা হয়, সেই লাইনে এগুলোর মান undefined assign করে কিন্তু 'var' এর ক্ষেত্রে JavaScript এটাকে Hoisting করে উপরে নিয়ে যে লাইনে রাখে সেই লাইনে এর মান undefined assign করে
+
+
+
+
+
+//****JavaScript Initializations are Not Hoisted____
+// JavaScript only hoists declarations, not initializations.
+
+
+
+//***Declare Your Variables At the Top !__
+// Hoisting is (to many developers) an unknown or overlooked behavior of JavaScript.
+
+// If a developer doesn't understand hoisting, programs may contain bugs (errors).
+
+// To avoid bugs, always declare all variables at the beginning of every scope.
+
+// Since this is how JavaScript interprets the code, it is always a good rule.
+
+// JavaScript in 'strict mode' does not allow variables to be used if they are not declared. Study "use strict" in the next chapter.
+
+
+
+
+
+
+
+
+
+
+//======JS Strict Mode==========================================================
+
+
+// "use strict" মোড সম্পূর্ণ file অথবা globally scope এর মধ্যে use করার জন্য সবার উপরে "use strict" লিখতে হবে,  এছাড়া নির্দিষ্ট কিছু functions বা scopes মধ্যে যদি চাই তাহলে "use strict" মোড Use করা যাবে (এখানে উপরে লিখতে হবে)
+
+
+
+
+
+
+
+
+
+//====JavaScript ' this ' keyword========================================
+
+// const person = {
+//   firstName: "John",
+//   lastName : "Doe",
+//   id       : 5566,
+//   fullName : function() {
+//     //  console.log(this.firstName + " " + this.lastName);
+//     return this.firstName + " " + this.lastName;
+// }
+// };
+// person.fullName();
+
+
+// In JavaScript, the this keyword refers to an object.
+
+// The this keyword refers to the object it belongs to.
+
+// The value of the this keyword can be changed.
+
+// The this keyword refers to different objects depending on how it is used:
+
+// In an object method, this refers to the 'object'.
+// Alone, this refers to the 'global object'.
+// In a function, this refers to the 'global object'.
+// In a function, in strict mode, this is 'undefined'.
+// In an event, this refers to the element that received the event.
+//** Methods like call(), apply(), and bind() can refer this to any object.
+
+// Note**'this' is not a variable. It is a keyword. You cannot change the value of 'this'.
+
+
+
+//** 'this' in a Method________________
+// When used in an object method, 'this' refers to the 'object'.
+
+// Example:
+// const person = {
+//   firstName: "John",
+//   lastName: "Doe",
+//   id: 5566,
+//   fullName : function() {
+//     console.log(this);
+//     return this.firstName + " " + this.lastName;
+//   }
+// };
+// // console.log(person.fullName());
+
+
+
+
+//-------------------------------------------
+// ***this Alone_____________
+// When used alone, this refers to the global object. Because this is running in the global scope.
+
+// In a browser window the global object is [object Window]:
+
+// console.dir(this);
+// console.log(this);
+
+// console.log(window);
+// console.dir(window);
+
+//  In 'strict mode', when used alone, 'this' also refers to the global object:
+
+
+
+
+
+
+//----------------------------------
+// ***'this' in a Function (Default)__________
+
+// In a function, the global object is the default binding for 'this'.
+
+// In a browser window the global object is [object Window]:
+
+
+// function myFunction() {
+//     // console.log(this);
+//   return this;
+// }
+// myFunction();
+
+
+
+
+//----------------------------------------
+// **'this' in a Function (Strict)_______
+//JavaScript strict mode does not allow default binding. So, when used in a function, in strict mode, this is undefined.
+
+// function myFunction() {
+//     // "use strict";
+//     // console.log(this);
+// }
+// myFunction();
+
+
+
+
+
+
+//-------------------------------------
+// ***'this' in Event Handlers_______________
+
+// In HTML event handlers, this refers to the HTML element that received the event
+
+
+
+
+
+
+
+//----------------------
+// Object Method Binding**
+// Example:
+// const person = {
+//   firstName  : "John",
+//   lastName   : "Doe",
+//   id         : 5566,
+//   myFunction : function() {
+//     // console.log(this);
+//     return this;
+//   }
+// };
+
+// person.myFunction();
+
+
+
+// const obj1 = {
+//     name : "John",
+//     getName : function() {
+//         return this.name;
+//     }
+// }
+
+// console.log(obj1.getName());
+
+
+
+
+
+
+
+//------------------------------------------
+// Explicit Function Binding**
+// The call() and apply() methods are predefined JavaScript methods. They can both be used to call an object method with another object as argument.
+
+// Example:
+// const obj1 = {
+//     name : "obj1",
+//     getName : function() {
+//         return this.name;
+//     }
+// }
+
+// const obj2 = {
+//     name : "obj2"
+// }
+// console.log(obj1.getName.call({name : "obj2"}));
+// console.log(obj1.getName.call(obj2));
+
+
+
+
+
+
+
+//**JavaScript Function bind()_____***
+// With the bind() method, an object can borrow a method from another object.
+
+// bind() পদ্ধতির সাহায্যে, একটি বস্তু অন্য বস্তু থেকে একটি পদ্ধতি ধার করতে পারে।
+
+// bind() পদ্ধতির সাহায্যে, একটা ফাংশনের সাথে অন্য একটি মেথড বা অবজেক্টকে বাঁধাই করা বা জোড়া লাগানো যায়
+
+// const person = {
+//   firstName:"John",
+//   lastName: "Doe",
+//   fullName: function () {
+//     console.log(this);
+//     // console.log(this.firstName + " " + this.lastName);
+//     return this.firstName + " " + this.lastName;
+//   }
+// }
+
+// const member = {
+//   firstName:"Hege",
+//   lastName: "Nilsen",
+// }
+
+// // let fullName = person.fullName.bind(member)();
+// // console.log(fullName);
+
+// // OR
+
+// let fullName = person.fullName.bind(member);
+// console.log(fullName());
+
+
+
+// **Preserving 'this': Sometimes the bind() method has to be used to prevent losing this. {কখনও কখনও bind() পদ্ধতিটি এটি হারানো রোধ করতে ব্যবহার করতে হয়।}
+
+// Sometimes the bind() method has to be used to prevent losing this.
+
+
+//*****When a function is used as a callback, this is lost.
+// const person = {
+//   firstName:"John",
+//   lastName: "Doe",
+//   display: function () {
+//     let x = document.getElementById("demo");
+//     x.innerHTML = this.firstName + " " + this.lastName;
+//   }
+// }
+
+// setTimeout(person.display, 3000);
+
+
+
+
+// ****The bind() method solves this problem.
+
+// const person = {
+//   firstName:"John",
+//   lastName: "Doe",
+//   display: function () {
+//     let x = document.getElementById("demo");
+//     x.innerHTML = this.firstName + " " + this.lastName;
+//   }
+// }
+
+// let display = person.display.bind(person);
+// // setTimeout(display, 3000);
+
+
+
+
+
+//*****This Precedence???????????
+
+
+
+
+
+
+
+
+
+//=========JavaScript Arrow Function==============================================================
+
+// Normal Function Example:
+
+// const nam = function() {
+//     console.log('sohel');
+//     return 'sohel';
+// }
+// nam();
+
+// Arrow Function Example:
+
+
+// const nam2 = () => {
+//     console.log('Khan');
+//     return 'Khan';
+// }
+// nam2();
+
+
+
+//**If the function has only one statement, and the statement returns a value, you can remove the brackets and the return keyword from the function.** This works only if the function has only one statement.
+
+// const nam2 = () => console.log('Khan');
+// nam2();
+
+// const nam2 = () => 'Khan';
+// console.log(nam2());
+
+
+
+//**If you have parameters, you pass them inside the parentheses.**
+
+// const nam2 = (fName) => fName + ' ' + 'Khan';
+// const nam2 = (fName) => fName.concat(' ' , 'Khan');
+// console.log(nam2('sohel'));
+
+
+
+//**If you have only one parameter, you can skip the parentheses as well
+
+// const nam2 = fName => fName + ' ' + 'Khan';
+// const nam2 = fName => fName.concat(' ' , 'Khan');
+// console.log(nam2('sohel'));
+
+
+
+
+
+//____________________________________________________________
+//****In Arrow Function ,What About 'this' Keyword?***
+
+// The handling of this is also different in arrow functions compared to regular functions.
+
+// In short, with arrow functions there are no binding of this.
+
+//***In regular functions the this keyword represented the object that called the function, which could be the window, the document, a button or whatever.
+
+////***With arrow functions the this keyword always represents the object that defined the arrow function.
+
+
+//-----Bangla------
+// regular functions এর তুলনায় arrow functions এর পরিচালনাও আলাদা।
+
+// সংক্ষেপে, arrow functionsগুলির সাথে 'this' এর কোনও binding  নেই।
+
+//****Regular functions এ 'this' keyword সেই বস্তুটিকে উপস্থাপন করে যে function কে call করে, যা window, document, একটি button  বা অন্য যেকোন কিছু  হতে পারে।
+
+//****Arrow functions এ 'this' keyword সর্বদা সেই বস্তুর প্রতিনিধিত্ব করে যে arrow function কে সংজ্ঞায়িত করে।
+
+// Arrow function টি যদি কোন কিছুর মধ্যে ডিক্লেয়ার করা হয়, তাহলে Arrow function টি উপরের দিকে সর্বোচ্চ লেভেলে চলে যায় এবং তাকে সংজ্ঞায়িত বস্তুটিকে খুঁজে বের করে 
+
+
+//____________________________________________________________________
+
+// Example: Regular Function--->
+
+// const person = {
+//   firstName:"John",
+//   lastName: "Doe",
+//   fullName:  function() {
+//     console.log(this);
+//     // console.log(this.firstName + " " + this.lastName);
+//     return this.firstName + " " + this.lastName;
+//   }
+// }
+
+// const member = {
+//   firstName:"Hege",
+//   lastName: "Nilsen",
+// }
+
+// let fullName = person.fullName.bind(member)();
+// console.log(fullName);
+
+
+
+
+// Example: Arrow Function--->
+
+// const person = {
+//   firstName:"John",
+//   lastName: "Doe",
+//   fullName:  () => {
+//     console.log(this);
+//     // console.log(this.firstName + " " + this.lastName);
+//     return this.firstName + " " + this.lastName;
+//   }
+// }
+// // console.log(person.fullName());
+
+// const member = {
+//   firstName:"Hege",
+//   lastName: "Nilsen",
+// }
+
+// let fullName = person.fullName.bind(member)();
+// console.log(fullName);
+
+
+
+
+
+
+
+
+
+//===========JavaScript Classes==============================================
+
+// JavaScript 'Classes' are templates for JavaScript 'Objects'.
+
+// A JavaScript 'class' is not an 'object'. It is a template for JavaScript 'objects'.
+
+// The constructor method is called automatically when a new object is created.
+
+// এর সুবিধা হল বিভিন্ন তথ্য দিয়ে বিভিন্ন রকমের অবজেক্ট তৈরি করা যাবে
+
+
+// JavaScript Class Syntax:-->
+// Use the keyword class to create a class.
+// Always add a method named constructor():
+
+// Syntax:
+// class ClassName {
+//   constructor() { ... }
+// }
+
+
+
+
+// Example:--->
+
+// class Person {
+//   constructor(name, age, job, gender) {
+//     this.Name = name;
+//     this.Age = age;
+//     this.JobTitle = job;
+//     this.Gender = gender;
+//     // console.log(this);
+   
+//   }
+// }
+
+// const sohel = new Person('Sohel', 23, 'Web Developer', 'Male');
+
+// const sathi = new Person('Sathi', 23, 'Web Developer', 'Female');
+
+// const rufaida = new Person('Rufaida', 23, 'Web Developer', 'Female');
+
+// console.log(sohel);
+// console.log(sathi);
+// console.log(rufaida);
+
+
+
+
+// **The Constructor Method________**
+// The constructor method is a special method:-->
+
+// It has to have the exact name "constructor"
+// It is executed automatically when a new object is created
+// It is used to initialize object properties
+
+//** If you do not define a constructor method, JavaScript will add an empty constructor method.
+
+// class Person {
+
+// }
+// const rufaida = new Person('Rufaida', 23, 'Web Developer', 'Female');
+// // console.log(rufaida);
+
+
+
+
+
+
+//**Class Methods__________**
+
+// Class methods are created with the same syntax as object methods.
+
+// Use the keyword class to create a class.
+
+// Always add a constructor() method.
+
+// Then add any number of methods.
+
+
+
+// class Car {
+//   constructor(name, year) {
+//     this.name = name;
+//     this.year = year;
+//     //  console.log(this);
+//   }
+//   age(presentYear) {
+//     // console.log(presentYear);
+//     // console.log(this.year);
+//     return presentYear - this.year;
+    
+//   }
+// }
+
+// const date = new Date();
+// let yearNow = date.getFullYear();
+
+
+// const myCar = new Car("Ford", 2014);
+
+// const carAge = myCar.age(yearNow);
+
+// // console.log(carAge);
+
+
+
+
+
+
+
+
+
+//============JavaScript JSON(JavaScript Object Notation)===================================================
+// JSON is a format for storing and transporting data.
+
+// It is a text format that is used to send data between computers.
+
+// JSON is often used when data is sent from a server to a web page.
+
+// It is lightweight and easy to understand.
+
+// It is used to send data from a server to a web page.
+
+// It is used to send data from a web page to a server.
+
+// It is easy to embed in HTML.
+
+// It is easy to send from one computer to another.
+
+// It is easy to read and write.
+
+// It is easy to parse and generate.
+
+// It is easy to validate and reject invalid data.
+
+
+
+// * The JSON syntax is derived from JavaScript object notation syntax, but the JSON format is text only. Code for reading and generating JSON data can be written in any programming language.
+
+
+// The JSON format is syntactically identical to the code for creating JavaScript objects. Because of this similarity, a JavaScript program can easily convert JSON data into native JavaScript objects.
+
+
+
+///**JSON Syntax Rules___
+
+// Data is in name/value pairs
+// Data is separated by commas
+// Curly braces hold objects
+// Square brackets hold arrays
+
+
+//** JSON names require double quotes. JavaScript names do not.
+
+// JSON objects are written inside curly braces.
+// JSON arrays are written inside square brackets.
+
+// A common use of JSON is to read data from a web server, and display the data in a web page.
+
+//** JavaScript built-in function JSON.parse() মাধ্যমে JSON data(text) গুলোকে JavaScript object এ রূপান্তর করা হয়
+
+//** JSON.stringify() এর মাধ্যমেJavaScript এর object গুলোকে JSON data(text) রূপান্তর করা হয়
+
+
+
+
+///JSON Data to Js Object__Using JSON.parse()
+
+// const jsonData ='{ "employees" : [' +
+// '{ "firstName":"John" , "lastName":"Doe" },' +
+// '{ "firstName":"Anna" , "lastName":"Smith" },' +
+// '{ "firstName":"Peter" , "lastName":"Jones" } ]}';
+
+// console.log(JSON.parse(jsonData));
+
+
+
+/// Js Object to JSON data__Using JSON.stringify()
+
+// const obj = {
+//     name : 'sohel',
+//     age : 23,
+// }
+
+// console.log(JSON.stringify(obj));
+
+
+
+
+
+
+
+
+//=========JavaScript Debugging==================================================
+
+// The 'debugger' keyword stops the execution of JavaScript, and calls (if available) the debugging function.
+
+// Debugging is the process of testing, finding, and reducing bugs (errors) in computer programs.
+// The first known computer bug was a real bug (an insect) stuck in the electronics.
+
+
+// let y = 150 / x;
+// // debugger;
+// var x = 15 * 5;
+// console.log(y);
+
+
+
+ 
+
+
+  
+
+
+
+
+//==============JavaScript Objects================================================================
+
+//*********JavaScript Object Definitions------------------------
+// In JavaScript, almost "everything" is an object:
+
+// Booleans can be objects (if defined with the new keyword)
+// Numbers can be objects (if defined with the new keyword)
+// Strings can be objects (if defined with the new keyword)
+// Dates are always objects
+// Maths are always objects
+// Regular expressions are always objects
+// Arrays are always objects
+// Functions are always objects
+// Objects are always objects
+
+
+// All JavaScript values, except primitives, are objects.
+
+
+
+
+
+
+//**JavaScript Primitives_____
+// A primitive value is a value that has no properties or methods.
+
+// A primitive data type is data that has a primitive value.
+
+// JavaScript defines 7 types of primitive data types: string, number, boolean, null, undefined, symbol, bigint
+
+// Primitive values are immutable (they are hardcoded and cannot be changed).
+
+
+
+
+
+//***Objects are Variables____
+
+// JavaScript variables can contain single values and also contain many values.
+
+// Objects are variables too. But objects can contain many values.
+
+// Object values are written as name : value pairs (name and value separated by a colon)
+
+// A JavaScript object is a collection of named values
+
+// It is a common practice to declare objects with the const keyword.
+
+
+
+
+
+//***Object Methods____
+// Methods are actions that can be performed on objects.
+
+// Object properties can be both primitive values, other objects, Other methods, and functions
+
+// JavaScript objects are containers for named values, called properties and methods.
+
+
+
+// Using an Object Literal is the easiest way to create a JavaScript Object.
+
+// An object literal is a list of name:value pairs (like age:50) inside curly braces {}.
+
+
+
+
+
+
+// Objects are mutable (they can be changed): They are addressed by reference, not by value.
+
+// EXAMPLE:
+// const person = {
+//   firstName:"John",
+//   lastName:"Doe",
+//   age:50, eyeColor:"blue"
+// }
+
+// const x = person; // The object x is not a copy of person. It is person. Both x and person are the same object.
+// x.age = 10;  // change both x and person objects
+
+// console.log(person);
+// console.log(x);
+
+// person.lastName = 'Gho' // change both x and person objects
+
+// console.log(person);
+// console.log(x);
+
+
+
+
+
+
+
+
+
+//========JavaScript Object Properties=========================================
+
+// Properties are the most important part of any JavaScript object.
+
+// Properties are the name/value pairs that make up an object.
+
+// Properties are written inside curly braces {} in an object literal.
+
+// Properties can be accessed using dot notation or bracket notation.(objectName.property  or objectName['property'])
+
+// Properties can be changed using dot notation or bracket notation.(objectName.property = value  or objectName['property'] = value)
+
+// Properties can be deleted using the delete keyword.(delete objectName.property or delete objectName['property'])
+
+// Properties can be added using the assignment operator (objectName.property = value or objectName['property'] = value)
+
+// Properties can be checked for existence using the ' in ' keyword. it returns true if the property exists in the object, Otherwise it returns false.
+
+// const obj = {
+//     name : 'sohel',
+//     age : 23,
+//     address : 'dhanmondi',  
+// }
+
+// console.log('age' in obj); // returns true
+
+
+// A JavaScript object is a collection of unordered properties.
+
+// Properties can usually be changed, added, and deleted, but some are read only.
+
+// The JavaScript ' for...in ' statement loops through the properties of an object.
+
+// syntax:--> 
+// for (let variableName in objectName) {
+//   // code to be executed
+// }
+
+// Example:
+// const person = {
+//   fname:" John",
+//   lname:" Doe",
+//   age: 25
+// };
+
+// for (let x in person) {
+// //   console.log(x);
+// //   console.log(person[x]);
+// }
+
+
+
+//**Deleting Properties:::
+//The ' delete ' keyword deletes a property from an object.
+
+// The delete keyword deletes both the value of the property and the property itself.
+
+// The delete operator is designed to be used on object properties. It has no effect on variables or functions.
+
+// The delete operator should not be used on predefined JavaScript object properties. It can crash your application.
+
+// Example:
+// const person = {
+//   firstName: "John",
+//   lastName: "Doe",
+//   age: 50,
+//   eyeColor: "blue"
+// };
+
+// delete person["age"];
+// // console.log(person);
+
+
+
+//***Property Attributes:::
+// All properties have a name. In addition they also have a value.
+
+// The ' name ' and ' value ' are called property names and property values, respectively.
+
+// The value is one of the property's attributes. Other attributes are: enumerable, configurable, and writable.
+
+// The ' enumerable ' attribute specifies whether the property is visible to ' for...in ' loops.
+
+// The ' configurable ' attribute specifies whether the property can be deleted from an object.
+
+// The ' writable ' attribute specifies whether the value of the property can be changed.
+
+
+
+
+
+
+
+
+
+//===============JavaScript Object Methods========================
+
+// Methods are actions that can be performed on objects.
+
+ 
+// What is 'this'???
+// In JavaScript, the 'this' keyword refers to an object.
+
+// Which object depends on how 'this' is being invoked (used or called).
+
+// The 'this' keyword refers to different objects depending on how it is used:
+
+// In an object method, 'this' refers to the object.
+// Alone, 'this' refers to the global object.
+// In a function, 'this' refers to the global object.
+// In a function, in strict mode, 'this' is undefined.
+// In an event, 'this' refers to the element that received the event.
+// Methods like call(), apply(), and bind() can refer 'this' to any object.
+
+
+////this is not a variable. It is a keyword. You cannot change the value of this.
+
+// Methods are functions stored as object properties.
+
+
+
+
+
+
+
+
+//===========JavaScript Display Objects==================
+
+// Some common solutions to display JavaScript objects are:
+
+// Displaying the Object Properties by name:
+
+// const person = {
+//   name: "John",
+//   age: 30,
+//   city: "New York"
+// };
+
+// document.getElementById("demo").innerHTML =
+// person.name + "," + person.age + "," + person.city;
+
+
+
+
+// Displaying the Object Properties ' for..in ' a Loop:
+
+// const person = {
+//   name: "John",
+//   age: 30,
+//   city: "New York"
+// };
+
+// let txt = "";
+// for (let x in person) {
+// txt += person[x] + " ";
+// };
+
+// document.getElementById("demo").innerHTML = txt;
+
+
+
+// Displaying the Object using ' Object.values() ':
+
+// Any JavaScript object can be converted to an array using Object.values():
+
+
+
+// const person = {
+//   name: "John",
+//   age: 30,
+//   city: "New York"
+// };
+
+// const myArray = Object.values(person); // collects the values
+
+// document.getElementById("demo").innerHTML = myArray;
+
+
+
+// Displaying the Object using ' JSON.stringify() '
+
+// Any JavaScript object can be stringified (converted to a string) with the JavaScript function JSON.stringify():
+
+// const person = {
+//   name: "John",
+//   age: 30,
+//   city: "New York"
+// };
+
+// let myString = JSON.stringify(person);
+// document.getElementById("demo").innerHTML = myString;
+
+
+
+//***'JSON.stringify()' converts dates into strings**:
+
+// const person = {
+//   name: "John",
+//   today: new Date()
+// };
+
+// let myString = JSON.stringify(person);
+// document.getElementById("demo").innerHTML = myString;
+
+
+
+// ***'JSON.stringify()' will not stringify functions:**:
+
+// const person = {
+//   name: "John",
+//   age: function () {return 30;}
+// };
+// person.age = person.age.toString();
+
+// let myString = JSON.stringify(person);
+// document.getElementById("demo").innerHTML = myString;
+
+
+
+//****stringify JavaScript arrays:******
+
+// const arr = ["John", "Peter", "Sally", "Jane"];
+
+// let myString = JSON.stringify(arr);
+// document.getElementById("demo").innerHTML = myString;
+
+
+
+
+
+
+
+
+
+
+//===========JavaScript Object Accessors======================
+
+// Getters and setters allow you to define Object Accessors (Computed Properties).
+
+// Getters and setters are useful when you want to provide controlled access to an object's properties.
+
+// Getters return the value of an object's property, while setters assign a new value to an object's property.
+
+// Getters and setters are created with the get and set keywords.
+
+
+//**JavaScript Getter (The get Keyword)__
+// Getters(get) return the value of an object's property.
+
+// Example:
+// const person = {
+//   firstName: "John",
+//   lastName: "Doe",
+//   language: "en",
+//   get lang() {
+//     return this.language;
+//   }
+// };
+
+// // Display data from the object using a getter:
+
+// console.log(person.lang);
+// document.getElementById("demo").innerHTML = person.lang;
+
+
+
+
+
+// ****JavaScript Setter (The set Keyword)___
+// Setters(set) assign a new value to an object's property.
+
+// Example:
+// const person = {
+//   firstName: "John",
+//   lastName: "Doe",
+//   language: "",
+//   set lang(lang) {
+//     this.language = lang;
+//   }
+// };
+
+// // Set an object property using a setter:
+// person.lang = "en";
+
+// console.log(person.language);
+
+// // Display data from the object:
+// document.getElementById("demo").innerHTML = person.language;
+
+
+
+
+//**JavaScript can secure better data quality when using getters and setters.**
+
+
+// Why Using Getters and Setters???
+
+// It gives simpler syntax
+// It allows equal syntax for properties and methods
+// It can secure better data quality
+// It is useful for doing things behind-the-scenes
+
+
+
+
+//**The 'Object.defineProperty()' method can also be used to add Getters and Setters to an existing object.**
+
+// const person = {
+//   firstName: "John",
+//   lastName: "Doe",
+// //   get fullName() {
+// //     return this.firstName + " " + this.lastName;
+// //   }
+// };
+
+// Object.defineProperty(person, "fullName", {
+//   get : function () {
+//     return this.firstName + " " + this.lastName;
+// }
+// });
+
+// console.log(person.fullName);
+
+
+
+
+
+
+
+
+
+
+
+//========JavaScript Object Constructors=============================
+
+// It is considered good practice to name constructor functions with an upper-case first letter.
+
+// it is like "blueprint" for creating many objects of the same "type".
+
+// Example: // Function name should be capitalized. 
+
+// function Person(first, last, age, eye) {
+//   this.firstName = first;
+//   this.lastName = last;
+//   this.age = age;
+//   this.eyeColor = eye;
+// }
+
+
+// In a constructor function this does not have a value. It is a substitute for the new object. The value of this will become the new object when a new object is created.
+
+
+// Main Example:
+
+// function Person(firstName, lastName, age, eye) {
+//   this.firstName = firstName;
+//   this.lastName = lastName;
+//   this.age = age;
+//   this.eyeColor = eye;
+// }
+
+
+// Create an object using the Person constructor:
+
+// const sohel = new Person("Sohel", "Khan", 26, "black");
+// const sathi = new Person("Sathi", "Fahir ", 22, "brown");
+// const rufaida = new Person("Rufaida", "Sohel", 2.2, "black");
+
+// // console.log(sohel, sathi, rufaida);
+
+// rufaida.middleName = "Binte";
+
+// sathi.fullName = function() {
+//     return this.firstName + " " + this.lastName;
+// };
+// sohel.fullName = function() {
+//     return this.firstName + " " + this.lastName;
+// };
+
+// rufaida.fullName = function() {
+//     return this.firstName + " " + this.middleName + " " + this.lastName;
+// };
+
+// // console.log(sohel, sathi, rufaida);
+// // console.log(sohel.fullName());
+// // console.log(sathi.fullName());
+// // console.log(rufaida.fullName());
+
+
+
+
+//***Built-in JavaScript Constructors***
+// JavaScript has built-in constructors for native objects:___
+
+// new String()    // A new String object
+// new Number()    // A new Number object
+// new Boolean()   // A new Boolean object
+// new Object()    // A new Object object
+// new Array()     // A new Array object
+// new RegExp()    // A new RegExp object
+// new Function()  // A new Function object
+// new Date()      // A new Date object
+
+
+//**The Math() object is not in the list. Math is a global object. The new keyword cannot be used on Math.
+
+
+
+
+
+
+
+
+
+
+
+//======JavaScript Object Prototypes============================
+
+// All JavaScript objects inherit properties and methods from a prototype.
+
+// The prototype is an object that is used as a blueprint for creating objects.
+
+// The prototype is not created in the same way that the constructor is created. The prototype is an object that is shared among all objects that inherit from it.
+
+// The prototype is not a property of the object. It is a property of the constructor function.
+
+//***Only modify your own prototypes. Never modify the prototypes of standard JavaScript objects.
+
+// function Person(name, age) {
+//     this.Name = name;
+//     this.age = age;
+// }
+
+// const masum = new Person('Masun Billah', 23)
+
+// console.log(masum);
+
+// Person.prototype.FirstName = 'Masum';
+// console.dir(Person.prototype);
+
+// console.log(masum.FirstName);
+
+
+
+
+
+
+
+
+
+//=========JavaScript Iterables====?????=========================
+
+// Iterable objects are objects that can be iterated over with ' for..of '.
+
+// The ' for..of ' loop iterates over the values of an iterable object.
+
+// Technically, iterables must implement the Symbol.iterator method.
+
+// যদি কোন object এর prototype এর মধ্যে ' Symbol.iterator ' method থাকে তাহলে ওই object টি iterable করা সম্ভব অন্যথায় ওই object এর মধ্যে ' Symbol.iterator ' method add করে তারপর object টি iterable করতে হবে,  ' for..of ' loop সাহায্যে 
+
+//**Iterating Over a String__
+
+// let nam = 'sohel';
+
+// for (x of nam) {
+//     console.log(x);
+// }
+
+//**Iterating Over an Array__
+
+// const nams = ['sohel', 'masum', 'rufaida'];
+
+// for (x of nams) {
+//     console.log(x);
+// }
+
+
+// A JavaScript iterable is an object that has a 'Symbol.iterator'.
+
+// The 'Symbol.iterator' is a function that returns a ''next()'' function.
+
+//**Iterating Over a Object__
+// object এর মধ্যে ' Symbol.iterator ' method add করে তারপর object টি iterable করতে হবে,  ' for..of ' loop সাহায্যে 
+
+// let myNumbers = {};
+
+// myNumbers[Symbol.iterator] = function() {
+//   let n = 0;
+//   let done = false;
+//   return {
+//     next() {
+//       n += 1;
+//       if (n == 100) {done = true}
+//     //   console.log(n, done);
+//       return {value:n, done:done};
+//     }
+//   };
+// }
+
+
+// for (num of myNumbers) {
+//   console.log(num);
+// }
+
+// console.log(myNumbers);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

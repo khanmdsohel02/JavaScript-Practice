@@ -182,3 +182,261 @@
 // })
 
 // // console.log(getDuplicate);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//=====JavaScript Problem Solving - 2==================
+// 1. sentence  এ সুমিত কইবার আছে  এবং প্রথম সুমিত কত তম ইনডেক্স এ আছে 
+
+// const sentence = "Learn with Sumit is all about teaching web development skills and techniques in an efficient and practical manner. If you are just getting started in web development, Learn with Sumit has all the tools you need to learn the newest and most popular technologies to convert you from a no stack to full stack developer. Learn with Sumit also deep dives into advanced topics using the latest best practices for you seasoned web developers.";
+
+
+// console.log(sentence.match(/sumit/ig));
+
+// console.log(sentence.match(/sumit/ig).length);
+
+// let sumit = sentence.match(/sumit/i) // returns the first match
+// console.log(sumit.index);
+
+// //OR____
+
+// console.log(sentence.search(/sumit/i)); // returns the index position of first match
+
+
+
+
+
+
+//2. কোন অ্যারে থেকে কিভাবে সব থেকে বড় স্ট্রিং খুঁজে বের করবেন এবং তার ইনডেক্স নাম্বার দেখাবেন
+
+// const array = ['sohel', 'sathi', 'rufaida']
+
+// function boroString(names) {
+//     let boroWord = '';
+//     const arrLength = names.length;
+//     for (let i = 0; i < arrLength; i++) {
+//         //  console.log(i);
+//         if (names[i].length > boroWord.length) {
+//             boroWord = names[i];
+//         }
+//     }
+//     return [boroWord, names.indexOf(boroWord)];
+
+// }
+
+// let result = boroString(array);
+
+// const array = ['sohel', 'sathi', 'rufaida']
+
+//OR___
+
+
+// const array = ['Osman Goni', 'Shahera', 'rufaida', 'Syraiya', 'Mubassir Islam']
+
+// function boroString(names) {
+//     let boroWord = '';
+
+//     for(nam of names) {
+//         //  console.log(nam);
+//         if(nam.length > boroWord.length) {
+//             boroWord = nam;
+//             //  console.log(nam);
+//         }
+//     }
+//     return [boroWord, names.indexOf(boroWord)];
+
+// }
+
+// let result = boroString(array);
+// console.log(result);
+
+
+
+
+
+
+//3. ১ থেকে ১০০(যে কোন সংখ্যা হতে পারে) পর্যন্ত ৩ অথবা ৫ এবং ৩ ও ৫ উভয় সংখ্যা দ্বারা বিভাজ্য তা বের কর এবং কোন সংখ্যাগুলো বিভাজ্য নয় সেগুলো বের
+
+// const divisibleByThreeAndFive = [];
+// const divisibleByThree = [];
+// const divisibleByFive = [];
+// const notDivisible = [];
+
+
+// function huntDivisible(number) {
+//     for(let i = 1; i <= number; i++) {
+//         if(i % 3 === 0 && i % 5 === 0) {
+//             divisibleByThreeAndFive.push(i);
+//             // console.log(`${i} is Divisible by 3 and 5`);
+//         }else if(i % 3 === 0) {
+//             divisibleByThree.push(i);
+//             // console.log(`${i} is Divisible by 3`);
+//         }else if(i % 5 === 0) {
+//             divisibleByFive.push(i);
+//             // console.log(`${i} is Divisible by 5`);
+//         }else {
+//             notDivisible.push(i);
+//             // console.log(`${i} is not divisible by 3 or 5 and Both`);
+//             // console.log(i);
+//         }
+//     }
+// }
+
+// huntDivisible(500);
+
+// console.log(`Divisible by 3 and 5 :->  ${divisibleByThreeAndFive}`);
+
+// console.log(`Divisible by 3 :->  ${divisibleByThree}`);
+
+// console.log(`Divisible by 5 :->  ${divisibleByFive}`);
+
+// console.log(`Not Divisible :->  ${notDivisible}`);
+
+
+
+
+
+
+// 4. কোন array থেকে falsy values অথবা truty values খুঁজে বের করা
+
+// const array = [0, '','sohel', null, 'masum',undefined, NaN, 7, '25', false];
+
+
+// const falsyValues = array.filter(function(item) {
+//     if(!item) {
+//         // return false; // it is not working
+//         return !item;
+//     }
+// });
+// console.log(falsyValues);
+
+
+// const trutyValues = array.filter(function(item) {
+//     if(item) {
+//         return true;
+//         // return item;
+//     }
+// });
+// console.log(trutyValues);
+
+
+// const trutyValues = array.filter(Boolean);
+// console.log(trutyValues);
+
+
+
+
+
+//--- কোন array থেকে falsy উপাদান বাদ দেওয়া
+
+// const array = [0, '','sohel', null, 'masum',undefined, NaN, 7, '25', false];
+// console.log(array);
+
+// for(let i = 0; i < array.length; i++) {
+//     if(!array[i]) {
+//         array.splice(i, 1);
+//         i--; // decrement to revisit the same index. Removing the element means index i could be, replaced with another empty element. 
+//     }
+// }
+
+// console.log(array);
+
+
+
+//---- কোন array থেকে truty উপাদান বাদ দেওয়া
+
+// const array = [0, '','sohel', null, 'masum',undefined, NaN, 7, '25', false];
+// console.log(array);
+
+// for(let i = 0; i < array.length; i++) {
+//     if(array[i]) {
+//         array.splice(i, 1);
+//         i--; // decrement to revisit the same index. Removing the element means index i could be, replaced with another empty element. 
+//     }
+// }
+
+// console.log(array);
+
+
+
+// --- কোন Object থেকে falsy উপাদান বাদ দেওয়া এবং truty উপাদান রিটার্ন করা
+
+// const obj = {a: 0,b: '',c: 'sohel',d: null,e: 'masum', f: undefined,g: NaN,h: 7,i: '25',j: false};
+
+//__delete Kora___
+// for(el in obj) {
+//     // console.log(obj[el]);
+//     if(!obj[el]) {
+//         // console.log(obj[el]);
+//         delete obj[el];
+
+//     }
+
+// }
+
+// console.log(obj);
+
+//__OR___
+
+// const trutyValues = function(obj) {
+//     for(el in obj) {
+//     // console.log(obj[el]);
+//         if(!obj[el]) {
+//            // console.log(obj[el]);
+//            delete obj[el];
+//         }
+//     }
+//     return obj;
+// }
+// const result = trutyValues(obj);
+// console.log(result);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
