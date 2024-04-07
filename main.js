@@ -1,5 +1,13 @@
 // "use strict";
 
+
+/////////////////////////////////////////
+
+// JS default behaviour is synchronous, which means that the code runs line by line. But JS default behaviour can be changed to Asynchronous behaviour, In asynchronous way, it will run in parallel.
+
+///////////////////////////////////////////
+
+
 // a = 3;
 // var a;
 // console.log(a);
@@ -208,7 +216,8 @@
 
 
 // // ===============charAt() Method================
-var n = 'Muhammad sajid';
+// var n = 'Muhammad sajid';
+
 // console.log(n.charAt(11)); // charAt() method returns the character at the specified index(position) in a string
 // console.log(n.charAt(11.5)); // charAt() method returns the character at the specified index(position) in a string
 
@@ -1395,7 +1404,7 @@ var n = 'Muhammad sajid';
 
 // Note that the function takes 3 arguments: 1. value, 2. index, 3. array
 
-const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
+// const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 
 // function myFunction(value, index, array) {
 //     // console.log(value);
@@ -2439,8 +2448,8 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 // exp(x)	                  Returns the value of Ex
 // floor(x)	                  Returns x, rounded downwards to the nearest integer
 // log(x)	                  Returns the natural logarithm (base E) of x
-// max(x, y, z, ..., n)	      Returns the number with the highest value
-// min(x, y, z, ..., n)	      Returns the number with the lowest value
+// max(x, y, z, ..., n)	      Returns the number with the highest value   // console.log(Math.min.apply(null, [1,2,3]));
+// min(x, y, z, ..., n)	      Returns the number with the lowest value   // console.log(Math.max.apply(null, [1,2,3]));
 // pow(x, y)	              Returns the value of x to the power of y
 // random()	                  Returns a random number between 0 and 1
 // round(x)	                  Rounds x to the nearest integer
@@ -3598,6 +3607,7 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 //   ["bananas", 300],
 //   ["oranges", 200]
 // ];
+
 // // console.log(fruits);
 
 // const myMap = new Map(fruits);
@@ -3645,6 +3655,12 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 // ____get()____	                
 // Returns the value of the specified key in a Map
 
+// const fruits = [
+//   ["apples", 500],
+//   ["bananas", 300],
+//   ["oranges", 200]
+// ];
+
 // const myMap = new Map(fruits);
 // // console.log(myMap);
 
@@ -3659,6 +3675,12 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 //-------------------------------------------
 // ____has()____	                
 // Returns true if a key exists in a Map
+
+// const fruits = [
+//   ["apples", 500],
+//   ["bananas", 300],
+//   ["oranges", 200]
+// ];
 
 // const myMap = new Map(fruits);
 // // console.log(myMap);
@@ -3676,6 +3698,12 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 // ____delete()____	            
 // Removes a Map element specified by a key
 
+// const fruits = [
+//   ["apples", 500],
+//   ["bananas", 300],
+//   ["oranges", 200]
+// ];
+
 // const myMap = new Map(fruits);
 // // console.log(myMap);
 
@@ -3688,6 +3716,12 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 //-------------------------------------------
 // ____clear()____	            
 // Removes all elements from a Map
+
+// const fruits = [
+//   ["apples", 500],
+//   ["bananas", 300],
+//   ["oranges", 200]
+// ];
 
 // const myMap = new Map(fruits);
 // // console.log(myMap);
@@ -3714,6 +3748,12 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 // ____entries()____	        
 // Returns a new Iterator object containing the [key, value] for each element in the Map
 
+// const fruits = [
+//   ["apples", 500],
+//   ["bananas", 300],
+//   ["oranges", 200]
+// ];
+
 // const myMap = new Map(fruits);
 // // console.log(myMap);
 
@@ -3725,6 +3765,12 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 //-------------------------------------------
 // ____keys()____	            
 // Returns a new Iterator object containing the keys for each element in the Map
+
+// const fruits = [
+//   ["apples", 500],
+//   ["bananas", 300],
+//   ["oranges", 200]
+// ];
 
 // const myMap = new Map(fruits);
 // // console.log(myMap);
@@ -3739,6 +3785,12 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 //-------------------------------------------
 // ____values()____	        
 // Returns a new Iterator object containing the values for each element in the Map
+
+// const fruits = [
+//   ["apples", 500],
+//   ["bananas", 300],
+//   ["oranges", 200]
+// ];
 
 // const myMap = new Map(fruits);
 // // console.log(myMap);
@@ -3782,6 +3834,12 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 // ____valueOf()____	        
 // Returns the Map itself
 
+// const fruits = [
+//   ["apples", 500],
+//   ["bananas", 300],
+//   ["oranges", 200]
+// ];
+
 // const myMap = new Map(fruits);
 // // console.log(myMap);
 
@@ -3802,10 +3860,47 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 // ____size____  
 // Returns the number of elements in a Map
 
+// const fruits = [
+//   ["apples", 500],
+//   ["bananas", 300],
+//   ["oranges", 200]
+// ];
+
 // const myMap = new Map(fruits);
-// // console.log(myMap);
+// console.log(myMap);
 
 // console.log(myMap.size); // return length of map
+
+
+
+
+
+//-------------------------------------------
+//^^** Being able to use objects as keys is an important Map feature.
+
+// const apples = {name: 'Apples'};
+// const bananas = {name: 'Bananas'};
+// const oranges = {name: 'Oranges'};
+
+
+// const fruit = new Map();
+
+// // console.log(fruit);
+
+// // add objects as keys
+// fruit.set(apples, 500); 
+// fruit.set(bananas, 1000);
+
+// //add onject property value as keys
+// fruit.set(oranges.name, 1000);
+
+// console.log(fruit);
+
+
+// console.log(fruit.keys()); // returns keys
+
+// console.log(fruit.get(apples)); // returns value
+// console.log(fruit.get('apples')); // returns undefined
 
 
 
@@ -4663,14 +4758,15 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 
 //========JavaScript Hoisting===================================
 
-// Hoisting is JavaScript's default behavior of moving declarations (var a; , let b; , const c; etc) to the top. 
+// Hoisting is JavaScript's default behavior of moving declarations (var a; , let b; , const c; etc) to the top of the current scope. But, 'class' declarations are not hoisted.
 
 // Hoisting allows us to use variables before they are declared.
 
 
+
 //****JavaScript Declarations are Hoisted______
 
-// JavaScript শুধুমাত্র Declarations পার্টটুকুকে Hoisting(উপরে তোলা) করা হয় 
+// JavaScript শুধুমাত্র Declarations পার্টটুকুকে Hoisting(উপরে তোলা) করা হয় | But, 'class' declarations are not hoisted.
 
 // In JavaScript, a variable can be declared after it has been used.
 
@@ -4815,7 +4911,7 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 
 
 //----------------------------------------
-// **'this' in a Function (Strict)_______
+// **'this' in a Function (Strict mode)_______
 //JavaScript strict mode does not allow default binding. So, when used in a function, in strict mode, this is undefined.
 
 // function myFunction() {
@@ -4874,6 +4970,7 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 
 //------------------------------------------
 // Explicit Function Binding**
+
 // The call() and apply() methods are predefined JavaScript methods. They can both be used to call an object method with another object as argument.
 
 // Example:
@@ -4896,7 +4993,8 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 
 
 
-//**JavaScript Function bind()_____***
+/////////^^JavaScript Function bind()^^////////////////////////
+
 // With the bind() method, an object can borrow a method from another object.
 
 // bind() পদ্ধতির সাহায্যে, একটি বস্তু অন্য বস্তু থেকে একটি পদ্ধতি ধার করতে পারে।
@@ -5159,11 +5257,11 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 // It is executed automatically when a new object is created
 // It is used to initialize object properties
 
+
 //** If you do not define a constructor method, JavaScript will add an empty constructor method.
 
-// class Person {
+// class Person { }
 
-// }
 // const rufaida = new Person('Rufaida', 23, 'Web Developer', 'Female');
 // // console.log(rufaida);
 
@@ -5176,7 +5274,7 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 
 // Class methods are created with the same syntax as object methods.
 
-// Use the keyword class to create a class.
+// Use the keyword 'class' to create a class.
 
 // Always add a constructor() method.
 
@@ -5207,6 +5305,250 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 // const carAge = myCar.age(yearNow);
 
 // // console.log(carAge);
+
+
+//---
+
+// class Man{
+//   constructor(name, age, job, gender){
+//     this.Name = name;
+//     this.Age = age;
+//     this.JobTitle = job;
+//     this.Gender = gender;
+//   }
+//   jobPosition(position){
+//       if(this.JobTitle === position){
+//         return `${this.Name} job Position is an ${this.JobTitle}`;
+//     }
+//   }
+// }
+// const sohel = new Man('Sohel', 23, 'Web Developer','Male');
+
+// console.log(sohel);
+// console.log(sohel.jobPosition("Web Developer"));
+
+
+
+
+
+
+
+
+
+//////// JavaScript Class Inheritance ===========================
+
+// To create a class inheritance, use the 'extends' keyword.
+
+// Inheritance is useful for code reusability: reuse properties and methods of an existing class when you create a new class.
+
+// Inheritance allows you to define a class that inherits all the methods and properties from another class.
+
+// Inheritance allows you to reuse code.
+
+// Inheritance facilitates code reusability.
+
+
+
+// Example:--->
+// class Car {
+//   constructor(brand) {
+//     this.carname = brand;
+//   }
+//   present() {
+//     return 'I have a ' + this.carname;
+//   }
+// }
+
+// class Model extends Car {
+//   constructor(brand, mod) {
+//     super(brand);
+//     this.model = mod;
+//   }
+//   show() {
+//     return this.present() + ', it is a ' + this.model;
+//   }
+// }
+
+// let myCar = new Model("Ford", "Mustang");
+
+// console.log(myCar);
+// console.log(myCar.show());
+
+
+
+///***The 'super()' method refers to the parent class.
+
+// By calling the 'super()' method in the constructor method, we call the parent's constructor method and gets access to the parent's properties and methods.
+
+
+
+
+
+///// Classes also allows you to use getters and setters____
+
+// To add getters and setters in the class, use the 'get' and 'set' keywords.
+
+// Example:--->
+// class Car {
+//   constructor(brand) {
+//     this._carname = brand;
+//   }
+//   get carname() {
+//     return this._carname;
+//   }
+//   set carname(x) {
+//     this._carname = x;
+//   }
+// }
+
+// const myCar = new Car("Ford");
+// // const myCar = new Car("");
+
+// console.log(myCar.carname); // if you do not assign any value, it will indicate 'get' method
+
+// console.log(myCar.carname = "Mustang"); // if you assign any value, it will indicate 'set' method
+
+
+
+// Hoisting :: class declarations are not hoisted. That means that you must declare a class before you can use it
+
+
+
+
+
+
+////////JavaScript Class Static Method=========================
+
+// 'Static' class methods are defined on the class itself.
+
+// 'Static' methods belong to the class, not to any particular object.
+
+// 'Static' methods can be called without creating any particular object.
+
+// ক্লাসের একটি উদাহরণ তৈরি না করেই স্ট্যাটিক পদ্ধতি called kora যেতে পারে।
+
+// You cannot call a 'static' method on an object, only on an object class.
+
+
+// Example:--->//Without 'static' method 
+// class Car {
+//   constructor(name) {
+//     this.name = name;
+//   }
+//    hello() {
+//     return "Hello!!";
+//   }
+// }
+
+// const myCar = new Car("Ford");
+
+// console.log(myCar.hello()); 
+
+
+
+// Example:---> //Use 'static' method 
+// class Car {
+//   constructor(name) {
+//     this.name = name;
+//   }
+//   static hello() {
+//     return "Hello!!";
+//   }
+// }
+
+// const myCar = new Car("Ford");
+
+// console.log(Car.hello()); // You can call 'hello()' on the Car Class because 'hello' is a static method.
+
+
+//**** If you want to use the class object inside the static method , you can send class object as a parameter
+
+//Example:---> // Use 'static' method 
+// class Car {
+//   constructor(name) {
+//     this.name = name;
+//   }
+//   static hello(x) {
+//     // console.log(this);
+//     return "Inside Hello Method : " + x.name;
+//   }
+// }
+// const myCar = new Car("Ford");
+
+// console.log(Car.hello(myCar)) // class object as a parameter
+
+
+
+
+/////Four Examples of 'static' method-------
+
+// Example:--->//Without 'static' method _________
+// class Car {
+//   constructor(name) {
+//     this.name = name;
+//   }
+//    hello() {
+//     return "Hello!!";
+//   }
+// }
+
+// const myCar = new Car("Ford");
+
+// console.log(myCar.hello()); 
+
+
+
+
+// Example:---> //Use 'static' method ________
+// class Car {
+//   constructor(name) {
+//     this.name = name;
+//   }
+//   static hello() {
+//     return "Hello!!";
+//   }
+// }
+
+// const myCar = new Car("Ford");
+
+// console.log(Car.hello()); // You can call 'hello()' on the Car Class because 'hello' is a static method.
+
+
+
+
+//Example:---> // Use 'static' method & send static method parameter_______
+// class Car {
+//   constructor(name) {
+//     this.name = name;
+//   }
+//   static hello(x) {
+//     // console.log(this);
+//     return "Inside Hello Method : " + x.name;
+//   }
+// }
+// const myCar = new Car("Ford");
+
+// console.log(Car.hello(myCar)) // class object as a parameter
+
+
+
+
+
+// 'Static' methods can be called without creating any particular object._____
+// class Car {
+//   constructor(name) {
+//     this.name = name;
+//   }
+//   static hello() {
+//     // console.log(this);
+//     return "Inside Hello Method";
+//   }
+// }
+
+// console.log(Car.hello()) 
+
+
+
 
 
 
@@ -5923,6 +6265,896 @@ const arrNumbers = [45, 4, 16, 9, 16, 25, 16, 50];
 // }
 
 // console.log(myNumbers);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//=========^^^^^ JavaScript Function ^^^^^=============================================
+
+
+
+//=======JavaScript Function Definitions=======================
+
+// JavaScript functions are defined with the 'function' keyword.
+
+// You can use a function 'declaration' or a function 'expression'.
+
+
+
+//----Function Declarations_____
+
+// Declared functions are not executed immediately. They are "saved for later use", and will be executed later, when they are invoked (called upon).
+
+//Syntax:
+
+// function functionName(parameters) {
+//   // code to be executed
+// }
+
+// এক বা একাধিক parameters থাকতে পারে 
+
+// Semicolons are used to separate executable JavaScript statements. Since a function declaration is not an executable statement, it is not common to end it with a semicolon.
+
+//Example:
+// function myFunction(a, b) {
+//   return a * b;
+// }
+
+// এই function টা যেকোনো সময় called বা invoked by it name
+
+
+
+
+
+
+//-----Function Expressions____(anonymous function)
+// A JavaScript function can also be defined using an expression.
+
+//Syntax:
+// const x = function (a, b) {return a * b};
+
+
+// A function expression has been stored in a variable, the variable can be used as a function
+
+// A function without a name is actually an anonymous function
+
+// Functions stored in variables do not need function names. They are always invoked (called) using the variable name.
+
+
+
+
+
+
+
+//---The Function() Constructor_____
+
+// Functions can also be defined with a built-in JavaScript function constructor called 'Function().'
+
+// It is exactly the same as the regular function declaration.('function' keyword.)
+
+// const myFunction = new Function("a", "b", "return a * b");
+// let x = myFunction(4, 3);
+
+
+
+
+
+
+//----Function Hoisting____
+// Hoisting is JavaScript's default behavior of moving declarations to the top of the current scope.
+
+// Hoisting applies to variable declarations and to function declarations. Because of this, JavaScript functions can be called before they are declared:
+
+//Like that__--:
+// myFunction(5);
+
+// function myFunction(y) {
+//   return y * y;
+// }
+
+
+//***Functions defined using an expression are not hoisted.
+
+// myFunction(3, 4); // Not Working
+
+// const myFunction = function(x, y) {return x * y; };
+
+// myFunction(3, 4); // It is Working
+
+
+
+
+
+
+
+//---Self-Invoking Functions___
+// Function expressions can be made "self-invoking".
+
+// A self-invoking expression is invoked (started) automatically, without being called.
+
+// it is also called as 'immediately invoked function expression'.(IIFE)
+
+// It is also called anonymous self-invoking function(function without name).
+
+
+// Syntax:
+// (function () {
+//   let x = "Self-Invoking!!";  // I will invoke myself
+// //   console.log(x);
+// })();
+
+
+
+
+
+
+//**Functions are Objects
+// JavaScript functions can best be described as objects. 
+
+// JavaScript functions have both properties and methods.
+
+// The arguments.length property returns the number of arguments received when the function was invoked
+
+
+
+//*******
+// A function defined as the property of an object, is called a method to the object.
+
+// A function designed to create new objects, is called an object constructor.
+//*******
+
+
+
+
+
+//***Arrow Functions____
+
+// Arrow functions do not have their own 'this'. They are not well suited for defining object methods.
+
+// Arrow functions are not hoisted. They must be defined before they are used.
+
+// Using const is safer than using var, because a function expression is always constant value.
+
+// You can only omit the return keyword and the curly brackets if the function is a single statement.
+
+// The handling of 'this' is also different in arrow functions compared to regular functions. With arrow functions there are no binding of 'this'.
+
+// In regular functions the 'this' keyword represented the object that called the function, which could be the window, the document, a button or whatever.
+
+// In arrow functions the 'this' keyword always represents the object that defined the arrow function.
+
+
+
+
+
+
+
+
+
+
+
+//=======JavaScript Function Parameters===================
+
+// A JavaScript function does not perform any checking on parameter values (arguments).
+
+// function functionName(parameter1, parameter2, parameter3) {
+//   // code to be executed
+// }
+
+
+// Function parameters are the names listed in the function definition.
+
+// Function arguments are the real values passed to (and received by) the function.
+
+
+
+/////^^Parameter Rules^^////////
+
+// JavaScript function definitions do not specify data types for parameters.
+
+// JavaScript functions do not perform type checking on the passed arguments.
+
+
+// JavaScript functions do not check the number of arguments received.
+
+// JavaScript functions do not hava default values for parameters.
+
+// If a function is called with missing arguments (less than declared), the missing values are set to undefined.
+
+// function myFunction(x, y) {
+//     console.log(x); // return undefined
+// }
+
+// myFunction()
+
+
+
+
+
+
+////^^Default Parameter Values^^/////////////////////
+
+// function parameters to have default values.
+
+// function myFunction(x, y = 10) {
+//   console.log(x, y);
+// }
+// myFunction(5);
+
+// function myFunction(x, y = 10) {
+//   console.log(x, y);
+// }
+// myFunction(5, 20);
+
+
+
+
+
+
+/////^^Function Rest Parameter^^^////////////////
+
+// The rest parameter (...) allows a function to treat an indefinite number of arguments as an array:
+
+// function sum(...args) {
+//   console.log(args);
+// }
+
+// sum(4, 9, 16, 25, 29, 100, 66, 77);
+
+
+
+// function myFunction(a, b, c, ...d) {
+//   console.log(a, b, c);
+//   console.log(d);
+//   console.log(arguments);
+  
+// }
+
+// myFunction(4, 9, 16, 25, 29, 100, 66, 77);
+
+
+
+
+
+//////^^functions Arguments Object^^/////////////////////////
+
+// JavaScript functions have a built-in object called the arguments object.
+
+// The arguments object is an array-like object containing the function's arguments.
+
+// The argument object contains an array of the arguments used when the function was called (invoked).
+
+// The arguments object has a length property that returns the number of arguments passed to the function.
+
+
+// function myFunction() {
+//   console.log(arguments);
+//   console.log(arguments.length);
+// }
+
+// myFunction(4, 9, 16, 25, 29, 100, 66, 77);
+
+
+// If a function is called with too many arguments (more than declared), these arguments can be reached using the arguments object.
+
+// function myFunction(a, b, c) {
+//   console.log(a, b, c);
+//   console.log(arguments);
+  
+// }
+
+// myFunction(4, 9, 16, 25, 29, 100, 66, 77);
+
+
+
+
+
+
+//////^^Arguments are Passed by Value^^///////////////////
+
+// The parameters, in a function call, are the function's arguments.
+
+// JavaScript arguments are passed by value: The function only gets to know the values, not the argument's locations.
+
+// If a function changes an argument's value, it does not change the parameter's original value.
+
+//**Changes to arguments are not visible (reflected) outside the function.
+
+// let x = 2;
+// let y = 3;
+
+
+// function myFunction(a, c) {
+//     a = 5; // it is not change the parameter's original value
+//   console.log(a, c);
+  
+// }
+
+// myFunction(x, y)
+// console.log(x, y);
+
+
+
+
+
+
+////////^^^Objects are Passed by Reference^^^///////////////////////////
+
+// In JavaScript, object references are values. Because of this, objects will behave like they are passed by reference:
+
+// If a function changes an object property, it changes the original value.
+
+//**Changes to object properties are visible (reflected) outside the function.
+
+
+// let x = {name: 'sohel', age: 23};
+
+// function myFunction(a) {
+//     // a.name = 5; // it is change the parameter's original value
+//   console.log(a);
+// }
+
+// myFunction(x)
+// console.log(x);
+
+
+
+
+
+
+
+
+
+
+//========JavaScript Function Invocation======================================
+
+// The code inside a JavaScript function will execute when "something" invokes it.
+
+
+/////^^Invoking a JavaScript Function^^////////////////////////
+
+// The code inside a function is not executed when the function is defined.
+
+// The code inside a function is executed when the function is invoked.
+
+// It is common to use the term "call a function" instead of "invoke a function". It is also common to say "call upon a function", "start a function", or "execute a function".
+
+
+///**JavaScript function can be invoked without being called.**
+
+
+
+
+
+//// Invoking a Function as a Function____
+
+
+// function myFunction(x, y) {
+//     console.dir(this); // console.dir(window); //-> Both return the window object
+//   return x / y;
+// }
+
+
+// myFunction() and window.myFunction() is the same function:
+// myFunction(45, 3);  
+// console.log(window.myFunction(45, 3));
+
+
+//**JavaScript there is always a default global object. In a browser the page object is the browser window. The function above automatically becomes a window function.
+
+
+// This is a common way to invoke a JavaScript function, but not a very good practice. Global variables, methods, or functions can easily create name conflicts and bugs in the global object.
+
+
+
+
+
+
+
+////The Global Object______
+// In JavaScript, the 'this' keyword refers to an object. Which object depends on how 'this' is being invoked (used or called .The 'this' keyword refers to different objects depending on how it is used:
+
+// When a function is called without an owner object, the value of 'this' becomes the global object. But, When a function is called with an owner object, the value of 'this' becomes the owner object.
+
+// In a web browser the global object is the browser window.
+
+// function myFunction() {
+//   return this; // This "this" refer to the window
+// }
+
+// let x = myFunction(); // x will be the window object
+// console.log(x);
+// console.dir(x);
+
+
+// If Invoking a function as a global function, the value of 'this' to be the global object.
+
+
+
+
+
+
+/////Invoking a Function as a Method____
+
+// In JavaScript you can define functions as object methods.
+
+// const myIntro = {
+//   firstName:"John",
+//   lastName: "Doe",
+//   fullName: function () {
+//     console.log(this); // it return the myIntro object
+//     return this.firstName + " " + this.lastName;
+//   }
+// }
+// console.log(myIntro.fullName());
+
+// In this example, the value of 'this' refers to the myIntro object. Because the myIntro object is the owner of the fullName method.
+
+// Invoking a function as an object method, causes the value of 'this' to be the object itself.
+
+
+
+
+
+
+////Invoking a Function with a Function Constructor____
+
+// If a function invocation is preceded with the 'new' keyword, it is a constructor invocation.
+
+
+// function myFunction(arg1, arg2) {
+//   this.firstName = arg1;
+//   this.lastName  = arg2;
+//   console.log(this); // it return the myFunction object
+// }
+
+// // This creates a new object
+// const myObj = new myFunction("John", "Doe");
+
+// console.log(myObj); // it return the myFunction object
+
+
+// console.log(myObj.firstName);
+// console.log(myObj.lastName);
+
+// Both are return same result
+// console.log(this.myFunction);
+// console.log(window.myFunction);
+
+
+
+
+//**যদি 'new' keyword দিয়ে কোন ফাংশন কে invoked করা হয় তখন সেই ফাংশনের মধ্যে 'this' বলতে ওই ফাংশনটিকে বুঝায়, এছাড়া 'this' বলতে গ্লোবাল অবজেক্টকে (উইন্ডো অবজেক্ট) বুঝায়
+
+// The 'this' keyword in the constructor does not have a value.
+// The value of 'this' will be the new object created when the function is invoked.
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////^^JavaScript Function 'call()'^^////////////////////////
+
+// With the 'call()' method, you can write a method that can be used on different objects.
+
+
+// In JavaScript all functions are object methods.
+
+// If a function is not a method of a JavaScript object, it is a function of the global object :::
+
+// const person = {
+//   firstName:"John",
+//   lastName: "Doe",
+//   fullName: function () {
+//     console.log(this); // 'this' refers to the person object
+//   }
+// }
+// person.fullName(); 
+
+//----------
+
+//  function fullName() {
+//     console.log(this); // 'this' refers to the window object
+// }
+// fullName()
+
+
+
+
+// With the 'call()' method, you can write a method that can be used on different objects.
+
+//  function fullName() {
+//     console.log(this); // 'this' refers to the call() method argument(object)
+// }
+// fullName.call({name: 'sohel', age: 23});
+
+
+
+
+
+
+//**The JavaScript call() Method______
+
+// The 'call()' method is a predefined JavaScript method.
+
+// It can be used to invoke (call) a method with an owner object as an argument (parameter).
+
+// With 'call()', an object can use a method belonging to another object.
+
+// 'call()' method is accept only first object and then accept others arguments as perameters
+
+// The call() method takes arguments separately.
+
+
+
+// Example: Accept Object 
+// const person = {
+//   fullName: function() {
+//     console.log(this); // // 'this' refers to the call() method argument(object)
+//     return this.firstName + " " + this.lastName;
+//   }
+// }
+// const person1 = {
+//   firstName:"John",
+//   lastName: "Doe"
+// }
+// const person2 = {
+//   firstName:"Mary",
+//   lastName: "Doe"
+// }
+
+// console.log(person.fullName.call(person1, person2)); // it is accept only first onject and then accept arguments as perameters
+// console.log(person.fullName.call(person2));
+
+
+
+
+// Example: Accept Object  and then others arguments
+// const person = {
+//   fullName: function(secondArg, thirdArg) {
+//     console.log(this); // // 'this' refers to the call() method argument(object)
+
+//     console.log(secondArg); // accept second argument by perameter
+
+//     console.log(thirdArg); // accept third argument by perameter
+
+//     return this.firstName + " " + this.lastName;
+//   }
+// }
+// const person1 = {
+//   firstName:"John",
+//   lastName: "Doe"
+// }
+// const person2 = {
+//   firstName:"Mary",
+//   lastName: "Doe"
+// }
+
+// console.log(person.fullName.call(person1, person2)); // it is accept only first object and then accept arguments as perameters
+
+// console.log(person.fullName.call(person2, 'hello', 'world'));
+
+
+
+
+
+
+
+
+
+////////^^JavaScript Function apply()^^///////////////////////////////////////////
+
+// With the apply() method, you can write a method that can be used on different objects.
+
+// The apply() method is similar to the call() method .
+
+// It can be used to invoke (call) a method with an owner object as an argument (parameter).
+
+// With 'apply()', an object can use a method belonging to another object.
+
+// 'apply()' method is accept only first object and then accept other Array arguments as perameters
+
+// The 'apply()' method takes arguments as an array.
+
+// The apply() method is very handy if you want to use an array instead of an argument list.
+
+
+
+//Example: Accept object
+// const person = {
+//   fullName: function() {
+//     console.log(this); // // 'this' refers to the apply() method argument(object)
+//     return this.firstName + " " + this.lastName;
+//   }
+// }
+
+// const person1 = {
+//   firstName:"John",
+//   lastName: "Doe"
+// }
+// const person2 = {
+//   firstName:"Mary",
+//   lastName: "Doe"
+// }
+
+// console.log(person.fullName.apply(person1)); // it is accept only first object and then accept Array arguments as perameters.
+// console.log(person.fullName.apply(person2));
+
+
+
+
+// Example: Accept Object  and then Array arguments 
+// const person = {
+//   fullName: function(secondArg, thirdArg) {
+//     // console.log(this); // 'this' refers to the apply() method argument(object)
+
+//     // console.log(secondArg); // accept second argument by perameter
+
+//     // console.log(thirdArg); // accept third argument by perameter
+
+//     return this.firstName + " " + this.lastName;
+//   }
+// }
+// const person1 = {
+//   firstName:"John",
+//   lastName: "Doe"
+// }
+// const person2 = {
+//   firstName:"Mary",
+//   lastName: "Doe"
+// }
+
+// console.log(person.fullName.apply(person1, person2)); // it is accept only first object and then accept arguments Array as perameters
+
+// console.log(person.fullName.apply(person2, ['hello', 'world']));
+
+
+///****In JavaScript strict mode, if the first argument of the apply() method is not an object, it becomes the owner (object) of the invoked function. In "non-strict" mode, it becomes the global object.
+
+
+// const person = {
+//   fullName: function() {
+//     console.log(this); // // 'this' refers to the window object
+//     return this.firstName + " " + this.lastName;
+//   }
+// }
+
+// const person1 = {
+//   firstName:"John",
+//   lastName: "Doe"
+// }
+// const person2 = {
+//   firstName:"Mary",
+//   lastName: "Doe"
+// }
+
+// console.log(person.fullName.apply(person1, person2)); // it is accept only first object and then accept arguments Array as perameters
+
+// console.log(person.fullName.apply(null, ['hello', 'world']));
+// console.log(person.fullName.apply("sohel", ['hello', 'world']));
+// console.log(person.fullName.apply(0, ['hello', 'world']));
+
+
+
+
+
+// // Find max & min value in an array/////
+// console.log(Math.max.apply(null, [1,2,3]));
+// console.log(Math.min.apply(null, [1,2,3]));
+// console.log(Math.max.apply('', [1,2,3]));
+// console.log(Math.min.apply('', [1,2,3]));
+
+
+
+
+
+
+////////////////^^^ lexical scope ^^^///////////////
+// parent ফাংশনের উপাদান, child ফাংশনে এক্সেস করার যায়, আর এটি করা যায় lexical scope এর সাহায্যে
+
+// function outer() {
+//     let x = "hello";
+//     const obj = {age: 25};
+//     const arr = [1, 2, 3];
+//     function inner() {
+//         console.log(x, obj, arr);
+//     }
+//     inner();
+// }
+
+// outer()
+// এখানে x, obj, arr এই উপাদানগুলো lexical scope এর সাহায্যে outer ফাংশন থেকে inner ফাংশনে ঢুকেছে
+
+
+
+////////^^JavaScript function Closures^^//////////////////////////////////////////
+
+// A closure is a function having access to the parent scope, even after the parent function has closed.
+
+// JavaScript variables can belong to the local or global scope.
+
+// Global variables can be made local (private) with closures.
+
+// যদি কোন scope end হয়ে যায় এবং end কৃত scope মান যদি অন্য scope এ ব্যবহার করা হয়, তখন সেই scope(যেখানে end কৃত scope এর মান ব্যবহার করা হয়েছে বা inner Scope) এ ক্লোজার ওপেন হয়ে যায় এবং end কৃত scope(outer Scope) এর মান গুলো ক্লোজার এর মধ্যে জমা হয়ে থাকে
+
+// function outer () {
+//     let x = "hello";
+//     const obj = {age: 25};
+//     const arr = [1, 2, 3];
+//     function inner () {
+//         var a = 5;
+//         console.log(x, obj, arr);
+//     }
+//     // console.dir(inner);
+//     return inner;
+// }
+
+// const inner = outer(); // ending outer function scope
+
+// console.dir(inner);
+
+// inner()
+
+// এখানে outer ফাংশন called বা invoked করার সাথে সাথেই inner ফাংশনে একটি ক্লোজার স্কোপ ওপেন হয়েছে
+
+/// In a web page, global variables belong to the page. Global variables can be used (and changed) by all other scripts in the page.
+
+// A local variable can only be used inside the function where it is defined. It is hidden from other functions and other scripting code. Global and local variables with the same name are different variables. Modifying one, does not modify the other.
+
+///**Variables created without a declaration keyword (var, let, or const) are always global, even if they are created inside a function.
+
+
+// Global variables live(Lifetime) until the page is discarded(closed), like when you navigate to another page or close the window.
+
+
+// But Local variables have short lives(Lifetime). They are created when the function is invoked(called), and deleted when the function is finished.
+
+
+
+
+
+
+///JavaScript Nested Functions____
+
+// All functions have access to the global scope.  
+
+// In fact, in JavaScript, all functions have access to the scope "above" them. JavaScript supports nested functions. Nested functions have access to the scope "above" them.
+
+
+
+
+
+
+
+
+
+
+
+
+
+//=============== Asynchronous JavaScript ====================================
+
+
+//////JavaScript Callbacks_("I will call back later!")_______
+
+// A callback is a function passed as an argument to another function. This technique allows a function to call another function
+
+// A callback function can run after another function has finished
+
+
+// Function Sequence---
+// JavaScript functions are executed in the sequence they are called. Not in the sequence they are defined.
+
+
+// function myFirst() {
+// console.log('myFirstF');
+// }
+
+// function mySecond() {
+//   console.log('mySecondF');
+// }
+
+// myFirst();
+// mySecond();
+
+// mySecond();
+// myFirst();
+
+
+//***Sometimes you would like to have better control over when to execute a function.
+
+// Example:-1
+// function myDisplayer(some) {
+//   console.log(some);;
+// }
+
+// function myCalculator(num1, num2) {
+//   let sum = num1 + num2;
+//   return sum;
+// }
+
+// let result = myCalculator(5, 5);
+// myDisplayer(result);
+
+
+
+// Example:-2 other way
+
+// function myDisplayer(some) {
+//   console.log(some);;
+// }
+
+// function myCalculator(num1, num2) {
+//   let sum = num1 + num2;
+//   myDisplayer(sum);
+// }
+
+// myCalculator(5, 5);
+
+
+
+
+//****For better control over when to execute a function, use a callback function.
+
+// A callback is a function passed as an argument to another function.
+
+// Example:-
+// function myDisplayer(some) {
+//   console.log(some);
+// }
+
+// function myCalculator(num1, num2, myCallback) {
+//   let sum = num1 + num2;
+//   myCallback(sum);
+// }
+
+// myCalculator(5, 5, myDisplayer); // 'myDisplayer' is a called a callback function. It is passed to myCalculator() as an argument.
+
+// argument মন চাইলে ব্যবহার করতে পারবো, আর মন না চাইলে ব্যবহার করবো না | এটাই হলcallback function এর সুবিধা
+
+// When you pass a function as an argument, remember not to use parenthesis.
+
+
+//When to Use a Callback?-->>: Where callbacks really shine are in asynchronous functions, where one function has to wait for another function (like waiting for a file to load).
+
+
+
+
+
+
+
+
+/////// JS Asynchronous Behaviors_("I will finish later!"________
+
+// JS default behaviour is synchronous, which means that the code runs line by line. But JS default behaviour can be changed to Asynchronous behaviour, In asynchronous way, it will run in parallel.
+
+
+
+
+
+
+
+
+
+
 
 
 
