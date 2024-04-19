@@ -408,16 +408,191 @@
 
 
 
+////////TO-DO APP////////////
+
+
+// const inputValue = document.querySelector('#new-task');
+
+// const form = document.querySelector('form');
+
+// const inComTaskItems = document.querySelector('#items');
+
+// const comtaskItems = document.querySelector('.complete-list ul');
+
+
+// let createTask = (newTask) => {
+//     let listItem = document.createElement('li');
+//     let checkBoxInput = document.createElement('input');
+//     checkBoxInput.type = 'checkbox';
+//     let label = document.createElement('label');
+//     label.innerText = newTask;
+
+//     // listItem.appendChild(checkBoxInput);
+//     // listItem.appendChild(label);
+
+//     listItem.append(checkBoxInput, label);
+
+//     return listItem;   
+
+// }
+
+// let addTask = (e) => {
+//     e.preventDefault();
+//     let listItem = createTask(inputValue.value);
+//     inComTaskItems.appendChild(listItem);
+
+//     form.reset();
+
+//     comCheckMark(listItem, addToComSection);
+// }
+
+
+
+// function addToComSection() {
+//     let listItem = this.parentNode;
+//     let checkBox = listItem.querySelector('input[type="checkbox"]');
+//     checkBox.remove();
+
+//     let delBtn = document.createElement('button');
+//     delBtn.innerText = 'Delete';
+//     delBtn.classList.add('delete');
+//     listItem.appendChild(delBtn);
+
+//     comtaskItems.appendChild(listItem);
+
+//     clickDelBtn(listItem, deleteTask);
+
+    
+// }
+
+// let deleteTask = function() {
+//     let parent = this.parentNode;
+//     let grandParent = parent.parentNode;
+//     grandParent.removeChild(parent);
+    
+// }
+
+
+// let clickDelBtn = (taskItem, deleteBtnClick) => {
+//     let deleteButton = taskItem.querySelector('.delete');
+//     deleteButton.onclick = deleteBtnClick;
+// }
+
+
+// const comCheckMark = (listItem, taskComMark) => {
+//     let checkBox = listItem.querySelector('input[type="checkbox"]');
+//     checkBox.onchange = taskComMark;
+
+// }
+
+
+
+// form.addEventListener('submit', addTask);
 
 
 
 
 
 
+/////Tic Tac Toe///////////
 
 
+// let boxes = document.querySelectorAll(".box");
+// let resetBtn = document.querySelector("#reset-btn");
+// let newGameBtn = document.querySelector("#new-btn");
+// let msgContainer = document.querySelector(".msg-container");
+// let msg = document.querySelector("#msg");
+// let mainDiv = document.querySelector("main");
+
+// let turnO = true; //playerX, playerO
+// let count = 0; //To Track Draw
+
+// const winPatterns = [
+//   [0, 1, 2],
+//   [0, 3, 6],
+//   [0, 4, 8],
+//   [1, 4, 7],
+//   [2, 5, 8],
+//   [2, 4, 6],
+//   [3, 4, 5],
+//   [6, 7, 8],
+// ];
+
+// const resetGame = () => {
+//   turnO = true;
+//   count = 0;
+//   enableBoxes();
+//   msgContainer.classList.add("hide");
+//   mainDiv.classList.remove("hide");
+// };
+
+// boxes.forEach((box) => {
+//   box.addEventListener("click", () => {
+//     if (turnO) {
+//       //playerO
+//       box.innerText = "O";
+//       turnO = false;
+//     } else {
+//       //playerX
+//       box.innerText = "X";
+//       turnO = true;
+//     }
+//     box.disabled = true;
+//     count++;
+    
+//  let isWinner = checkWinner();
+
+//     if (count === 9 && !isWinner) {
+//       gameDraw();
+//     }
+//   });
+// });
+
+// const gameDraw = () => {
+//   msg.innerText = `Game was a Draw.`;
+//   msgContainer.classList.remove("hide");
+//   mainDiv.classList.add("hide");
+//   disableBoxes();
+// };
+
+// const disableBoxes = () => {
+//   for (let box of boxes) {
+//     box.disabled = true;
+//   }
+// };
+
+// const enableBoxes = () => {
+//   for (let box of boxes) {
+//     box.disabled = false;
+//     box.innerText = "";
+//   }
+// };
+
+// const showWinner = (winner) => {
+//   msg.innerText = `Congratulations, Winner is ${winner}`;
+//   msgContainer.classList.remove("hide");
+//   mainDiv.classList.add("hide");
+//   disableBoxes();
+// };
+
+// const checkWinner = () => {
+//   for (let pattern of winPatterns) {
+//     let pos1Val = boxes[pattern[0]].innerText;
+//     let pos2Val = boxes[pattern[1]].innerText;
+//     let pos3Val = boxes[pattern[2]].innerText;
 
 
+//     if (pos1Val != "" && pos2Val != "" && pos3Val != "") {
+//       if (pos1Val === pos2Val && pos2Val === pos3Val) {
+//         showWinner(pos1Val);
+//         return true;
+//       }
+//     }
+//   }
+// };
+
+// newGameBtn.addEventListener("click", resetGame);
+// resetBtn.addEventListener("click", resetGame);
 
 
 
