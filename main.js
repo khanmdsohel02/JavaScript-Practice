@@ -7128,7 +7128,7 @@
 
 // myCalculator(5, 5, myDisplayer); // 'myDisplayer' is a called a callback function. It is passed to myCalculator() as an argument.
 
-// argument মন চাইলে ব্যবহার করতে পারবো, আর মন না চাইলে ব্যবহার করবো না | এটাই হলcallback function এর সুবিধা
+// argument মন চাইলে ব্যবহার করতে পারবো, আর মন না চাইলে ব্যবহার করবো না | এটাই হল callback function এর সুবিধা
 
 // When you pass a function as an argument, remember not to use parenthesis.
 
@@ -7145,6 +7145,320 @@
 /////// JS Asynchronous Behaviors_("I will finish later!"________
 
 // JS default behaviour is synchronous, which means that the code runs line by line. But JS default behaviour can be changed to Asynchronous behaviour, In asynchronous way, it will run in parallel.
+
+
+// Functions running in parallel with other functions are called asynchronous functions. {A good example is JavaScript setTimeout()}
+
+// Asynchronous functions can run in parallel with other asynchronous functions.
+
+// In the real world, callbacks are most often used with asynchronous functions.
+
+//***When you pass a function as an argument, remember not to use parenthesis.
+
+
+// Example:-1
+// function myDisplayer(something) {
+//   console.log(something);
+// }
+
+// function myCalculator(num1, num2, myCallback) {
+//   let sum = num1 + num2;
+//   console.log(sum);
+//   myCallback(sum);
+// }
+
+// myCalculator(5, 5, myDisplayer);
+
+
+
+
+
+// Example:-2________
+
+// function myFunction() { console.log('Into setTimeout'); }
+
+// console.log('Before setTimeout');
+
+// setTimeout(myFunction, 3000); // myFunction is used as a callback.
+
+// console.log('After setTimeout');
+
+//***When you pass a function as an argument, remember not to use parenthesis.
+
+
+//----
+// function myFunction(value) { console.log(value);}
+
+// setTimeout(function() { myFunction("SoHeL"); }, 3000);
+
+
+// setTimeout(function() {console.log('Into setTimeout');}, 3000);
+
+
+
+
+// Example:-3________
+
+// setInterval(function() {console.log('Into setTimeout');}, 3000);
+
+
+
+// function myFunction(value) { console.log(value);}
+
+// setInterval(function() { myFunction("SoHeL"); }, 3000);
+
+
+
+// function myFunction() { console.log('Into setTimeout'); }
+
+// console.log('Before setTimeout');
+
+// setInterval(myFunction, 3000); // myFunction is used as a callback.
+
+// console.log('After setTimeout');
+
+
+
+
+
+
+
+
+/////// JS Asynchronous Behaviors[JS Promises]_"I Promise a Result!"________
+
+// "Producing code" is code that can take some time and "Consuming code" is code that must wait for the result. A Promise is an Object that links "Producing code and Consuming code"
+
+// let x = 0;
+
+// function myDisplayer(some) {
+//   console.log(some);
+// }
+
+// let myPromise = new Promise(function(myResolve, myReject) {
+ 
+//   if (x === "0") {
+//     myResolve("OK");
+//   } else {
+//     myReject("Error");
+//   }
+// });
+
+// myPromise.then(
+//   function(value) {myDisplayer(value);},
+//   function(error) {myDisplayer(error);}
+// );
+
+
+
+
+////**Promise Object Properties**////////
+// Pending, Fulfilled, Rejected
+
+// The Promise object supports two properties: state and result.__
+
+// The "state" is a string that can be one of the following values: pending, fulfilled, or rejected.
+
+// The 'result' is the value that was fulfilled or rejected.
+
+
+// While a Promise object is "pending" (working), the result is 'undefined'.
+
+// When a Promise object is "fulfilled", the result is a value.
+
+// When a Promise object is "rejected", the result is an error object.
+
+
+
+// Promise.then() takes two arguments, a callback for success and another for failure.
+
+// Both are optional, so you can add a callback for success or failure only.
+
+
+
+// let myPromise = new Promise(function(Resolve, Reject) {
+//   setTimeout(function() {Resolve("Coding Lover!!"); }, 3000);
+// });
+
+// myPromise.then(function(value) {
+// console.log(value);});
+
+
+
+
+
+
+
+
+
+/////// JS Asynchronous Behaviors('async' and 'await')________
+
+//**  'async' and 'await' make promises easier to write
+
+// 'async' makes a function return a Promise
+
+// 'await' makes a function wait for a Promise
+
+
+
+// The keyword 'async' before a function makes the function return a promise
+
+//Like: 
+// async function myFunction() {return "Hello"}
+
+// Or
+
+//  function myFunction() {return Promise.resolve("Hello")}
+
+
+
+
+// The 'await' keyword can only be used inside an 'async' function.
+
+// The 'await' keyword makes the function pause the execution and wait for a resolved promise before it continues
+
+
+// async function myDisplay() {
+//   let myPromise = new Promise(function(resolve, reject) {
+//     resolve("Coding Lover!!");
+//   });
+//    return await myPromise;
+// }
+// myDisplay().then(function(result){
+//     console.log(result);
+// }); 
+
+
+
+
+// The two arguments (resolve and reject) are pre-defined by JavaScript. We will not create them, but call one of them when the executor function is ready. Very often we will not need a reject function.
+
+
+
+
+
+
+
+
+
+
+
+
+//======= JS HTML DOM ====================================
+
+//**With the HTML DOM, JavaScript can access and change all the elements of an HTML document.
+
+// When a web page is loaded, the browser creates a Document Object Model of the page.
+
+
+//** With the object model, JavaScript gets all the power it needs to create dynamic HTML:
+
+// JavaScript can change all the HTML elements in the page
+// JavaScript can change all the HTML attributes in the page
+// JavaScript can change all the CSS styles in the page
+// JavaScript can remove existing HTML elements and attributes
+// JavaScript can add new HTML elements and attributes
+// JavaScript can react to all existing HTML events in the page
+// JavaScript can create new HTML events in the page
+
+
+// HTML DOM methods are actions you can perform (on HTML Elements).
+
+// HTML DOM properties are values (of HTML Elements) that you can set or change.
+
+// In the DOM, all HTML elements are defined as objects.
+
+// The HTML DOM document object is the owner of all other objects in your web page.
+
+// The document object represents your web page. If you want to access any element in an HTML page, you always start with accessing the document object.
+
+
+// Never use " document.write() " after the document is loaded. It will overwrite the document.
+
+
+// HTML form validation can be done by JavaScript.
+
+
+const inputValue = document.querySelector('#new-task');
+
+const form = document.querySelector('form');
+
+const inComTaskItems = document.querySelector('#items');
+
+const comtaskItems = document.querySelector('.complete-list ul');
+
+
+let createTask = (newTask) => {
+    let listItem = document.createElement('li');
+    let checkBoxInput = document.createElement('input');
+    checkBoxInput.type = 'checkbox';
+    let label = document.createElement('label');
+    label.innerText = newTask;
+
+    // listItem.appendChild(checkBoxInput);
+    // listItem.appendChild(label);
+
+    listItem.append(checkBoxInput, label);
+
+    return listItem;   
+
+}
+
+let addTask = (e) => {
+    e.preventDefault();
+    let listItem = createTask(inputValue.value);
+    inComTaskItems.appendChild(listItem);
+
+    form.reset();
+
+    comCheckMark(listItem, addToComSection);
+}
+
+
+
+function addToComSection() {
+    let listItem = this.parentNode;
+    let checkBox = listItem.querySelector('input[type="checkbox"]');
+    checkBox.remove();
+
+    let delBtn = document.createElement('button');
+    delBtn.innerText = 'Delete';
+    delBtn.classList.add('delete');
+    listItem.appendChild(delBtn);
+
+    comtaskItems.appendChild(listItem);
+
+    clickDelBtn(listItem, deleteTask);
+
+    
+}
+
+let deleteTask = function() {
+    let parent = this.parentNode;
+    let grandParent = parent.parentNode;
+    grandParent.removeChild(parent);
+    
+}
+
+
+let clickDelBtn = (taskItem, deleteBtnClick) => {
+    let deleteButton = taskItem.querySelector('.delete');
+    deleteButton.onclick = deleteBtnClick;
+}
+
+
+const comCheckMark = (listItem, taskComMark) => {
+    let checkBox = listItem.querySelector('input[type="checkbox"]');
+    checkBox.onchange = taskComMark;
+
+}
+
+
+
+form.addEventListener('submit', addTask);
+
+
+
+
 
 
 

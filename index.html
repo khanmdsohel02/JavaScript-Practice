@@ -7,9 +7,40 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <section class="container">
+        <div class="logo">
+            <img src="/avatar9.png" alt="Learn with Sumit" />
+        </div>
+        <h1 id="header" class="header">To-Do App</h1>
+    
+        <form class="new-task-container box">
+            <label for="new-task">Add New Task</label>
+            <input type="text" id="new-task" required/>
+            <input type="submit" id="addTask" value="Add Task" />
+        </form>
+    
+        <div class="todo-list box">
+            <h2>In_complete Tasks</h2>
+            <ul id="items">
+               
+            </ul>
+        </div>
+        <!--/todo-list-->
+    
+        <div class="complete-list box">
+            <h2>Completed Tasks</h2>
+            <ul>
+                
+            </ul>
+        </div>
+        <!--/complete-list-->
+    </section>
+
     <p id="demo"></p>
     <script src="main.js"></script>
     <script src="pSolved.js"></script>
+    
 </body>
 </html>
 
