@@ -7384,6 +7384,193 @@
 
 
 
+////**The addEventListener() method**////////////////
+
+
+//Syntax:: element.addEventListener(event, function, booleanValue);
+
+// First parameter is the type of the event (like "click" or "mousedown")
+
+// Second parameter is the function we want to call when the event occurs.
+
+// Third parameter(optional) is a boolean value specifying whether to use event bubbling or event capturing. By default(it is true), event bubbling is used. 
+// 'true' means event bubbling is used, 'false' means event capturing is used.
+
+
+
+// The addEventListener() method attaches an event handler to an element without overwriting existing event handlers.
+
+// You can easily remove an event listener by using the removeEventListener() method. The removeEventListener() method removes event handlers that have been attached with the addEventListener() method:
+
+
+
+
+
+//**Event Bubbling or Event Capturing?____
+// There are two ways of event propagation in the HTML DOM, bubbling(it is defualt behavior) and capturing.
+
+// Event propagation is a way of defining the element order when an event occurs
+
+
+// const inner = document.getElementById("myP1");
+// const myP = document.getElementById("myP");
+
+// In Bubbling mode(default[false]), the event listener is called the inner element first, and then the outer element. 
+
+// document.getElementById("myDiv1").addEventListener("click", function() {
+//   console.log(myDiv1);
+// }, false);
+
+// inner.addEventListener("click", function(e) {
+// console.log(inner);
+// });
+
+// myP.addEventListener("click", function(e) {
+// console.log(myP);
+// });
+
+
+
+//In Capturing mode[true], the event listener is called the outer element first, and then the inner element.
+
+// document.getElementById("myP2").addEventListener("click", function() {
+// console.log(myP2);
+// }, true);
+
+// document.getElementById("myDiv2").addEventListener("click", function() {
+// console.log(myDiv2);
+// }, true);
+
+
+
+
+
+
+
+
+//////======HTML DOM Navigation=========/////////
+
+// According to the W3C HTML DOM standard, everything in an HTML document is a node:
+
+// A node is an object that has properties and methods associated with it.
+
+// The document object is the root node of the HTML DOM tree.
+
+// New nodes can be created, and all nodes can be modified or deleted.
+
+// The nodes in the node tree have a hierarchical relationship to each other. The terms parent, child, and sibling are used to describe the relationships.
+
+
+//***Navigating Between Nodes____
+// The HTML DOM provides methods to navigate between nodes in the tree. You can use these methods to get and set the value of a node, or to traverse the tree.
+
+// const title =document.querySelector('#demo');
+
+// // parentNode 
+// console.log(title.parentNode);
+
+// // childNodes[nodenumber]
+// console.log(title.childNodes);
+
+// // firstChild
+// console.log(title.firstChild);
+
+// // lastChild
+// console.log(title.lastChild);
+
+// // nextSibling
+// console.log(title.nextSibling);
+
+// // previousSibling
+// console.log(title.previousSibling);
+
+//firstChild --> Accessing the 'innerHTML' property is the same as accessing the 'nodeValue' property[Becuase only Text contains belongs to NodeValue]
+
+//**firstChild ::
+// const title =document.querySelector('#demo').firstChild;
+
+// const title =document.querySelector('#demo').innerHTML;
+
+// const title =document.querySelector('#demo').firstChild.nodeValue;
+
+// const title =document.querySelector('#demo').childNodes[0].nodeValue;
+
+// console.log(title);
+
+
+
+// Accessing the outerHTML property is the same as accessing the 'textContent' property
+
+// console.log(document.querySelector('#demo').outerHTML);
+// console.log(document.querySelector('#demo').textContent);
+
+
+
+
+// Accessing the full document and the full body:
+// console.log(document.body); //- The body of the document
+// console.log(document.documentElement); //- The full document
+
+
+
+//---The nodeName Property---|||
+// The "nodeName" property specifies the name of a node.
+
+// console.log(document.querySelector('#demo').nodeName);
+// console.log(document.querySelector('#demo').firstChild.nodeName);
+
+// nodeName is read-only
+// nodeName of an element node is the same as the tag name
+// nodeName of an attribute node is the attribute name
+// nodeName of a text node is always #text
+// nodeName of the document node is always #document
+
+//** Note: nodeName always contains the uppercase tag name of an HTML element.**
+
+
+
+
+///----The "nodeValue" Property------|||
+// The "nodeValue" property specifies the value of a node.
+
+// console.log(document.querySelector('#demo').nodeValue);
+// console.log(document.querySelector('#demo').firstChild.nodeValue);
+
+// nodeValue for element nodes is null
+// nodeValue for text nodes is the text itself
+// nodeValue for attribute nodes is the attribute value
+
+
+
+
+
+//--The nodeType Property----|||
+// The nodeType property is read only. It returns the type of a node.
+
+
+// console.log(document.querySelector('#demo').nodeType);
+
+// console.log(document.querySelector('#demo').firstChild.nodeType);
+
+// console.log(document.querySelector('#demo').nextElementSibling.nodeType);
+
+// console.log(document.querySelector('#demo').parentNode.nodeType);
+
+
+//== nodeType properties ==
+
+
+// ELEMENT_NODE	       1	<h1 class="heading">W3Schools</h1>
+
+// ATTRIBUTE_NODE	   2	 class = "heading" (deprecated)
+
+// TEXT_NODE	       3	W3Schools
+
+// COMMENT_NODE	       8	<!-- This is a comment -->
+
+// DOCUMENT_NODE	   9	The HTML document itself (the parent of <html>)
+
+// DOCUMENT_TYPE_NODE  10	<!Doctype html>
 
 
 
@@ -7393,6 +7580,37 @@
 
 
 
+///=======HTML DOM Elements (Nodes)==============
+
+// Creating New HTML Elements (Nodes)__createElement()_______________
+//Syntax:: document.createElement('elementName');
+
+// const h1 = document.createElement('h1');
+// h1.innerHTML = 'W3Schools';
+
+// console.log(h1);
+
+// appends the new element as a last child [ appendChild() ]____________
+// It is appended the new element as the last child of the parent.
+//Syntax:: a.appendChild(b);
+
+//a-->Where the new element will be added(কোথায় নতুন এলিমেন্ট টি এড করা হবে)
+//b-->which element you want to append(কোন উপাদান আপনি যোগ করতে চান)
+
+// document.querySelector('#demo1').appendChild(h1);
+
+
+
+// appends the new element before the existing specified element  [ insertBefore() ]_____
+
+//Syntax:: a.insertBefore(b, c);
+
+//a-->Where the new element will be added(কোথায় নতুন এলিমেন্ট টি এড করা হবে)
+//b-->which created element you want to append(তৈরি করা কোন উপাদান আপনি যোগ করতে চান)
+//c--> কোন এলিমেন্ট এর আগে নতুন এলিমেন্ট টি এড করা হবে(existing element)
+
+
+// document.querySelector('body').insertBefore(h1, document.querySelector('#demo'));
 
 
 
@@ -7400,6 +7618,19 @@
 
 
 
+///Removing Existing HTML Elements (Nodes)______remove()__removeChild(param)______
+
+// To remove an HTML element, use the remove() method:
+
+
+// document.querySelector('#demo').remove(); // does not work in older browsers
+
+// const parent = document.querySelector('#demo1');
+// const child = document.querySelector('#child');
+
+// parent.removeChild(child);
+
+// child.parentNode.removeChild(child); // Find the child you want to remove, and use its parentNode property to find the parent
 
 
 
@@ -7407,6 +7638,24 @@
 
 
 
+//// Replacing HTML Elements______
+// To replace an element to the HTML DOM, use the replaceChild() method
+
+
+//Syntax:: a.insertBefore(b, c);
+
+//a-->Where the new element will be added(কোথায় নতুন এলিমেন্ট টি এড করা হবে)
+//b-->which created element you want to append(তৈরি করা কোন উপাদান আপনি যোগ করতে চান)
+//c--> কোন এলিমেন্টের জায়গা নতুন এলিমেন্ট টি এড করা হবে(existing element)
+
+
+
+// const para = document.createElement("p");
+// para.innerHTML = "W3Schools";
+
+// const parent = document.getElementById("demo1");
+// const child = document.getElementById("child");
+// parent.replaceChild(para, child);
 
 
 
